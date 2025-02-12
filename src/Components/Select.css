@@ -1,0 +1,36 @@
+.select-buttons {
+  display: flex;
+  background-color: var(--middleground-color);
+}
+
+.select-button {
+  border: none;
+  color: var(--foreground-color);
+  background-color: unset;
+  font-size: var(--button-font-size);
+  border-bottom: 3px solid rgba(0, 0, 0, 0);
+  padding: 10px 30px 10px 30px;
+}
+
+.select-button:hover {
+  border-bottom: 3px solid white;
+}
+
+.select-button:active {
+  background-color: var(--background-active-color);
+}
+
+.select-button-selected {
+  border: none;
+  padding: 10px 30px 10px 30px;
+  background-color: unset;
+  font-size: var(--button-font-size);
+  border-bottom: 3px solid var(--selected-color);
+  color: var(--selected-color);
+}
+
+.icon-select-button-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

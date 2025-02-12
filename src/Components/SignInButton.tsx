@@ -1,4 +1,4 @@
-import { FaGoogle } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 import "./SignInButton.css"
 import { useGoogleLogin } from "@react-oauth/google";
 import { exchangeAuthCodeForTokens, saveAuth } from "../Utils/Authorization";
@@ -21,7 +21,7 @@ function SignInButton() {
 
   return (
     <button className="sign-in-button" onClick={login}>
-      <FaGoogle size="30px" />
+      <FcGoogle size="30px" />
       Conecteaza-te cu Google
     </button>
   )

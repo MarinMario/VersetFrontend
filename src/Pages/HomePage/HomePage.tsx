@@ -1,3 +1,4 @@
+import Layout from "../../Components/Layout"
 import { Authorization } from "../../Utils/Authorization"
 import "./HomePage.css"
 
@@ -9,7 +10,7 @@ function HomePage(props: HomePageProps) {
 
   return (
     <div>
-      welcome to homepage
+      <Layout />
     </div>
   )
 }

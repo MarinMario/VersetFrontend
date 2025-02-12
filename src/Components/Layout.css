@@ -1,0 +1,12 @@
+.layout-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: var(--middleground-color);
+  align-items: center;
+}
+
+.profile-button {
+  text-align: right;
+}
