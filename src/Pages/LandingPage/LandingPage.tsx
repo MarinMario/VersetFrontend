@@ -1,25 +1,20 @@
 import useGoogleAuth from "../../Hooks/useGoogleAuth"
+import { RequestGetSongs } from "../../Utils/Requests"
 
 function LandingPage() {
 
   const { runWithAuth, login } = useGoogleAuth()
 
 
-  const getSongs = () =>
-    runWithAuth(auth => {
-      if (auth == null) {
-        console.log("auth is invalid")
-        return;
-      }
-      fetch("http://localhost:5074/api/Songs", {
-        method: "GET",
-        headers: {
-          "idToken": auth?.id_token
-        }
-      }).then(response => {
+  const getSongs = () => {
+    RequestGetSongs(runWithAuth, response => {
+      if(response.ok) {
         response.json().then(data => console.log(data))
-      })
+      } else {
+        console.log("failed to get songs")
+      }
     })
+  }
 
   return (
     <>

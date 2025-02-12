@@ -1,6 +1,6 @@
 import { useGoogleLogin } from "@react-oauth/google";
 
-type Authorization = {
+export type Authorization = {
   access_token: string,
   expires_in: number,
   id_token: string,
