@@ -2,11 +2,11 @@ import useGoogleAuth from "../../Hooks/useGoogleAuth"
 
 function LandingPage() {
 
-  const { getAuthorization, login } = useGoogleAuth()
+  const { runWithAuth, login } = useGoogleAuth()
 
 
   const getSongs = () =>
-    getAuthorization().then(auth => {
+    runWithAuth(auth => {
       if (auth == null) {
         console.log("auth is invalid")
         return;
@@ -25,7 +25,7 @@ function LandingPage() {
     <>
       <button onClick={() => login()}>login</button>
       <button onClick={() => {
-        getAuthorization().then(auth => {
+        runWithAuth(auth => {
           console.log("this is the authorization: ", auth)
         })
       }}>get auth</button>

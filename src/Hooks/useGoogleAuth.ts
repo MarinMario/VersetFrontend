@@ -25,6 +25,7 @@ async function exchangeAuthCodeForTokens(authCode: string) {
         client_secret: CLIENT_SECRET,
         redirect_uri: "postmessage", // Required for auth-code flow
         grant_type: "authorization_code",
+        access_type: "offline", // Important: Requests the refresh token
       }),
     });
 
@@ -37,36 +38,73 @@ async function exchangeAuthCodeForTokens(authCode: string) {
   }
 }
 
+function saveAuth(tokens: any) {
+  const expiration_unix = Date.now() + (tokens.expires_in - 1) * 60000
+  const auth: Authorization = { ...tokens, expiration_unix: expiration_unix }
+  localStorage.setItem(authorization, JSON.stringify(auth))
+}
+
+async function refreshAuthorization(refreshToken: string, run: (newAuth: Authorization) => void, login: () => void) {
+  try {
+    const response = await fetch("https://oauth2.googleapis.com/token", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        client_id: CLIENT_ID,
+        client_secret: CLIENT_SECRET,
+        refresh_token: refreshToken,
+        grant_type: "refresh_token",
+      }),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json(); // Get the error details from the response body
+      console.error("Google OAuth2 error:", errorData);
+      throw new Error(`Failed to refresh token: ${errorData.error_description}`);
+    }
+
+    const newTokens = await response.json();
+    const tokensWithRefreshToken = { ...newTokens, refresh_token: refreshToken }
+    run(tokensWithRefreshToken)
+    saveAuth(tokensWithRefreshToken)
+
+  } catch (error) {
+    console.log("Failed to refresh token. Redirecting to Log in...")
+    login()
+
+    console.error("Error refreshing token:", error);
+  }
+}
 
 function useGoogleAuth() {
   const login = useGoogleLogin({
     flow: "auth-code",
     onSuccess: async response => {
       const tokens = await exchangeAuthCodeForTokens(response.code)
-      const expiration_unix = Date.now() + (tokens.expires_in - 1) * 60000
-      const auth: Authorization = { ...tokens, expiration_unix: expiration_unix }
-      localStorage.setItem(authorization, JSON.stringify(auth))
+      saveAuth(tokens)
     },
   });
 
-  const getAuthorization = async () => {
+  const runWithAuth = (run: (auth: Authorization) => void) => {
     let stringAuth = localStorage.getItem(authorization)
 
-    if (!stringAuth) {
-      console.log("No Authorization saved.")
-      login()
-      stringAuth = localStorage.getItem(authorization)
-    }
-
     if (stringAuth === null) {
-      console.log("Failed to request Authorization.")
-      return null
+      console.log("No Authorization found. Redirecting to log in.")
+      login()
+      return
+    }
+    const auth = JSON.parse(stringAuth) as Authorization
+
+    if (Date.now() >= auth.expiration_unix) {
+      console.log("Authorization has expired. Refreshing tokens.")
+      refreshAuthorization(auth.refresh_token, run, login)
+      return
     }
 
-    return JSON.parse(stringAuth) as Authorization
+    run(auth)
   };
 
-  return { getAuthorization, login }
+  return { runWithAuth, login }
 }
 
 export default useGoogleAuth
