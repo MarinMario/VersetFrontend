@@ -4,9 +4,9 @@ import mkcert from 'vite-plugin-mkcert'
 
 // https://vite.dev/config/
 export default defineConfig({
-  server: { https: true, port: 3000 },
+  server: { port: 3000 },
   plugins: [react(), mkcert()],
   build: {
     outDir: "build"
-  }
+  },
 })

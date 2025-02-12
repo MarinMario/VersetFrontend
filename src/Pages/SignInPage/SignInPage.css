@@ -1,0 +1,28 @@
+.sign-in-page {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+  height: 100vh;
+}
+
+
+.sign-in-container {
+  background-color: var(--middleground-color);
+  padding: 30px;
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 50px;
+  border-radius: 20px;
+}
+
+.sign-in-welcome-text {
+  display: flex;
+  flex-direction: column;
+}
