@@ -39,7 +39,7 @@ async function exchangeAuthCodeForTokens(authCode: string) {
 }
 
 function saveAuth(tokens: any) {
-  const expiration_unix = Date.now() + (tokens.expires_in - 1) * 60000
+  const expiration_unix = Date.now() + tokens.expires_in * 1000
   const auth: Authorization = { ...tokens, expiration_unix: expiration_unix }
   localStorage.setItem(authorization, JSON.stringify(auth))
 }
