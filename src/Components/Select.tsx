@@ -6,11 +6,14 @@ interface SelectButton {
   children: JSX.Element | JSX.Element[] | string,
   selected: boolean,
   onClick: () => void
+  vertical: boolean
 }
 
 function SelectButton(props: SelectButton) {
 
-  const classNames = props.selected ? "select-button-selected" : "select-button"
+  const classNamesHorizontal = props.selected ? "select-button-selected" : "select-button"
+  const classNamesVertical = props.selected ? "select-button-selected-vertical" : "select-button-vertical"
+  const classNames = props.vertical ? classNamesVertical : classNamesHorizontal
 
   return (
     <button
@@ -32,7 +35,9 @@ export function IconSelectButtonContent(props: IconSelectButtonContentProps) {
   return (
     <div className="icon-select-button-content">
       {<props.icon fontSize="25px" />}
-      {props.text}
+      <div className="icon-select-button-content-text" >
+        {props.text}
+      </div>
     </div>
   )
 }
@@ -43,11 +48,13 @@ interface SelectProps {
   optionContent?: Record<string, JSX.Element>
   selected: string
   onClick: (option: string) => void
+  vertical?: boolean
 }
 
 function Select(props: SelectProps) {
 
   const optionContent = props.optionContent === undefined ? {} : props.optionContent
+  const vertical = props.vertical ?? false
 
   const getContent = (option: string) => {
     if (optionContent.hasOwnProperty(option))
@@ -56,11 +63,13 @@ function Select(props: SelectProps) {
     return <>{option}</>
   }
 
+  const className = vertical ? "select-buttons-vertical" : "select-buttons"
   return (
-    <div className="select-buttons">
+    <div className={className}>
       {
         props.options.map(option =>
           <SelectButton
+            vertical={vertical}
             selected={option === props.selected}
             onClick={() => props.onClick(option)}
           >

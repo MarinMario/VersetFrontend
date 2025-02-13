@@ -9,9 +9,9 @@ interface HomePageProps {
 function HomePage(props: HomePageProps) {
 
   return (
-    <div>
-      <Layout />
-    </div>
+    <Layout>
+      home page
+    </Layout>
   )
 }
 

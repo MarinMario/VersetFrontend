@@ -17,18 +17,10 @@ function App() {
         <Route index element={<IndexPage />} />
         <Route path="login" element={<SignInPage />} />
         <Route path="home" element={<HomePage runWithAuth={runWithAuth} />} />
-        <Route path="friends" element={
-          <>
-            <Layout />
-            prieteni
-          </>
-        } />
-        <Route path="projects" element={
-          <>
-            <Layout />
-            proiecte
-          </>
-        } />
+        <Route path="friends" element={<Layout>prieteni</Layout>} />
+        <Route path="projects" element={<Layout>proiecte</Layout>} />
+        <Route path="profile" element={<Layout>profil</Layout>} />
+
       </Routes>
     </BrowserRouter>
   )
