@@ -4,10 +4,7 @@ import "./HomePage.css"
 import { Authorization } from "../../Utils/Authorization"
 import useGoogleAuth from "../../Hooks/useGoogleAuth"
 
-interface HomePageProps {
-}
-
-function HomePage(props: HomePageProps) {
+function HomePage() {
 
   const { runWithAuth } = useGoogleAuth()
   const [auth, setAuth] = useState<Authorization | null>(null)

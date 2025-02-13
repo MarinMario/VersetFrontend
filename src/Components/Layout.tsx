@@ -9,7 +9,6 @@ import { ReactNode } from "react";
 
 interface LayoutProps {
   children: ReactNode
-  centerContent?: boolean
 }
 
 function Layout(props: LayoutProps) {
@@ -17,8 +16,6 @@ function Layout(props: LayoutProps) {
   const navigate = useNavigate()
   const location = useLocation()
   const selected = location.pathname
-
-  const centerContent = props.centerContent ?? false
 
   const handleOnSelect = (option: string) => {
     navigate(option)
