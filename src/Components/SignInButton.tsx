@@ -3,6 +3,7 @@ import "./SignInButton.css"
 import { useGoogleLogin } from "@react-oauth/google";
 import { exchangeAuthCodeForTokens, saveAuth } from "../Utils/Authorization";
 import { useNavigate } from "react-router-dom";
+import Button from "./Button";
 
 
 function SignInButton() {
@@ -20,10 +21,10 @@ function SignInButton() {
 
 
   return (
-    <button className="sign-in-button" onClick={login}>
-      <FcGoogle size="30px" />
-      Conecteaza-te cu Google
-    </button>
+    <Button onClick={login}>
+      <FcGoogle className="icon" />
+      <span>Conecteaza-te cu Google</span>
+    </Button>
   )
 }
 

@@ -1,3 +1,4 @@
+import { googleLogout } from "@react-oauth/google";
 
 export type Authorization = {
   access_token: string,
@@ -78,4 +79,29 @@ export async function refreshAuthorization(refreshToken: string, run: (newAuth: 
 
 export function isLoggedIn() {
   return localStorage.getItem(LocalStorageAuthKey) !== null
+}
+
+export type IdTokenData = {
+  email: string,
+  family_name: string,
+  given_name: string,
+  name: string
+}
+
+export function getIdTokenData(authData: Authorization) {
+
+  try {
+    const strData = atob(authData.id_token.split(".")[1])
+    const jsonData = JSON.parse(strData) as IdTokenData
+    return jsonData
+  }
+  catch (err) {
+    console.log(err)
+    return null
+  }
+}
+
+export function logout() {
+  localStorage.removeItem(LocalStorageAuthKey)
+  googleLogout()
 }

@@ -9,6 +9,7 @@ import { JSX } from "react";
 
 interface LayoutProps {
   children: JSX.Element | JSX.Element[] | string | string[]
+  centerContent?: boolean
 }
 
 function Layout(props: LayoutProps) {
@@ -16,6 +17,8 @@ function Layout(props: LayoutProps) {
   const navigate = useNavigate()
   const location = useLocation()
   const selected = location.pathname
+
+  const centerContent = props.centerContent ?? false
 
   const handleOnSelect = (option: string) => {
     navigate(option)
@@ -38,7 +41,7 @@ function Layout(props: LayoutProps) {
           }}
         />
       </div>
-      <div>
+      <div className="">
         {props.children}
       </div>
     </div>

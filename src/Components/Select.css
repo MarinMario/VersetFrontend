@@ -15,7 +15,6 @@
   border: none;
   color: var(--foreground-color);
   background-color: unset;
-  font-size: var(--button-font-size);
   border-bottom: 3px solid rgba(0, 0, 0, 0);
   padding: 10px 30px 10px 30px;
 }
@@ -24,7 +23,6 @@
   border: none;
   color: var(--foreground-color);
   background-color: unset;
-  font-size: var(--button-font-size);
   border-left: 3px solid rgba(0, 0, 0, 0);
   padding: 20px 30px 20px 20px;
 }
@@ -52,7 +50,6 @@
   border: none;
   padding: 10px 30px 10px 30px;
   background-color: unset;
-  font-size: var(--button-font-size);
   border-bottom: 3px solid var(--selected-color);
   color: var(--selected-color);
 }
@@ -61,7 +58,6 @@
   border: none;
   padding: 20px 30px 20px 20px;
   background-color: unset;
-  font-size: var(--button-font-size);
   border-left: 3px solid var(--selected-color);
   color: var(--selected-color);
 }
@@ -70,7 +66,6 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  /* justify-content: center; */
   vertical-align: middle;
 }
 

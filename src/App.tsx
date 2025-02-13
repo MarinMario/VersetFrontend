@@ -1,14 +1,12 @@
-import useGoogleAuth from "./Hooks/useGoogleAuth";
 import HomePage from "./Pages/HomePage/HomePage";
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignInPage from "./Pages/SignInPage/SignInPage";
-import IndexPage from "./Pages/IndexPage/IndexPage";
 import RedirectToLogin from "./Components/RedirectToLogin";
 import Layout from "./Components/Layout";
+import ProfilePage from "./Pages/ProfilePage/ProfilePage";
+import IndexPage from "./Pages/IndexPage/IndexPage";
 
 function App() {
-
-  const { runWithAuth, login } = useGoogleAuth()
 
   return (
     <BrowserRouter>
@@ -16,10 +14,10 @@ function App() {
       <Routes>
         <Route index element={<IndexPage />} />
         <Route path="login" element={<SignInPage />} />
-        <Route path="home" element={<HomePage runWithAuth={runWithAuth} />} />
+        <Route path="home" element={<HomePage />} />
         <Route path="friends" element={<Layout>prieteni</Layout>} />
         <Route path="projects" element={<Layout>proiecte</Layout>} />
-        <Route path="profile" element={<Layout>profil</Layout>} />
+        <Route path="profile" element={<ProfilePage />} />
 
       </Routes>
     </BrowserRouter>

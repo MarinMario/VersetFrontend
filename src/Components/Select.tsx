@@ -34,7 +34,7 @@ export function IconSelectButtonContent(props: IconSelectButtonContentProps) {
 
   return (
     <div className="icon-select-button-content">
-      {<props.icon fontSize="25px" />}
+      {<props.icon className="icon" />}
       <div className="icon-select-button-content-text" >
         {props.text}
       </div>
@@ -69,6 +69,7 @@ function Select(props: SelectProps) {
       {
         props.options.map(option =>
           <SelectButton
+            key={option}
             vertical={vertical}
             selected={option === props.selected}
             onClick={() => props.onClick(option)}
