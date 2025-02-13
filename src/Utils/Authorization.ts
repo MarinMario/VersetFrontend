@@ -39,9 +39,14 @@ export async function exchangeAuthCodeForTokens(authCode: string) {
   }
 }
 
-export function saveAuth(tokens: any) {
+export function createAuth(tokens: any) {
   const expiration_unix = Date.now() + (tokens.expires_in - 60) * 1000
   const auth: Authorization = { ...tokens, expiration_unix: expiration_unix }
+  return auth
+}
+
+export function saveAuth(tokens: any) {
+  const auth = createAuth(tokens)
   localStorage.setItem(LocalStorageAuthKey, JSON.stringify(auth))
 }
 

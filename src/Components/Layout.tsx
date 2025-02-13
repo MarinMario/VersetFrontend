@@ -5,10 +5,10 @@ import { FaHouse } from "react-icons/fa6";
 import { FaToolbox } from "react-icons/fa6";
 import { FaAt } from "react-icons/fa";
 import "./Layout.css"
-import { JSX } from "react";
+import { ReactNode } from "react";
 
 interface LayoutProps {
-  children: JSX.Element | JSX.Element[] | string | string[]
+  children: ReactNode
   centerContent?: boolean
 }
 

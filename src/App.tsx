@@ -5,6 +5,7 @@ import RedirectToLogin from "./Components/RedirectToLogin";
 import Layout from "./Components/Layout";
 import ProfilePage from "./Pages/ProfilePage/ProfilePage";
 import IndexPage from "./Pages/IndexPage/IndexPage";
+import ProjectsPage from "./Pages/ProjectsPage/ProjectsPage";
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
         <Route path="login" element={<SignInPage />} />
         <Route path="home" element={<HomePage />} />
         <Route path="friends" element={<Layout>prieteni</Layout>} />
-        <Route path="projects" element={<Layout>proiecte</Layout>} />
+        <Route path="projects" element={<ProjectsPage />} />
         <Route path="profile" element={<ProfilePage />} />
 
       </Routes>

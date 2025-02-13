@@ -22,7 +22,6 @@ function ProfilePage() {
   }, [])
 
   const email = tokenData === null ? "Failed to decode user information." : tokenData.email
-  const name = tokenData === null ? "Failed to decode user information." : tokenData.name
 
   const onLogOut = () => {
     logout()
@@ -34,10 +33,6 @@ function ProfilePage() {
       <div className="center">
         <div className="profile-page" style={{ height: windowSize.height - 200 }}>
           <div>
-            <div className="email">
-              <FaAt className="icon" />
-              <p>{name}</p>
-            </div>
             <div className="email">
               <FaAt className="icon" />
               <p>{email}</p>

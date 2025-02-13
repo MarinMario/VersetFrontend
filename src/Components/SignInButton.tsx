@@ -1,9 +1,10 @@
 import { FcGoogle } from "react-icons/fc";
 import "./SignInButton.css"
 import { useGoogleLogin } from "@react-oauth/google";
-import { exchangeAuthCodeForTokens, saveAuth } from "../Utils/Authorization";
+import { createAuth, exchangeAuthCodeForTokens, getIdTokenData, saveAuth } from "../Utils/Authorization";
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
+import { RequestAddUser } from "../Utils/Requests";
 
 
 function SignInButton() {
@@ -15,6 +16,17 @@ function SignInButton() {
     onSuccess: async response => {
       const tokens = await exchangeAuthCodeForTokens(response.code)
       saveAuth(tokens)
+      const auth = createAuth(tokens)
+      const idTokenData = getIdTokenData(auth)
+      if (idTokenData !== null) {
+        RequestAddUser(auth, response => {
+          if (response.ok) {
+            console.log(`Created User for ${idTokenData.email}.`)
+          } else {
+            response.json().then(err => console.log(err))
+          }
+        }, idTokenData.email, idTokenData.name)
+      }
       navigate("/home")
     },
   });
