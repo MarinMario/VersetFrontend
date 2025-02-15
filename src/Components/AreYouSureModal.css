@@ -3,10 +3,16 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
 }
 
 .are-you-sure-modal-buttons {
   display: flex;
   gap: 5px;
+  justify-content: center;
+}
+
+.are-you-sure-modal-content-vertical {
+  max-width: 300px;
+  word-wrap: break-word;
 }

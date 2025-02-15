@@ -9,6 +9,7 @@
 .project-settings-modal-buttons {
   display: flex;
   gap: 5px;
+  justify-content: center;
 }
 
 .project-settings-container {
@@ -19,7 +20,7 @@
 
 .project-settings-container > div {
   display: flex;
-  gap: 50px;
+  gap: 0px;
   align-items: center;
 }
 
@@ -28,5 +29,5 @@
 }
 
 .project-settings-label {
-  width: 130px;
+  width: 100px;
 }

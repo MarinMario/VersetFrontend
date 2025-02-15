@@ -8,7 +8,6 @@ import { ReactNode } from "react";
 import "./Layout.css"
 import useVerticalPage from "../Hooks/useVerticalPage";
 
-
 interface LayoutProps {
   children: ReactNode
 }
@@ -33,6 +32,7 @@ function Layout(props: LayoutProps) {
           verticalPage ? <></> : <div className="app-name">Verset</div>
         }
         <Select
+          small={verticalPage}
           vertical={!verticalPage}
           options={["/feed", "/notifications", "/projects", "/profile"]}
           selected={selected}

@@ -31,6 +31,8 @@ function ProjectsPage() {
   const [settingsOpen, setSettingsOpen] = useState(false)
   const [search, setSearch] = useState("")
 
+  const searchedProjects = projects.filter(proj => proj.name.includes(search))
+
   const selectFirstProject = (data: DtoSong[]) => {
     if (selectedProject === "" && data.length > 0)
       setSelectedProject(data[0].id)
@@ -85,7 +87,7 @@ function ProjectsPage() {
 
   const windowSize = useWindowSize()
   const verticalPage = useVerticalPage()
-  const projectsHeight = verticalPage ? windowSize.height - 150 : windowSize.height - 90
+  const projectsHeight = verticalPage ? windowSize.height - 130 : windowSize.height - 60
   const projectsPageClasses = "page " + (verticalPage ? "projects-page-vertical" : "projects-page")
   const projectsClasses = "projects"
 
@@ -95,7 +97,7 @@ function ProjectsPage() {
       :
       <div className={projectsClasses} style={{ height: projectsHeight }}>
         {
-          projects.map(project =>
+          searchedProjects.map(project =>
             <span
               key={project.id}
               onClick={() => setSelectedProject(project.id)}

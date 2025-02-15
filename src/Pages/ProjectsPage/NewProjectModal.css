@@ -10,12 +10,12 @@
   margin-top: 20px;
   display: flex;
   gap: 5px;
+  justify-content: center;
 }
 
 .new-project-input-container {
   display: flex;
   align-items: center;
-  gap: 30px;
 }
 
 .new-project-input-container > span {

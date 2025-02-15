@@ -44,3 +44,7 @@
   gap: 0px;
   align-items: center;
 }
+
+.layout-content {
+  width: 100% ;
+}
