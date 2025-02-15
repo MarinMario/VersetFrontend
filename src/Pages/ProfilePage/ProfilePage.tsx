@@ -30,8 +30,7 @@ function ProfilePage() {
 
   return (
     <Layout>
-      <div className="center">
-        <div className="profile-page" style={{ height: windowSize.height - 200 }}>
+        <div className="page profile-page" style={{ height: windowSize.height - 200 }}>
           <div>
             <div className="email">
               <FaAt className="icon" />
@@ -40,7 +39,6 @@ function ProfilePage() {
           </div>
           <Button onClick={onLogOut}>Deconecteaza-te</Button>
         </div>
-      </div>
     </Layout>
   )
 }

@@ -25,9 +25,9 @@ function SignInButton() {
           } else {
             response.json().then(err => console.log(err))
           }
-        }, idTokenData.email, idTokenData.name)
+        })
       }
-      navigate("/home")
+      navigate("/feed")
     },
   });
 

@@ -1,16 +1,21 @@
-import { JSX } from "react";
+import { ReactNode } from "react";
 import "./Button.css"
 
 
 interface ButtonProps {
-  children: JSX.Element | JSX.Element[] | string | string[]
+  children: ReactNode
   onClick?: () => void
+  buttonProps?: React.ButtonHTMLAttributes<HTMLButtonElement>
+  dark?: boolean
 }
 
 function Button(props: ButtonProps) {
 
+  const dark = props.dark ?? false
+  const classNames = "button" + (dark ? " button-dark" : "")
+
   return (
-    <button className="button" onClick={props.onClick}>
+    <button className={classNames} onClick={props.onClick} {...props.buttonProps}>
       {props.children}
     </button>
   )

@@ -1,19 +1,21 @@
-import { JSX } from "react"
+import { ReactNode } from "react"
 import "./Select.css"
 import { IconType } from "react-icons"
 
 interface SelectButton {
-  children: JSX.Element | JSX.Element[] | string,
-  selected: boolean,
+  children: ReactNode,
+  selected: boolean
   onClick: () => void
   vertical: boolean
 }
 
 function SelectButton(props: SelectButton) {
 
+
   const classNamesHorizontal = props.selected ? "select-button-selected" : "select-button"
   const classNamesVertical = props.selected ? "select-button-selected-vertical" : "select-button-vertical"
   const classNames = props.vertical ? classNamesVertical : classNamesHorizontal
+
 
   return (
     <button
@@ -27,15 +29,16 @@ function SelectButton(props: SelectButton) {
 
 interface IconSelectButtonContentProps {
   icon: IconType,
-  text: string
+  text: string,
+  iconClassName: string,
 }
 
 export function IconSelectButtonContent(props: IconSelectButtonContentProps) {
 
   return (
-    <div className="icon-select-button-content">
-      {<props.icon className="icon" />}
-      <div className="icon-select-button-content-text" >
+    <div>
+      {<props.icon className={props.iconClassName} />}
+      <div>
         {props.text}
       </div>
     </div>
@@ -43,27 +46,31 @@ export function IconSelectButtonContent(props: IconSelectButtonContentProps) {
 }
 
 
-interface SelectProps {
-  options: string[]
-  optionContent?: Record<string, JSX.Element>
-  selected: string
-  onClick: (option: string) => void
+interface SelectProps<T extends string> {
+  options: T[]
+  optionContent?: Record<T, ReactNode>
+  selected: T
+  onOptionClick: (option: T) => void
   vertical?: boolean
+  small?: boolean
+
 }
 
-function Select(props: SelectProps) {
+function Select<T extends string>(props: SelectProps<T>) {
 
-  const optionContent = props.optionContent === undefined ? {} : props.optionContent
+  const optionContent = props.optionContent
   const vertical = props.vertical ?? false
 
-  const getContent = (option: string) => {
-    if (optionContent.hasOwnProperty(option))
+  const getContent = (option: T) => {
+    if (optionContent !== undefined)
       return optionContent[option]
 
     return <>{option}</>
   }
 
-  const className = vertical ? "select-buttons-vertical" : "select-buttons"
+  const small = props.small ? "select-buttons-small" : ""
+  const className = (vertical ? "select-buttons-vertical" : "select-buttons") + " " + small
+
   return (
     <div className={className}>
       {
@@ -72,7 +79,7 @@ function Select(props: SelectProps) {
             key={option}
             vertical={vertical}
             selected={option === props.selected}
-            onClick={() => props.onClick(option)}
+            onClick={() => props.onOptionClick(option)}
           >
             {getContent(option)}
           </SelectButton>

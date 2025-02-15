@@ -1,13 +1,18 @@
 :root {
-  --background-color: #1c1c1c;
+  --background-color: #292929;
   --background-hover-color: #242424;
   --background-active-color: #333333;
   --middleground-color: #141414;
-  --foreground-color: white;
-  --selected-color: #f74802;
-  --button-font-size: 16px;
+  --middleground-active-color: black;
+  --foreground-color: #e0e0e0;
+  --selected-color: #eb7134;
+  --disabled-color: #696969;
+  --font-size: 16px;
   --icon-font-size: 20px;
-  --gap-icon-text: 25px
+  --small-icon-font-size: 25px;
+  --padding-horizontal: 15px;
+  --padding-vertical: 5px;
+  --padding: 5px 15px 5px 15px;
 }
 
 html,
@@ -25,12 +30,20 @@ body {
   font-family: Arial, sans-serif;
 }
 
+h3 {
+  margin: 0px;
+}
+
 .icon {
   font-size: var(--icon-font-size);
 }
 
+.small-icon {
+  font-size: var(--small-icon-font-size);
+}
+
 button {
-  font-size: var(--button-font-size);
+  font-size: var(--font-size);
 }
 
 .center {
@@ -39,4 +52,18 @@ button {
   align-items: center;
   text-align: center;
   justify-content: center;
+}
+
+.page {
+  margin: 25px 50px 25px 50px
+}
+
+.icon-text-div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.icon-text-div>.text {
+  margin-top: 3px;
 }

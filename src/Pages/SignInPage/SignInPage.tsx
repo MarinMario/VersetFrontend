@@ -2,14 +2,18 @@ import { useNavigate } from "react-router-dom"
 import SignInButton from "../../Components/SignInButton"
 import "./SignInPage.css"
 import { LocalStorageAuthKey } from "../../Utils/Authorization"
+import { useEffect } from "react"
 
 
 function SignInPage() {
 
   const navigate = useNavigate()
-  if (localStorage.getItem(LocalStorageAuthKey) !== null) {
-    navigate("/home")
-  }
+
+  useEffect(() => {
+    if (localStorage.getItem(LocalStorageAuthKey) !== null) {
+      navigate("/feed")
+    }
+  }, [])
 
   return (
     <div className="sign-in-page">

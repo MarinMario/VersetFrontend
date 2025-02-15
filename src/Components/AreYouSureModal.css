@@ -1,0 +1,12 @@
+
+.are-you-sure-modal-content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.are-you-sure-modal-buttons {
+  display: flex;
+  gap: 5px;
+}

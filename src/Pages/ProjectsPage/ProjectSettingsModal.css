@@ -1,0 +1,32 @@
+
+.project-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 10px;
+}
+
+.project-settings-modal-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.project-settings-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-settings-container > div {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.project-settings-name-input {
+  width: 180px;
+}
+
+.project-settings-label {
+  width: 130px;
+}

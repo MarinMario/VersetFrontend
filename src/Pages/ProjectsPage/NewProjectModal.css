@@ -1,0 +1,27 @@
+
+.new-project-modal-content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.new-project-modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 5px;
+}
+
+.new-project-input-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.new-project-input-container > span {
+  width: 100px;
+}
+
+.new-project-modal-input {
+  width: 180px;
+}

@@ -1,4 +1,5 @@
 import { Authorization } from "./Authorization"
+import { DtoSong } from "./Dtos"
 
 const API_URL = import.meta.env.VITE_API_URL
 
@@ -29,15 +30,26 @@ export function RequestGetSongs(runWithAuth: RunWithAuth, runWithResponse: RunWi
   runRequest(runWithAuth, runWithResponse, "GET", "Songs")
 }
 
-export function RequestAddUser(auth: Authorization, runWithResponse: RunWithResponse, gmail: string, name: string) {
-  runRequest2(auth, runWithResponse, "POST", "Users",
-    {
-      "gmail": gmail,
-      "name": name
-    }
-  )
+export function RequestAddUser(auth: Authorization, runWithResponse: RunWithResponse) {
+  runRequest2(auth, runWithResponse, "POST", "Users")
 }
 
-export function RequestGetUserSongs(auth: Authorization, runWithResponse: RunWithResponse, userGmail: string) {
-  runRequest2(auth, runWithResponse, "GET", `Songs/user/${userGmail}`)
+export function RequestGetUserSongs(auth: Authorization, runWithResponse: RunWithResponse) {
+  runRequest2(auth, runWithResponse, "GET", `Songs/user`)
+}
+
+export function RequestAddSong(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse, name: string, accessFor: number) {
+  runRequest(runWithAuth, runWithResponse, "POST", "Songs", { name: name, lyrics: "", accessFor: accessFor })
+}
+
+export function RequestDeleteSong(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse, id: string) {
+  runRequest(runWithAuth, runWithResponse, "DELETE", `Songs/id/${id}`)
+}
+
+export function RequestUpdateSong(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse, id: string, name: string, lyrics: string, accessFor: number) {
+  runRequest(runWithAuth, runWithResponse, "POST", `Songs/update/${id}`, {
+    lyrics: lyrics,
+    name: name,
+    accessFor: accessFor,
+  })
 }

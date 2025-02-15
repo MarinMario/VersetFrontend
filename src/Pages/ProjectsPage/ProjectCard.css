@@ -1,3 +1,50 @@
 .music-icon {
   font-size: 30px;
+  padding: 10px;
+  background-color: var(--foreground-color);
+  color: var(--middleground-color);
+  border-radius: 10px;
+  min-width: 30px;
+  height: 30px;
+}
+
+.music-icon-hovered {
+  background-color: var(--selected-color);
+  color: var(--middleground-active-color)
+}
+
+.project-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--middleground-color);
+  gap: 50px;
+}
+
+.project-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-card-container-hovered {
+  background-color: var(--middleground-active-color);
+}
+
+.project-card-buttons {
+  display: flex;
+  /* gap: 10px; */
+}
+
+.project-info>div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.project-name {
+  font-weight: bold;
+  word-break: break-all;
 }

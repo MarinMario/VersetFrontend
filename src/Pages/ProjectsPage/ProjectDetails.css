@@ -1,0 +1,32 @@
+
+.project-details-header {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  min-width: 300px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  height: 22px;
+  gap: 20px;
+}
+
+.project-details-header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.project-lyrics {
+  background-color: var(--middleground-color);
+  white-space: wrap;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  /* max-width: 600px; */
+}
+
+.project-verse {
+  min-height: 20px;
+  word-break: break-all;
+}

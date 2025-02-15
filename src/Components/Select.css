@@ -3,7 +3,6 @@
   display: flex;
   background-color: var(--middleground-color);
 }
-
 .select-buttons-vertical {
   display: flex;
   background-color: var(--middleground-color);
@@ -62,13 +61,6 @@
   color: var(--selected-color);
 }
 
-.icon-select-button-content {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  vertical-align: middle;
-}
-
-.icon-select-button-content-text {
-  margin-top: 2px;
+.select-buttons-small > button {
+  padding: 10px;
 }

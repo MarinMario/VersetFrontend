@@ -15,8 +15,8 @@ function App() {
       <Routes>
         <Route index element={<IndexPage />} />
         <Route path="login" element={<SignInPage />} />
-        <Route path="home" element={<HomePage />} />
-        <Route path="friends" element={<Layout>prieteni</Layout>} />
+        <Route path="feed" element={<HomePage />} />
+        <Route path="notifications" element={<Layout>Notificari</Layout>} />
         <Route path="projects" element={<ProjectsPage />} />
         <Route path="profile" element={<ProfilePage />} />
 
