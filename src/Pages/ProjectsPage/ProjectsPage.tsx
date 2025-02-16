@@ -32,8 +32,13 @@ function ProjectsPage() {
   const [settingsOpen, setSettingsOpen] = useState(false)
   const [search, setSearch] = useState("")
 
-  const searchedProjects = projects.filter(proj => proj.name.toLowerCase().includes(search.toLowerCase()))
-  const sortedProjects = searchedProjects.sort((p1, p2) => -compareIsoDates(p1.lastUpdateDate, p2.lastUpdateDate))
+
+  const filterProjects = (projects: DtoSong[]) => {
+    const searchedProjects = projects.filter(proj => proj.name.toLowerCase().includes(search.toLowerCase()))
+    const sortedProjects = searchedProjects.sort((p1, p2) => -compareIsoDates(p1.lastUpdateDate, p2.lastUpdateDate))
+
+    return sortedProjects
+  }
 
   const selectFirstProject = (data: DtoSong[]) => {
     if (selectedProject === "" && data.length > 0)
@@ -53,7 +58,8 @@ function ProjectsPage() {
                 setStatus("success")
                 return castedData
               })
-              selectFirstProject(castedData)
+              const filteredProjects = filterProjects(castedData)
+              selectFirstProject(filteredProjects)
             })
           } else {
             setStatus("fail")
@@ -99,7 +105,7 @@ function ProjectsPage() {
       :
       <div className={projectsClasses} style={{ height: projectsHeight }}>
         {
-          sortedProjects.map(project =>
+          filterProjects(projects).map(project =>
             <span
               key={project.id}
               onClick={() => setSelectedProject(project.id)}
