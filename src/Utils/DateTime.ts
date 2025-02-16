@@ -1,7 +1,7 @@
 
-export function getMonthRomanian(date: Date){
+export function getMonthRomanian(date: Date) {
   const month = date.getMonth()
-  switch(month) {
+  switch (month) {
     case 0: return "Ianuarie"
     case 1: return "Februarie"
     case 2: return "Martie"
@@ -17,4 +17,17 @@ export function getMonthRomanian(date: Date){
   }
 
   return "Invalid"
+}
+
+export function compareIsoDates(date1: string, date2: string) {
+  const d1 = new Date(date1 + "Z").getTime()
+  const d2 = new Date(date2 + "Z").getTime()
+
+  if (d1 === d2)
+    return 0
+
+  if (d1 > d2)
+    return 1
+
+  return -1
 }

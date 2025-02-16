@@ -19,6 +19,7 @@ import IconButton from "../../Components/IconButton"
 import "./ProjectsPage.css"
 import ProjectSettingsModal from "./ProjectSettingsModal"
 import Button from "../../Components/Button"
+import { compareIsoDates } from "../../Utils/DateTime"
 
 
 function ProjectsPage() {
@@ -31,7 +32,8 @@ function ProjectsPage() {
   const [settingsOpen, setSettingsOpen] = useState(false)
   const [search, setSearch] = useState("")
 
-  const searchedProjects = projects.filter(proj => proj.name.includes(search))
+  const searchedProjects = projects.filter(proj => proj.name.toLowerCase().includes(search.toLowerCase()))
+  const sortedProjects = searchedProjects.sort((p1, p2) => -compareIsoDates(p1.lastUpdateDate, p2.lastUpdateDate))
 
   const selectFirstProject = (data: DtoSong[]) => {
     if (selectedProject === "" && data.length > 0)
@@ -97,7 +99,7 @@ function ProjectsPage() {
       :
       <div className={projectsClasses} style={{ height: projectsHeight }}>
         {
-          searchedProjects.map(project =>
+          sortedProjects.map(project =>
             <span
               key={project.id}
               onClick={() => setSelectedProject(project.id)}

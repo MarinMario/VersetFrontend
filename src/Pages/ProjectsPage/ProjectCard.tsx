@@ -27,8 +27,8 @@ function ProjectCard(props: ProjectCardProps) {
   const name = props.dto.name
   const visibleName = name.length <= 30 ? name : name.slice(0, 28) + "..."
 
-  const creationDateTime = new Date(props.dto.creationDate)
-  const creationDate = creationDateTime.getDate() + " " + getMonthRomanian(creationDateTime) + " " + creationDateTime.getFullYear()
+  const lastUpdate = new Date(props.dto.lastUpdateDate + "Z")
+  const lastUpdateText = lastUpdate.getDate() + " " + getMonthRomanian(lastUpdate) + " " + lastUpdate.getFullYear()
 
   const { runWithAuth } = useGoogleAuth()
 
@@ -70,7 +70,7 @@ function ProjectCard(props: ProjectCardProps) {
         <FaMusic className={musicIconClassNames} />
         <div>
           <div className="project-name">{visibleName}</div>
-          <div>{creationDate}</div>
+          <div>{lastUpdateText}</div>
         </div>
       </div>
       <div className="project-card-buttons">
