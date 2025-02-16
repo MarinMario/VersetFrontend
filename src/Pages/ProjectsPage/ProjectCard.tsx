@@ -8,6 +8,7 @@ import AreYouSureModal from "../../Components/AreYouSureModal";
 import { getMonthRomanian } from "../../Utils/DateTime";
 import { RequestDeleteSong } from "../../Utils/Requests";
 import useGoogleAuth from "../../Hooks/useGoogleAuth";
+import { useNavigate } from "react-router-dom";
 
 interface ProjectCardProps {
   dto: DtoSong
@@ -44,6 +45,12 @@ function ProjectCard(props: ProjectCardProps) {
     }, props.dto.id)
   }
 
+  const navigate = useNavigate()
+
+  const goToEditor = () => {
+    navigate(`/editor/${props.dto.id}`)
+  }
+
   return (
     <div
       className={cardContainerClassNames}
@@ -67,7 +74,7 @@ function ProjectCard(props: ProjectCardProps) {
         </div>
       </div>
       <div className="project-card-buttons">
-        <IconButton icon={MdEdit} iconClassName="small-icon" />
+        <IconButton icon={MdEdit} iconClassName="small-icon" onClick={goToEditor} />
         <IconButton icon={MdDelete} iconClassName="small-icon" onClick={() => setDeleteProjectModalOpen(true)} />
       </div>
     </div>

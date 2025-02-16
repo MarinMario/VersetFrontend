@@ -6,6 +6,7 @@ import Layout from "./Components/Layout";
 import ProfilePage from "./Pages/ProfilePage/ProfilePage";
 import IndexPage from "./Pages/IndexPage/IndexPage";
 import ProjectsPage from "./Pages/ProjectsPage/ProjectsPage";
+import EditorPage from "./Pages/EditorPage/EditorPage";
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
         <Route path="notifications" element={<Layout>Notificari</Layout>} />
         <Route path="projects" element={<ProjectsPage />} />
         <Route path="profile" element={<ProfilePage />} />
-
+        <Route path="editor/*" element={<EditorPage />} />
       </Routes>
     </BrowserRouter>
   )

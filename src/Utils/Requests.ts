@@ -37,6 +37,10 @@ export function RequestGetUserSongs(auth: Authorization, runWithResponse: RunWit
   runRequest2(auth, runWithResponse, "GET", `Songs/user`)
 }
 
+export function RequestGetSong(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse, id: string) {
+  runRequest(runWithAuth, runWithResponse, "GET", `Songs/id/${id}`)
+}
+
 export function RequestAddSong(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse, name: string, accessFor: number) {
   runRequest(runWithAuth, runWithResponse, "POST", "Songs", { name: name, lyrics: "", accessFor: accessFor })
 }

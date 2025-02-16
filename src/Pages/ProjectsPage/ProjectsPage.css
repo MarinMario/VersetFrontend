@@ -2,7 +2,7 @@
 /* HORIZONTAL */
 .projects-page {
   display: flex;
-  gap: 30px;
+  gap: 10px;
   /* justify-content: center; */
 }
 
