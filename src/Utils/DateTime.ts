@@ -31,3 +31,10 @@ export function compareIsoDates(date1: string, date2: string) {
 
   return -1
 }
+
+export function formatIsoDate(date: string) {
+  const d = new Date(date)
+  const formatted = d.getDate() + " " + getMonthRomanian(d) + " " + d.getFullYear() + " " + d.getHours() + ":" + d.getMinutes()
+
+  return formatted
+}

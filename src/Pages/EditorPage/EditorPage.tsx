@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 import { RequestGetSong, RequestUpdateSong } from "../../Utils/Requests"
 import useGoogleAuth from "../../Hooks/useGoogleAuth"
-import { DtoSong } from "../../Utils/Dtos"
+import { DtoSong, DtoSongUpdate } from "../../Utils/Dtos"
 import Status from "../../Components/Status"
 import Loading, { LoadingCircle } from "../../Components/Loading"
 import Error from "../../Components/Error"
@@ -46,6 +46,14 @@ function EditorPage() {
       return
     }
 
+    const song: DtoSongUpdate = {
+      id: dto.id,
+      name: dto.name,
+      lyrics: content,
+      description: dto.description,
+      accessFor: dto.accessFor,
+    }
+
     setSaveStatus("loading")
     RequestUpdateSong(runWithAuth, response => {
       if (response.ok) {
@@ -53,7 +61,7 @@ function EditorPage() {
       } else {
         setSaveStatus("fail")
       }
-    }, dto.id, dto.name, content, dto.accessFor)
+    }, song)
   }
 
   useEffect(() => {
@@ -101,7 +109,7 @@ function EditorPage() {
           />
         </div>
         <div className="editor-page-function">
-          
+
         </div>
         <Status
           status={status}

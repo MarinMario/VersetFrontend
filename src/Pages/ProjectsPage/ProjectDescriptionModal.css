@@ -1,0 +1,19 @@
+
+.project-description-modal-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.project-description-modal-textarea {
+  width: 500px;
+  height: 200px;
+  background-color: var(--background-color);
+  border: none;
+  outline: none;
+  color: var(--foreground-color);
+  padding: 5px;
+  border-radius: 5px;
+  resize: none;
+}

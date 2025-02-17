@@ -1,5 +1,3 @@
-
-
 .project-details-header {
   display: flex;
   align-items: center;
@@ -17,15 +15,39 @@
   gap: 5px;
 }
 
-.project-lyrics {
-  background-color: var(--middleground-color);
-  padding: 10px;
-  border-radius: 10px;
-  overflow: auto;
+.project-description-lyrics {
   height: calc(100vh - 80px);
   width: calc(100vw - 570px);
+  /* display: grid; */
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow: auto;
+  /* overflow: auto; */
 }
 
 .project-verse {
   min-height: 20px;
 }
+
+/* .project-description, .project-lyrics {
+
+} */
+
+.project-lyrics-header, .project-description-header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: space-between;
+  background-color: var(--middleground-active-color);
+  border-radius: 10px 10px 0px 0px;
+  padding: 10px;
+}
+
+.project-lyrics-content, .project-description-content {
+  background-color: var(--middleground-color);
+  overflow: auto;
+  padding: 10px;
+  border-radius: 0px 0px 10px 10px;
+}
+

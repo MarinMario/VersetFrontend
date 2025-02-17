@@ -4,9 +4,8 @@ import useGoogleAuth from "../../Hooks/useGoogleAuth"
 import ProjectCard from "./ProjectCard"
 import { RequestAddSong, RequestGetUserSongs } from "../../Utils/Requests"
 import { getIdTokenData } from "../../Utils/Authorization"
-import { DtoSong } from "../../Utils/Dtos"
-import Status from "../../Components/Status"
-import Loading from "../../Components/Loading"
+import { DtoSong, DtoSongAdd } from "../../Utils/Dtos"
+import { LoadingCircle } from "../../Components/Loading"
 import Error from "../../Components/Error"
 import Input from "../../Components/Input"
 import NewProjectModal from "./NewProjectModal"
@@ -41,7 +40,7 @@ function ProjectsPage() {
   }
 
   const selectFirstProject = (data: DtoSong[]) => {
-    if (selectedProject === "" && data.length > 0)
+    if (data.length > 0)
       setSelectedProject(data[0].id)
   }
 
@@ -77,6 +76,10 @@ function ProjectsPage() {
 
     const nonEmptyName = noSpacesName.length > 0 ? name : "proiectul meu"
 
+    const newSong: DtoSongAdd = {
+      name: nonEmptyName,
+      accessFor: accessFor
+    }
     RequestAddSong(runWithAuth, response => {
       if (response.ok) {
         console.log(`Added new project ${name} with access ${accessFor}.`)
@@ -84,7 +87,7 @@ function ProjectsPage() {
       } else {
         console.log(`Failed to add new project ${name} with access ${accessFor}.`)
       }
-    }, nonEmptyName, accessFor)
+    }, newSong)
   }
 
   const selectedProjectDto = projects.find(proj => proj.id === selectedProject)
@@ -119,6 +122,38 @@ function ProjectsPage() {
           )
         }
       </div>
+
+  if (status === "loading")
+    return (
+      <Layout>
+        <div className="projects-page-message">
+          <LoadingCircle />
+        </div>
+      </Layout>
+    )
+
+  if (status === "fail")
+    return (
+      <Layout>
+        <div className="projects-page-message">
+          <Error text="Failed to load projects." />
+        </div>
+      </Layout>
+    )
+
+  if (projects.length === 0)
+    return (
+      <Layout>
+        <NewProjectModal
+          open={newProjectModalOpen}
+          setOpen={setNewProjectModalOpen}
+          addProject={addProject}
+        />
+        <div className="projects-page-message">
+          <Button onClick={() => setNewProjectModalOpen(true)}>Proiect Nou</Button>
+        </div>
+      </Layout>
+    )
 
   return (
     <Layout>
@@ -168,20 +203,7 @@ function ProjectsPage() {
               }
             </div>
           </div>
-          {
-            <Status
-              status={status}
-              contentByStatus={{
-                "loading":
-                  <div>
-                    {ProjectsJSX}
-                    <Loading />
-                  </div>,
-                "fail": <Error text="Failed to load projects." />,
-                "success": ProjectsJSX
-              }}
-            />
-          }
+          {ProjectsJSX}
         </div>
         {
           selectedProjectDto === undefined || verticalPage || windowSize.width < 850

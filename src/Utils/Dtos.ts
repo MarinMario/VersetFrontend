@@ -8,10 +8,24 @@ export interface DtoUser {
 
 export interface DtoSong {
   id: string,
-  lyrics: string,
   name: string,
+  lyrics: string,
+  description: string,
   accessFor: number,
   creationDate: string,
   lastUpdateDate: string
   user: DtoUser
+}
+
+export interface DtoSongAdd {
+  name: string,
+  accessFor: number
+}
+
+export interface DtoSongUpdate {
+  id: string,
+  name: string,
+  lyrics: string,
+  description: string,
+  accessFor: number
 }

@@ -1,12 +1,13 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import Modal from "../../Components/Modal";
-import { DtoSong } from "../../Utils/Dtos";
+import { DtoSong, DtoSongUpdate } from "../../Utils/Dtos";
 import Button from "../../Components/Button";
 import "./ProjectSettingsModal.css"
 import Input from "../../Components/Input";
 import Select from "../../Components/Select";
 import { RequestUpdateSong } from "../../Utils/Requests";
 import useGoogleAuth from "../../Hooks/useGoogleAuth";
+import { formatIsoDate } from "../../Utils/DateTime";
 
 interface ProjectSettingsModalProps {
   dto: DtoSong
@@ -22,11 +23,23 @@ function ProjectSettingsModal(props: ProjectSettingsModalProps) {
 
   const { runWithAuth } = useGoogleAuth()
 
+  const createdAtText = formatIsoDate(props.dto.creationDate + "Z")
+  const lastUpdateText = formatIsoDate(props.dto.lastUpdateDate + "Z")
+
   const onClose = () => {
     props.setOpen(false)
   }
 
   const onSave = () => {
+
+    const song: DtoSongUpdate = {
+      id: props.dto.id,
+      name: name,
+      lyrics: props.dto.lyrics,
+      description: props.dto.description,
+      accessFor: parseInt(accessFor)
+    }
+
     RequestUpdateSong(runWithAuth, response => {
       if (response.ok) {
         console.log(`Updated project ${props.dto.name}.`)
@@ -37,7 +50,7 @@ function ProjectSettingsModal(props: ProjectSettingsModalProps) {
       }
 
       onClose()
-    }, props.dto.id, name, props.dto.lyrics, parseInt(accessFor))
+    }, song)
   }
 
   useEffect(() => {
@@ -73,12 +86,10 @@ function ProjectSettingsModal(props: ProjectSettingsModalProps) {
             />
           </div>
           <div>
-            <span className="project-settings-label">Data crearii: </span>
-            <span>{props.dto.creationDate}</span>
+            Creat pe {createdAtText}
           </div>
           <div>
-            <span className="project-settings-label">Ultima modificare: </span>
-            <span>{props.dto.lastUpdateDate}</span>
+            Ultima modificare pe {lastUpdateText}
           </div>
         </div>
         <div className="project-settings-modal-buttons">

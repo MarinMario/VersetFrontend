@@ -32,6 +32,14 @@
   height: 30px;
 }
 
+.projects-page-message {
+  display: flex;
+  /* background-color: blue; */
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
 /* VERTICAL */
 
 @media (orientation: portrait) {
