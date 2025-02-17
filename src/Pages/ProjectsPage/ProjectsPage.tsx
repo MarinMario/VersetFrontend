@@ -11,7 +11,6 @@ import Error from "../../Components/Error"
 import Input from "../../Components/Input"
 import NewProjectModal from "./NewProjectModal"
 import ProjectDetails from "./ProjectDetails"
-import useWindowSize from "../../Hooks/useWindowSize"
 import useVerticalPage from "../../Hooks/useVerticalPage"
 import { FaPlus } from "react-icons/fa";
 import { MdSettings } from "react-icons/md";
@@ -20,6 +19,7 @@ import "./ProjectsPage.css"
 import ProjectSettingsModal from "./ProjectSettingsModal"
 import Button from "../../Components/Button"
 import { compareIsoDates } from "../../Utils/DateTime"
+import useWindowSize from "../../Hooks/useWindowSize"
 
 
 function ProjectsPage() {
@@ -32,8 +32,13 @@ function ProjectsPage() {
   const [settingsOpen, setSettingsOpen] = useState(false)
   const [search, setSearch] = useState("")
 
-  const searchedProjects = projects.filter(proj => proj.name.toLowerCase().includes(search.toLowerCase()))
-  const sortedProjects = searchedProjects.sort((p1, p2) => -compareIsoDates(p1.lastUpdateDate, p2.lastUpdateDate))
+
+  const filterProjects = (projects: DtoSong[]) => {
+    const searchedProjects = projects.filter(proj => proj.name.toLowerCase().includes(search.toLowerCase()))
+    const sortedProjects = searchedProjects.sort((p1, p2) => -compareIsoDates(p1.lastUpdateDate, p2.lastUpdateDate))
+
+    return sortedProjects
+  }
 
   const selectFirstProject = (data: DtoSong[]) => {
     if (selectedProject === "" && data.length > 0)
@@ -53,7 +58,8 @@ function ProjectsPage() {
                 setStatus("success")
                 return castedData
               })
-              selectFirstProject(castedData)
+              const filteredProjects = filterProjects(castedData)
+              selectFirstProject(filteredProjects)
             })
           } else {
             setStatus("fail")
@@ -89,17 +95,17 @@ function ProjectsPage() {
 
   const windowSize = useWindowSize()
   const verticalPage = useVerticalPage()
-  const projectsHeight = verticalPage ? windowSize.height - 130 : windowSize.height - 60
-  const projectsPageClasses = "page " + (verticalPage ? "projects-page-vertical" : "projects-page")
-  const projectsClasses = "projects"
+  // const projectsHeight = verticalPage ? windowSize.height - 130 : windowSize.height - 60
+  // const projectsPageClasses = "page " + (verticalPage ? "projects-page-vertical" : "projects-page")
+  // const projectsClasses = "projects"
 
   const ProjectsJSX =
     projects.length === 0
       ? <>Nu ai proiecte...</>
       :
-      <div className={projectsClasses} style={{ height: projectsHeight }}>
+      <div className="projects">
         {
-          sortedProjects.map(project =>
+          filterProjects(projects).map(project =>
             <span
               key={project.id}
               onClick={() => setSelectedProject(project.id)}
@@ -133,7 +139,7 @@ function ProjectsPage() {
           />
       }
 
-      <div className={projectsPageClasses}>
+      <div className="page projects-page">
         <div className="project-selection">
           <div className="projects-page-header">
             <Input
@@ -150,7 +156,7 @@ function ProjectsPage() {
                   : <Button onClick={() => setNewProjectModalOpen(true)}>Proiect Nou</Button>
               }
               {
-                verticalPage
+                verticalPage || windowSize.width < 850
                   ?
                   <IconButton
                     disabled={selectedProjectDto === undefined}
@@ -178,7 +184,7 @@ function ProjectsPage() {
           }
         </div>
         {
-          selectedProjectDto === undefined || verticalPage
+          selectedProjectDto === undefined || verticalPage || windowSize.width < 850
             ? <></>
             : <ProjectDetails dto={selectedProjectDto} loadProjects={loadProjects} />
         }
