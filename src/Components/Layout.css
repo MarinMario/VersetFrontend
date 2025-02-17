@@ -16,7 +16,7 @@
 .layout-container {
   display: flex;
   flex-direction: column;
-  padding: 20px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
   /* padding-right: 30px; */
   background-color: var(--middleground-color);
   height: 100vh;
@@ -28,23 +28,23 @@
   text-align: right;
 }
 
-/* VERTICAL */
-
-.layout-page-vertical {
-  display: flex;
-  flex-direction: column;
-}
-
-.layout-container-vertical {
-  display: flex;;
-  justify-content: center;
-  /* padding-right: 30px; */
-  background-color: var(--middleground-color);
-  /* height: 100vh; */
-  gap: 0px;
-  align-items: center;
-}
-
 .layout-content {
-  width: 100% ;
+  width: 100% ; 
+}
+
+@media (orientation: portrait) {
+  .layout-page {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .layout-container {
+    display: flex;;
+    justify-content: center;
+    background-color: var(--middleground-color);
+    padding: 0px;
+    height: auto;
+    gap: 0px;
+    align-items: center;
+  }
 }
