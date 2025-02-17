@@ -34,6 +34,10 @@ h3 {
   margin: 0px;
 }
 
+textarea {
+  font-size: 14px;
+}
+
 .icon {
   font-size: var(--icon-font-size);
 }

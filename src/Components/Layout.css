@@ -48,3 +48,8 @@
     align-items: center;
   }
 }
+@media (max-height: 450px) {
+  .layout-container {
+    justify-content: center;
+  }
+}

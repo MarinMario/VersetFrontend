@@ -85,15 +85,11 @@ function EditorPage() {
         <Button small variant="text" onClick={() => navigate("/projects")}>Proiecte</Button>
         <Button small variant="text" onClick={saveContent}>
           <div className="editor-page-save-button-content">
-            <div>
-              {
-                saveStatus === "loading"
-                  ? <LoadingCircle small />
-                  : <></>
-              }
-            </div>
-            <div>Save</div>
-            <div></div>
+            {
+              saveStatus === "loading"
+                ? <LoadingCircle small />
+                : "Save"
+            }
           </div>
         </Button>
         <Button small variant="text">File</Button>
@@ -117,6 +113,7 @@ function EditorPage() {
             "loading": <div className="editor-content-message"><Loading text="Loading project..." /></div>,
             "fail": <div className="editor-content-message"><Error text="Failed to load project." /></div>,
             "success": <EditorTextbox content={content} setContent={setContent} />
+            // success: <div className="editor-content-message"><LoadingCircle /></div>
           }}
         />
       </div>

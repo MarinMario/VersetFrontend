@@ -1,5 +1,5 @@
 
-import { Dispatch, SetStateAction, useState } from "react"
+import { Dispatch, SetStateAction, useEffect, useState } from "react"
 import Button from "../../Components/Button"
 import Modal from "../../Components/Modal"
 import "./ProjectDescriptionModal.css"
@@ -45,12 +45,20 @@ function ProjectDescriptionModal(props: ProjectDescriptionModalProps) {
       onClose()
     }, song)
   }
+
+
+  useEffect(() => {
+    setDescription(props.dto.description)
+  }, [props.dto])
+
   return (
-    <Modal open={props.open}>
-      <textarea className="project-description-modal-textarea" value={description} onChange={e => setDescription(e.target.value)}></textarea>
-      <div className="project-description-modal-buttons">
-        <Button onClick={onSave}>Salveaza</Button>
-        <Button onClick={onClose}>Anuleaza</Button>
+    <Modal open={props.open} onClose={onClose}>
+      <div className="project-description-modal-content">
+        <textarea className="project-description-modal-textarea" value={description} onChange={e => setDescription(e.target.value)}></textarea>
+        <div className="project-description-modal-buttons">
+          <Button onClick={onSave}>Salveaza</Button>
+          <Button onClick={onClose}>Anuleaza</Button>
+        </div>
       </div>
     </Modal>
   )
