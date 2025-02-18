@@ -7,6 +7,7 @@ import ProfilePage from "./Pages/ProfilePage/ProfilePage";
 import IndexPage from "./Pages/IndexPage/IndexPage";
 import ProjectsPage from "./Pages/ProjectsPage/ProjectsPage";
 import EditorPage from "./Pages/EditorPage/EditorPage";
+import PostPage from "./Pages/PostPage/PostPage";
 
 function App() {
 
@@ -21,6 +22,8 @@ function App() {
         <Route path="projects" element={<ProjectsPage />} />
         <Route path="profile" element={<ProfilePage />} />
         <Route path="editor/*" element={<EditorPage />} />
+        <Route path="user/*" element={<EditorPage />} />
+        <Route path="post/*" element={<PostPage />} />
       </Routes>
     </BrowserRouter>
   )

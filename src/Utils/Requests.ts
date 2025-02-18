@@ -1,5 +1,5 @@
 import { Authorization } from "./Authorization"
-import { DtoSongAdd, DtoSongUpdate } from "./Dtos"
+import { DtoSongAdd, DtoSongUpdate, DtoUserUpdate } from "./Dtos"
 
 const API_URL = import.meta.env.VITE_API_URL
 
@@ -27,29 +27,50 @@ export function runRequest(runWithAuth: RunWithAuth, runWithResponse: RunWithRes
 }
 
 export function RequestGetSongs(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse) {
-  runRequest(runWithAuth, runWithResponse, "GET", "Songs")
+  runRequest(runWithAuth, runWithResponse, "GET", "Songs/GetAll")
 }
 
 export function RequestAddUser(auth: Authorization, runWithResponse: RunWithResponse) {
-  runRequest2(auth, runWithResponse, "POST", "Users")
+  runRequest2(auth, runWithResponse, "POST", "Users/Add")
 }
 
 export function RequestGetUserSongs(auth: Authorization, runWithResponse: RunWithResponse) {
-  runRequest2(auth, runWithResponse, "GET", `Songs/user`)
+  runRequest2(auth, runWithResponse, "GET", `Songs/GetByUser`)
 }
 
 export function RequestGetSong(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse, id: string) {
-  runRequest(runWithAuth, runWithResponse, "GET", `Songs/id/${id}`)
+  runRequest(runWithAuth, runWithResponse, "GET", `Songs/GetById/${id}`)
 }
 
 export function RequestAddSong(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse, song: DtoSongAdd) {
-  runRequest(runWithAuth, runWithResponse, "POST", "Songs", { name: song.name, lyrics: "", accessFor: song.accessFor, description: "" })
+  runRequest(runWithAuth, runWithResponse, "POST", "Songs/Add", {
+    name: song.name,
+    lyrics: "",
+    accessFor: song.accessFor,
+    description: ""
+  })
 }
 
 export function RequestDeleteSong(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse, id: string) {
-  runRequest(runWithAuth, runWithResponse, "DELETE", `Songs/id/${id}`)
+  runRequest(runWithAuth, runWithResponse, "DELETE", `Songs/Delete/${id}`)
 }
 
 export function RequestUpdateSong(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse, song: DtoSongUpdate) {
-  runRequest(runWithAuth, runWithResponse, "POST", `Songs/update/${song.id}`, song)
+  runRequest(runWithAuth, runWithResponse, "POST", `Songs/Update`, song)
+}
+
+export function RequestGetPublicSongs(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse) {
+  runRequest(runWithAuth, runWithResponse, "GET", "Songs/GetPublic")
+}
+
+export function RequestGetUserData(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse) {
+  runRequest(runWithAuth, runWithResponse, "GET", "Users/GetUserData")
+}
+
+export function RequestUpdateUser(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse, newUser: DtoUserUpdate) {
+  runRequest(runWithAuth, runWithResponse, "POST", "Users/Update", newUser)
+}
+
+export function RequestToggleRating(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse, ratingName: "Like" | "Dislike", songId: string) {
+  runRequest(runWithAuth, runWithResponse, "POST", `Users/ToggleRating/${ratingName}/${songId}`)
 }

@@ -1,1 +1,80 @@
 
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  color: var(--foreground-color);
+  background-color: var(--background-color);
+  height: calc(100vh - 20px);
+  overflow: auto;
+}
+
+.feed-song {
+  padding: 10px;
+  border-bottom: 2px solid var(--grey);
+  border-radius: 5px 5px 0px 0px;
+}
+
+.feed-song:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.feed-song-username-and-date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: var(--grey);
+}
+
+.feed-song-username-and-date > button {
+  padding: 0px;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--grey);
+  border: none;
+  outline: none;
+}
+
+.feed-song-username-and-date > button:hover {
+  /* background-color: rgba(255, 255, 255, 0.2); */
+  color: var(--foreground-color);
+}
+
+.feed-song-name {
+  color: var(--foreground-color);
+}
+
+.feed-song-description {
+  margin-top: 5px;
+
+}
+
+.feed-rate-icons {
+  display: flex;
+  width: min-content;
+  align-items: center;
+  /* border: 1px solid black; */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.feed-song-footer {
+  margin-top: 5px;
+  gap: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.homepage-loading {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.homepage-rating-active {
+  color: var(--selected-color);
+}

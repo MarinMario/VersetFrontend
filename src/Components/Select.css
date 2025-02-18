@@ -1,11 +1,9 @@
 /* select-buttons */
 .select-buttons {
   display: flex;
-  background-color: var(--middleground-color);
 }
 .select-buttons-vertical {
   display: flex;
-  background-color: var(--middleground-color);
   flex-direction: column;
 }
 
@@ -37,11 +35,11 @@
 
 /* select-button active */
 .select-button:active {
-  background-color: var(--background-active-color);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .select-button-vertical:active {
-  background-color: var(--background-active-color);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* select-button-selected */

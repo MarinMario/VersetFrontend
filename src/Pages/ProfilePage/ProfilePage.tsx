@@ -19,6 +19,7 @@ function ProfilePage() {
 
   useEffect(() => {
     runWithAuth(auth => setTokenData(getIdTokenData(auth)))
+    runWithAuth(auth => console.log(auth.id_token))
   }, [])
 
   const email = tokenData === null ? "Failed to decode user information." : tokenData.email
