@@ -5,8 +5,6 @@ import ProjectCard from "./ProjectCard"
 import { RequestAddSong, RequestGetUserSongs } from "../../Utils/Requests"
 import { getIdTokenData } from "../../Utils/Authorization"
 import { DtoSong, DtoSongAdd } from "../../Utils/Dtos"
-import { LoadingCircle } from "../../Components/Loading"
-import Error from "../../Components/Error"
 import Input from "../../Components/Input"
 import NewProjectModal from "./NewProjectModal"
 import ProjectDetails from "./ProjectDetails"
@@ -19,6 +17,8 @@ import ProjectSettingsModal from "./ProjectSettingsModal"
 import Button from "../../Components/Button"
 import { compareIsoDates } from "../../Utils/DateTime"
 import useWindowSize from "../../Hooks/useWindowSize"
+import LoadingPage from "../../Components/LoadingPage"
+import ErrorPage from "../../Components/ErrorPage"
 
 
 function ProjectsPage() {
@@ -124,22 +124,10 @@ function ProjectsPage() {
       </div>
 
   if (status === "loading")
-    return (
-      <Layout>
-        <div className="projects-page-message">
-          <LoadingCircle />
-        </div>
-      </Layout>
-    )
+    return <LoadingPage />
 
   if (status === "fail")
-    return (
-      <Layout>
-        <div className="projects-page-message">
-          <Error text="Failed to load projects." />
-        </div>
-      </Layout>
-    )
+    return <ErrorPage error="Proiectele nu s-au putut incarca." />
 
   if (projects.length === 0)
     return (

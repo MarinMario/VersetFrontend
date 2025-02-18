@@ -42,6 +42,10 @@ export function RequestGetSong(runWithAuth: RunWithAuth, runWithResponse: RunWit
   runRequest(runWithAuth, runWithResponse, "GET", `Songs/GetById/${id}`)
 }
 
+export function RequestGetSongPublic(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse, id: string) {
+  runRequest(runWithAuth, runWithResponse, "GET", `Songs/GetByIdPublic/${id}`)
+}
+
 export function RequestAddSong(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse, song: DtoSongAdd) {
   runRequest(runWithAuth, runWithResponse, "POST", "Songs/Add", {
     name: song.name,

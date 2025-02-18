@@ -2,21 +2,24 @@ import { useEffect, useState } from "react"
 import Layout from "../../Components/Layout"
 import "./HomePage.css"
 import useGoogleAuth from "../../Hooks/useGoogleAuth"
-import { DtoSongPublic, DtoUser, DtoUserUpdate } from "../../Utils/Dtos"
-import { RequestGetPublicSongs, RequestGetUserData, RequestToggleRating, RequestUpdateUser } from "../../Utils/Requests"
+import { DtoSongPublic, DtoUser } from "../../Utils/Dtos"
+import { RequestGetPublicSongs, RequestGetUserData, RequestToggleRating } from "../../Utils/Requests"
 import { compareIsoDates, isoToText } from "../../Utils/DateTime"
 import { MdThumbUp } from "react-icons/md";
 import { MdThumbDown } from "react-icons/md";
 import { FaComment } from "react-icons/fa";
 import { FaShare } from "react-icons/fa";
 import Button from "../../Components/Button"
-import { LoadingCircle } from "../../Components/Loading"
+import { useNavigate } from "react-router-dom"
+import LoadingPage from "../../Components/LoadingPage"
 
 function HomePage() {
 
   const { runWithAuth } = useGoogleAuth()
   const [publicSongs, setPublicSongs] = useState<DtoSongPublic[]>([])
   const [userData, setUserData] = useState<DtoUser | null>(null)
+
+  const navigate = useNavigate()
 
   const sortedSongs = publicSongs.sort((a, b) => -compareIsoDates(a.lastUpdateDate, b.lastUpdateDate))
 
@@ -40,7 +43,8 @@ function HomePage() {
     })
   }
 
-  const onRatingClick = (ratingName: "Like" | "Dislike", songId: string) => {
+  const onRatingClick = (ratingName: "Like" | "Dislike", songId: string, event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    event.stopPropagation()
     RequestToggleRating(runWithAuth, response => {
       if (response.ok) {
         loadPublicSongs()
@@ -69,21 +73,15 @@ function HomePage() {
   }
 
 
-  // if (userData == null)
-  //   return (
-  //     <Layout>
-  //       <div className="homepage-loading">
-  //         <LoadingCircle />
-  //       </div>
-  //     </Layout>
-  //   )
+  if (userData == null)
+    return <LoadingPage />
 
   return (
     <Layout>
       <div className="feed">
         {
           sortedSongs.map(song =>
-            <div key={song.id} className="feed-song">
+            <div key={song.id} className="feed-song" onClick={() => navigate(`/post/${song.id}`)}>
               <div className="feed-song-header">
                 <div className="feed-song-username-and-date">
                   <button>{song.user.name}</button>
@@ -97,11 +95,11 @@ function HomePage() {
               </div>
               <div className="feed-song-footer">
                 <div className="feed-rate-icons">
-                  <Button variant="text" onClick={() => onRatingClick("Like", song.id)}>
+                  <Button variant="text" onClick={event => onRatingClick("Like", song.id, event)}>
                     <MdThumbUp className={likeClassName(song.id)} />
                     {song.likes}
                   </Button>
-                  <Button variant="text" onClick={() => onRatingClick("Dislike", song.id)}>
+                  <Button variant="text" onClick={event => onRatingClick("Dislike", song.id, event)}>
                     <MdThumbDown className={dislikeClassName(song.id)} />
                     {song.dislikes}
                   </Button>

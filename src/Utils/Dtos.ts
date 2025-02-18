@@ -50,6 +50,7 @@ export interface DtoSongUpdate {
 export interface DtoSongPublic {
   id: string,
   name: string,
+  lyrics: string,
   description: string,
   creationDate: string,
   lastUpdateDate: string,

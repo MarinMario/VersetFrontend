@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useLocation, useNavigate } from "react-router-dom"
+import { useLocation, useNavigate, useParams } from "react-router-dom"
 import { RequestGetSong, RequestUpdateSong } from "../../Utils/Requests"
 import useGoogleAuth from "../../Hooks/useGoogleAuth"
 import { DtoSong, DtoSongUpdate } from "../../Utils/Dtos"
@@ -16,13 +16,19 @@ function EditorPage() {
   const { runWithAuth } = useGoogleAuth()
   const location = useLocation()
   const navigate = useNavigate()
-  const songId = location.pathname.replace("/editor/", "")
+  const params = useParams()
+  const songId = params["id"]
   const [dto, setDto] = useState<DtoSong | null>(null)
   const [status, setStatus] = useState<"loading" | "success" | "fail">("loading")
   const [saveStatus, setSaveStatus] = useState<"loading" | "success" | "fail">("success")
   const [content, setContent] = useState("")
 
   const loadContent = () => {
+    if(songId === undefined) {
+      console.log("Id parameter is not defined.")
+      return
+    }
+
     setStatus("loading")
     RequestGetSong(runWithAuth, response => {
       if (response.ok) {

@@ -4,7 +4,7 @@ import "./Button.css"
 
 interface ButtonProps {
   children: ReactNode
-  onClick?: () => void
+  onClick?: (event : React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
   buttonProps?: React.ButtonHTMLAttributes<HTMLButtonElement>
   dark?: boolean
   variant?: "outlined" | "text"
