@@ -55,7 +55,22 @@ export interface DtoSongPublic {
   creationDate: string,
   lastUpdateDate: string,
   likes: number,
-  dislikes: number
+  dislikes: number,
+  comments: number,
   user: DtoUserPublic
+}
+
+export interface DtoCommentAdd {
+  content: string,
+  songId: string
+}
+
+export interface DtoCommentPublic {
+  id: string,
+  content: string,
+  creationDate: string,
+  edited: boolean,
+  user: DtoUserPublic,
+  songId: string
 }
 

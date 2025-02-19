@@ -13,7 +13,7 @@
   color: var(--text-color);
   background-color: unset;
   border-bottom: 3px solid rgba(0, 0, 0, 0);
-  padding: 10px 30px 10px 30px;
+  padding: 10px 23px 10px 23px;
 }
 
 .select-button-vertical {
@@ -45,7 +45,7 @@
 /* select-button-selected */
 .select-button-selected {
   border: none;
-  padding: 10px 30px 10px 30px;
+  padding: 10px 23px 10px 23px;
   background-color: unset;
   border-bottom: 3px solid var(--selected-color);
   color: var(--selected-color);

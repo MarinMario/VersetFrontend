@@ -28,7 +28,7 @@
 }
 
 .layout-content {
-  width: 100% ; 
+  width: 100%; 
 }
 
 @media (orientation: portrait) {
@@ -46,7 +46,7 @@
     align-items: center;
   }
 }
-@media (max-height: 450px) {
+@media (max-height: 580px) {
   .layout-container {
     justify-content: center;
   }

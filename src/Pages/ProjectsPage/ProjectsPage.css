@@ -12,12 +12,15 @@
   margin-bottom: 10px;
 }
 
+.projects-container {
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+
 .projects {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  height: calc(100vh - 60px);
-  overflow-y: auto;
 }
 
 .project-selection {

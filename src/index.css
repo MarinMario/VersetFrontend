@@ -4,6 +4,7 @@
   --background-color-hover: rgba(255, 255, 255, 0.1);
   --background-color-active: rgba(255, 255, 255, 0.2);
   --background-color-selected: rgba(255, 255, 255, 0.1);
+  --middleground-color: #202020;
   --foreground-color: #313131;
   --text-color: #e0e0e0;
   --text-color-secondary: #b1b1b1;

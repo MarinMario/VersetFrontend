@@ -106,21 +106,23 @@ function ProjectsPage() {
     projects.length === 0
       ? <>Nu ai proiecte...</>
       :
-      <div className="projects">
-        {
-          filterProjects(projects).map(project =>
-            <span
-              key={project.id}
-              onClick={() => setSelectedProject(project.id)}
-            >
-              <ProjectCard
-                dto={project}
-                selected={selectedProject === project.id}
-                loadProjects={loadProjects}
-              />
-            </span>
-          )
-        }
+      <div className="projects-container">
+        <div className="projects">
+          {
+            filterProjects(projects).map(project =>
+              <span
+                key={project.id}
+                onClick={() => setSelectedProject(project.id)}
+              >
+                <ProjectCard
+                  dto={project}
+                  selected={selectedProject === project.id}
+                  loadProjects={loadProjects}
+                />
+              </span>
+            )
+          }
+        </div>
       </div>
 
   if (status === "loading")

@@ -26,8 +26,8 @@ function useGoogleAuth() {
       return
     }
 
-    const expiresIn = Math.floor((auth.expiration_unix - Date.now()) / 1000)
-    console.log(`Authorization expires in ${expiresIn} seconds.`)
+    // const expiresIn = Math.floor((auth.expiration_unix - Date.now()) / 1000)
+    // console.log(`Authorization expires in ${expiresIn} seconds.`)
 
     run(auth)
   };
