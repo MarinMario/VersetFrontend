@@ -69,7 +69,7 @@ function ProjectCard(props: ProjectCardProps) {
         <FaMusic className={musicIconClassNames} />
         <div>
           <div className="project-name">{visibleName}</div>
-          <div>{lastUpdateText}</div>
+          <div className="project-last-update">{lastUpdateText}</div>
         </div>
       </div>
       <div className="project-card-buttons">

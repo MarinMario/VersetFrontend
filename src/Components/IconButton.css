@@ -2,7 +2,7 @@
   padding: 10px;
   border-radius: 50px;
   border: none;
-  color: var(--foreground-color);
+  color: var(--text-color);
   background-color: rgba(0, 0, 0, 0);
   display: flex;
   gap: 10px;
@@ -12,11 +12,11 @@
 }
 
 .icon-button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--background-color-hover);
 }
 
 .icon-button:active {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--background-color-active);
 
 }
 

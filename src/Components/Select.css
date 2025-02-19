@@ -10,7 +10,7 @@
 /* select-button  */
 .select-button {
   border: none;
-  color: var(--foreground-color);
+  color: var(--text-color);
   background-color: unset;
   border-bottom: 3px solid rgba(0, 0, 0, 0);
   padding: 10px 30px 10px 30px;
@@ -18,7 +18,7 @@
 
 .select-button-vertical {
   border: none;
-  color: var(--foreground-color);
+  color: var(--text-color);
   background-color: unset;
   border-left: 3px solid rgba(0, 0, 0, 0);
   padding: 20px 30px 20px 20px;
@@ -30,16 +30,16 @@
 }
 
 .select-button-vertical:hover {
-  border-left: 3px solid white;
+  border-left: 3px solid var(--text-color);
 }
 
 /* select-button active */
 .select-button:active {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--background-color-active);
 }
 
 .select-button-vertical:active {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--background-color-active);
 }
 
 /* select-button-selected */
