@@ -26,6 +26,12 @@ body {
   overflow: hidden;
 }
 
+@media (orientation: portrait) {
+  html, body {
+    height: 2000px;
+  }
+}
+
 body {
   color: var(--text-color);
   background-color: var(--background-color);

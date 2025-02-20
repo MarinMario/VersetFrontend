@@ -34,7 +34,8 @@
 @media (orientation: portrait) {
   .layout-page {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    height: 100vh;
   }
   
   .layout-container {
