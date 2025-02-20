@@ -75,13 +75,16 @@
   }
 
   .comment-content {
-    max-width: 100%;
+    /* max-width: 100%; */
   }
-
 }
 
 @media (orientation: portrait) {
   .post-page {
     height: calc(100vh - 50px);
+  }
+
+  .comment-editor {
+    width: auto;
   }
 }

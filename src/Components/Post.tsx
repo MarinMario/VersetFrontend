@@ -7,6 +7,7 @@ import { RequestToggleRating } from "../Utils/Requests"
 import useGoogleAuth from "../Hooks/useGoogleAuth"
 import "./Post.css"
 import { useNavigate } from "react-router-dom"
+import { useState } from "react"
 
 
 interface PostProps {
@@ -41,6 +42,13 @@ function Post(props: PostProps) {
   const onUserNameClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     event.stopPropagation()
     navigate(`/profile/${song.user.id}`)
+  }
+
+  const [shareStatus, setShareStatus] = useState(false)
+  const onShare = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    event.stopPropagation()
+    navigator.clipboard.writeText(`${location.origin}/post/${song.id}`)
+    setShareStatus(true)
   }
 
   const content =
@@ -89,7 +97,18 @@ function Post(props: PostProps) {
           </Button>
         </div>
         <Button variant="text"><FaComment />{song.comments}</Button>
-        <Button variant="text"><FaShare />Share</Button>
+        <Button
+          className="post-share-button"
+          variant="text"
+          onClick={onShare}
+          buttonProps={{
+            onMouseLeave: () => setShareStatus(false)
+          }}
+        >
+          {
+            shareStatus ? "Copied" : <><FaShare />Share</>
+          }
+        </Button>
       </div>
     </div>
   )

@@ -38,7 +38,6 @@
 
 .post-description {
   margin-top: 5px;
-
 }
 
 .post-rate-icons {
@@ -59,4 +58,11 @@
 
 .post-rating-active {
   color: var(--selected-color);
+}
+
+.post-share-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
 }
