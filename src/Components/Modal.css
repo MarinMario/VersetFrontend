@@ -4,7 +4,6 @@
   bottom: 0px;
   left: 0px;
   right: 0px;
-  background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
 }
 
@@ -15,6 +14,16 @@
   transform: translate(-50%, -50%);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  background-color: var(--middleground-color);
+  background-color: var(--foreground-color);
   padding: 10px;
+}
+
+@media (orientation: portrait) {
+  .modal {
+    background-color: var(--foreground-color);
+  }
+
+  .modal-content {
+    box-shadow: none;
+  }
 }

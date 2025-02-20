@@ -5,7 +5,7 @@ import { useState } from "react";
 import { MdEdit, MdDelete } from "react-icons/md";
 import IconButton from "../../Components/IconButton";
 import AreYouSureModal from "../../Components/AreYouSureModal";
-import { getMonthRomanian } from "../../Utils/DateTime";
+import { isoToText } from "../../Utils/DateTime";
 import { RequestDeleteSong } from "../../Utils/Requests";
 import useGoogleAuth from "../../Hooks/useGoogleAuth";
 import { useNavigate } from "react-router-dom";
@@ -27,8 +27,7 @@ function ProjectCard(props: ProjectCardProps) {
   const name = props.dto.name
   const visibleName = name.length <= 30 ? name : name.slice(0, 28) + "..."
 
-  const lastUpdate = new Date(props.dto.lastUpdateDate + "Z")
-  const lastUpdateText = lastUpdate.getDate() + " " + getMonthRomanian(lastUpdate) + " " + lastUpdate.getFullYear()
+  const lastUpdateText = isoToText(props.dto.lastUpdateDate + "Z")
 
   const { runWithAuth } = useGoogleAuth()
 
@@ -70,7 +69,7 @@ function ProjectCard(props: ProjectCardProps) {
         <FaMusic className={musicIconClassNames} />
         <div>
           <div className="project-name">{visibleName}</div>
-          <div>{lastUpdateText}</div>
+          <div className="project-last-update">{lastUpdateText}</div>
         </div>
       </div>
       <div className="project-card-buttons">

@@ -14,11 +14,11 @@ interface NewProjectModalProps {
 function NewProjectModal(props: NewProjectModalProps) {
 
   const [name, setName] = useState("")
-  const [accessFor, setAccessFor] = useState<"0" | "1" | "2">("1")
+  const [accessFor, setAccessFor] = useState<"0" | "1" | "2">("2")
   const onClose = () => {
     props.setOpen(false)
     setName("")
-    setAccessFor("1")
+    setAccessFor("2")
   }
 
   const addProject = () => {

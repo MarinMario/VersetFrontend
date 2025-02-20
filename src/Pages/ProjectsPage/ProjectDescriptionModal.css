@@ -1,0 +1,25 @@
+
+.project-description-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-description-modal-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.project-description-modal-textarea {
+  width: 50vw;
+  height: 50vh;
+  background-color: var(--background-color);
+  border: none;
+  outline: none;
+  color: var(--text-color);
+  padding: 5px;
+  border-radius: 5px;
+  resize: none;
+}

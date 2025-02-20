@@ -1,1 +1,25 @@
 
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  height: calc(100vh - 20px);
+  overflow: auto;
+}
+
+.feed-song {
+  padding: 10px;
+  border-bottom: 2px solid var(--foreground-color);
+  border-radius: 5px 5px 0px 0px;
+}
+
+.feed-song:hover {
+  background-color: var(--background-color-hover);
+}
+
+@media (orientation: portrait) {
+  .feed {
+    height: calc(100vh - 70px);
+  }
+}

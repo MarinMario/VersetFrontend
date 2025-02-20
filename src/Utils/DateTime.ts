@@ -31,3 +31,45 @@ export function compareIsoDates(date1: string, date2: string) {
 
   return -1
 }
+
+function formatMinutes(x: number) {
+  if (x < 10)
+    return "0" + x.toString()
+
+  return x.toString()
+}
+
+export function formatIsoDate(date: string) {
+  const d = new Date(date)
+
+  const formatted = d.getDate() + " " + getMonthRomanian(d) + " " + d.getFullYear() + " " + d.getHours() + ":" + formatMinutes(d.getMinutes())
+
+  return formatted
+}
+
+export function isoToText(date: string) {
+  const d = new Date(date)
+  const dateUnix = d.getTime()
+  const nowUnix = new Date().getTime()
+  const timeDiff = nowUnix - dateUnix
+
+  if (timeDiff < 60000) // 1 minute
+    return "chiar acum"
+
+  if (timeDiff < 86400000) { // 24 hours
+    const hours = Math.floor(timeDiff / 3600000)
+    const minutes = Math.floor(timeDiff / 60000)
+    if (hours === 0)
+      return "acum " + minutes + (minutes === 1 ? " minut" : " minute")
+    if (hours === 1)
+      return "acum o ora"
+    return "acum " + hours + " ore"
+  }
+
+  if (timeDiff < 172800000) {
+    return "ieri la " + d.getHours() + formatMinutes(d.getMinutes())
+  }
+
+  return d.getDate() + " " + getMonthRomanian(d) + " " + d.getFullYear() + " " + d.getHours() + ":" + formatMinutes(d.getMinutes())
+
+}

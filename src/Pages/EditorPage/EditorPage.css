@@ -10,29 +10,29 @@
 }
 
 .editor-page-header {
-  background-color: var(--middleground-color);
   padding: 5px;
   display: flex;
   height: 26px;
 }
 
-.editor-page-options {
-  background-color: var(--middleground-color);
-}
-
 .editor-page-function {
-  background-color: #1f1f1f;
   padding: 5px;
   width: 200px;
+  background-color: var(--middleground-color);
 }
 
 .editor-content-message {
   padding: 5px;
+  display: flex;
+  align-items: center;
   width: 100%;
+  justify-content: center;
+  background-color: var(--freground-color);
 }
 
 .editor-page-save-button-content {
-  display: grid;
-  grid-template-columns: 20px auto 20px;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  width: 30px;
 }

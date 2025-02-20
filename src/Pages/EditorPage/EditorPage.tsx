@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import { useLocation, useNavigate } from "react-router-dom"
+import { useLocation, useNavigate, useParams } from "react-router-dom"
 import { RequestGetSong, RequestUpdateSong } from "../../Utils/Requests"
 import useGoogleAuth from "../../Hooks/useGoogleAuth"
-import { DtoSong } from "../../Utils/Dtos"
+import { DtoSong, DtoSongUpdate } from "../../Utils/Dtos"
 import Status from "../../Components/Status"
 import Loading, { LoadingCircle } from "../../Components/Loading"
 import Error from "../../Components/Error"
@@ -16,13 +16,19 @@ function EditorPage() {
   const { runWithAuth } = useGoogleAuth()
   const location = useLocation()
   const navigate = useNavigate()
-  const songId = location.pathname.replace("/editor/", "")
+  const params = useParams()
+  const songId = params["id"]
   const [dto, setDto] = useState<DtoSong | null>(null)
   const [status, setStatus] = useState<"loading" | "success" | "fail">("loading")
   const [saveStatus, setSaveStatus] = useState<"loading" | "success" | "fail">("success")
   const [content, setContent] = useState("")
 
   const loadContent = () => {
+    if(songId === undefined) {
+      console.log("Id parameter is not defined.")
+      return
+    }
+
     setStatus("loading")
     RequestGetSong(runWithAuth, response => {
       if (response.ok) {
@@ -46,6 +52,14 @@ function EditorPage() {
       return
     }
 
+    const song: DtoSongUpdate = {
+      id: dto.id,
+      name: dto.name,
+      lyrics: content,
+      description: dto.description,
+      accessFor: dto.accessFor,
+    }
+
     setSaveStatus("loading")
     RequestUpdateSong(runWithAuth, response => {
       if (response.ok) {
@@ -53,7 +67,7 @@ function EditorPage() {
       } else {
         setSaveStatus("fail")
       }
-    }, dto.id, dto.name, content, dto.accessFor)
+    }, song)
   }
 
   useEffect(() => {
@@ -77,15 +91,11 @@ function EditorPage() {
         <Button small variant="text" onClick={() => navigate("/projects")}>Proiecte</Button>
         <Button small variant="text" onClick={saveContent}>
           <div className="editor-page-save-button-content">
-            <div>
-              {
-                saveStatus === "loading"
-                  ? <LoadingCircle small />
-                  : <></>
-              }
-            </div>
-            <div>Save</div>
-            <div></div>
+            {
+              saveStatus === "loading"
+                ? <LoadingCircle small />
+                : "Save"
+            }
           </div>
         </Button>
         <Button small variant="text">File</Button>
@@ -101,7 +111,7 @@ function EditorPage() {
           />
         </div>
         <div className="editor-page-function">
-          
+
         </div>
         <Status
           status={status}
@@ -109,6 +119,7 @@ function EditorPage() {
             "loading": <div className="editor-content-message"><Loading text="Loading project..." /></div>,
             "fail": <div className="editor-content-message"><Error text="Failed to load project." /></div>,
             "success": <EditorTextbox content={content} setContent={setContent} />
+            // success: <div className="editor-content-message"><LoadingCircle /></div>
           }}
         />
       </div>

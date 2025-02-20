@@ -1,10 +1,11 @@
 import { useLocation, useNavigate } from "react-router-dom"
 import Select, { IconSelectButtonContent } from "./Select"
 import { BiSolidNavigation } from "react-icons/bi";
-import { MdNotifications } from "react-icons/md";
+// import { MdNotifications } from "react-icons/md";
 import { FaToolbox } from "react-icons/fa6";
 import { FaAt } from "react-icons/fa";
 import { ReactNode } from "react";
+// import { FaUserFriends } from "react-icons/fa";
 import "./Layout.css"
 import useVerticalPage from "../Hooks/useVerticalPage";
 import useWindowSize from "../Hooks/useWindowSize";
@@ -23,14 +24,11 @@ function Layout(props: LayoutProps) {
 
   const verticalPage = useVerticalPage()
   const windowSize = useWindowSize()
-  const smallHeader = !verticalPage && windowSize.height < 450
+  const smallHeader = !verticalPage && windowSize.height < 580
 
   const displayText = (text: string) => {
     if (verticalPage)
       return ""
-
-    // if (smallHeader)
-    //   return ""
 
     return text
   }
@@ -43,14 +41,15 @@ function Layout(props: LayoutProps) {
         }
         <Select
           vertical={!verticalPage}
-          options={["/feed", "/notifications", "/projects", "/profile"]}
+          options={["/feed", "/projects", "/my-profile"]}
           selected={selected}
           onOptionClick={handleOnSelect}
           optionContent={{
-            "/feed": <IconSelectButtonContent icon={BiSolidNavigation} text={displayText("Feed")} iconClassName="icon" />,
-            "/notifications": <IconSelectButtonContent icon={MdNotifications} text={displayText("Notificari")} iconClassName="small-icon" />,
+            "/feed": <IconSelectButtonContent icon={BiSolidNavigation} text={displayText("Discover")} iconClassName="icon" />,
+            // "/following": <IconSelectButtonContent icon={FaUserFriends} text={displayText("Following")} iconClassName="icon" />,
+            // "/notifications": <IconSelectButtonContent icon={MdNotifications} text={displayText("Notificari")} iconClassName="small-icon" />,
             "/projects": <IconSelectButtonContent icon={FaToolbox} text={displayText("Proiecte")} iconClassName="icon" />,
-            "/profile": <IconSelectButtonContent icon={FaAt} text={displayText("Profil")} iconClassName="icon" />
+            "/my-profile": <IconSelectButtonContent icon={FaAt} text={displayText("Profil")} iconClassName="icon" />
           }}
         />
       </div>

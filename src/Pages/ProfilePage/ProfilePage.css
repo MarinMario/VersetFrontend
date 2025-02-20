@@ -1,6 +1,5 @@
 .profile-page {
-  padding: 50px;
-  background-color: var(--middleground-color);
+  /* background-color: var(--middleground-color); */
   overflow: auto;
   border-radius: 10px;
   display: flex;
