@@ -100,3 +100,8 @@ export function RequestGetCommentsBySongId(runWithAuth: RunWithAuth, runWithResp
   console.log(`Request: Comments/GetBySongId/${songId}`)
   runRequest(runWithAuth, runWithResponse, "GET", `Comments/GetBySongId/${songId}`)
 }
+
+export function RequestDeleteComment(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse, commentId: string) {
+  console.log(`Request: Comments/Delete/${commentId}`)
+  runRequest(runWithAuth, runWithResponse, "DELETE", `Comments/Delete/${commentId}`)
+}

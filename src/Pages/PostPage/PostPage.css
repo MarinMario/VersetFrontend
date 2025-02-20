@@ -58,6 +58,14 @@
   color: var(--selected-color);
 }
 
+.comment-content-container {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  max-width: 500px;
+  /* width: 100%; */
+}
+
 .comment-content {
   /* background-color: var(--foreground-color); */
   min-width: 100px;
@@ -68,6 +76,7 @@
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
 
 @media (max-width: 670px) {
   .comment-editor {

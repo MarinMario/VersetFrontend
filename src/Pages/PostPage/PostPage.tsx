@@ -2,8 +2,8 @@ import { useEffect, useState } from "react"
 import Layout from "../../Components/Layout"
 import useGoogleAuth from "../../Hooks/useGoogleAuth"
 import { useParams } from "react-router-dom"
-import { DtoCommentAdd, DtoCommentPublic, DtoSongAdd, DtoSongPublic, DtoUser } from "../../Utils/Dtos"
-import { RequestAddComment, RequestGetCommentsBySongId, RequestGetSongPublic, RequestGetUserData } from "../../Utils/Requests"
+import { DtoCommentAdd, DtoCommentPublic, DtoSongPublic, DtoUser } from "../../Utils/Dtos"
+import { RequestAddComment, RequestDeleteComment, RequestGetCommentsBySongId, RequestGetSongPublic, RequestGetUserData } from "../../Utils/Requests"
 import LoadingPage from "../../Components/LoadingPage"
 import ErrorPage, { PageNotFound } from "../../Components/ErrorPage"
 import Post from "../../Components/Post"
@@ -11,6 +11,8 @@ import "./PostPage.css"
 import Button from "../../Components/Button"
 import { compareIsoDates, isoToText } from "../../Utils/DateTime"
 import { LoadingCircle } from "../../Components/Loading"
+import IconButton from "../../Components/IconButton"
+import { MdDelete } from "react-icons/md";
 
 function PostPage() {
 
@@ -86,6 +88,14 @@ function PostPage() {
     setCommentText("")
   }
 
+  const deleteComment = (commentId: string) => {
+    RequestDeleteComment(runWithAuth, response => {
+      if (response.ok && post !== null) {
+        loadComments(post.id)
+      }
+    }, commentId)
+  }
+
   const onRatingClick = () => {
     loadPost()
     loadUserData()
@@ -131,7 +141,18 @@ function PostPage() {
                     <div>⦁</div>
                     <div>{isoToText(c.creationDate + "Z")}</div>
                   </div>
-                  <div className="comment-content">{c.content}</div>
+                  <div className="comment-content-container">
+                    <div className="comment-content">{c.content}</div>
+                    {/* <Button onClick={() => deleteComment(c.id)}>Sterge</Button> */}
+                    <div>
+                      {
+                        userData.id === c.user.id
+                          ? <IconButton onClick={() => deleteComment(c.id)} icon={MdDelete} iconClassName="small-icon" />
+                          : <></>
+                      }
+
+                    </div>
+                  </div>
                 </div>
               )
             }
