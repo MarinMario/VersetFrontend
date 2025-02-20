@@ -67,7 +67,11 @@ export function isoToText(date: string) {
   }
 
   if (timeDiff < 172800000) {
-    return "ieri la " + d.getHours() + formatMinutes(d.getMinutes())
+    return "ieri la " + d.getHours() + ":" + formatMinutes(d.getMinutes())
+  }
+
+  if (timeDiff < 2592000000) {
+    return "acum " + Math.floor(timeDiff / 86400000) + " zile"
   }
 
   return d.getDate() + " " + getMonthRomanian(d) + " " + d.getFullYear() + " " + d.getHours() + ":" + formatMinutes(d.getMinutes())
