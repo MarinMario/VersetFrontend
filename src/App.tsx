@@ -26,7 +26,7 @@ function App() {
         <Route path="feed" element={<HomePage />} />
         <Route path="notifications" element={<Layout>Notificari</Layout>} />
         <Route path="projects" element={<ProjectsPage />} />
-        <Route path="profile" element={<ProfilePage />} />
+        <Route path="my-profile" element={<ProfilePage />} />
         <Route path="editor/:id" element={<EditorPage />} />
         <Route path="user/:id" element={<EditorPage />} />
         <Route path="post/:id" element={<PostPage />} />

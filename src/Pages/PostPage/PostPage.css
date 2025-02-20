@@ -82,10 +82,6 @@
   .comment-editor {
     width: auto;
   }
-
-  .comment-content {
-    /* max-width: 100%; */
-  }
 }
 
 @media (orientation: portrait) {

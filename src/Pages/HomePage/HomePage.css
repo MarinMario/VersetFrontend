@@ -17,3 +17,9 @@
 .feed-song:hover {
   background-color: var(--background-color-hover);
 }
+
+@media (orientation: portrait) {
+  .feed {
+    height: calc(100vh - 70px);
+  }
+}

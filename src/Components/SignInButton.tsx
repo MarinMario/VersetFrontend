@@ -25,9 +25,10 @@ function SignInButton() {
           } else {
             response.json().then(err => console.log(err))
           }
+
+          navigate("/feed")
         })
       }
-      navigate("/feed")
     },
   });
 
