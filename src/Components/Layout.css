@@ -14,11 +14,11 @@
   display: flex;
 }
 
-.layout-container {
+.layout-menu {
   display: flex;
   flex-direction: column;
   padding: 5px 5px 5px 5px;
-  height: 100vh;
+  height: 100dvh;
   gap: 50px;
   align-items: center;
 }
@@ -35,10 +35,10 @@
   .layout-page {
     display: flex;
     flex-direction: column-reverse;
-    height: 100vh;
+    height: 100dvh;
   }
   
-  .layout-container {
+  .layout-menu {
     display: flex;;
     justify-content: center;
     padding: 0px;
@@ -48,7 +48,7 @@
   }
 }
 @media (max-height: 580px) {
-  .layout-container {
+  .layout-menu {
     justify-content: center;
   }
 }
