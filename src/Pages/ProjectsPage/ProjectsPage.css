@@ -13,7 +13,7 @@
 }
 
 .projects-container {
-  /* height: calc(100vh - 60px); */
+  height: calc(100dvh - 60px);
   overflow-y: auto;
 }
 
@@ -47,6 +47,6 @@
 
 @media (orientation: portrait) {
   .projects {
-    height: calc(100vh - 110px);
+    height: calc(100dvh - 110px);
   }
 }

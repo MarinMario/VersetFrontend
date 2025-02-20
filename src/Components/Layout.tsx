@@ -35,7 +35,7 @@ function Layout(props: LayoutProps) {
 
   return (
     <div className="layout-page">
-      <div className="layout-container">
+      <div className="layout-menu">
         {
           verticalPage || smallHeader ? <></> : <div className="app-name">Verset</div>
         }

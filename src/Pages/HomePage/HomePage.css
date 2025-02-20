@@ -4,7 +4,7 @@
   flex-direction: column;
   gap: 10px;
   padding: 10px;
-  height: calc(100vh - 20px);
+  height: calc(100dvh - 20px);
   overflow: auto;
 }
 
@@ -20,6 +20,6 @@
 
 @media (orientation: portrait) {
   .feed {
-    height: calc(100vh - 70px);
+    height: calc(100dvh - 70px);
   }
 }

@@ -1,6 +1,6 @@
 .post-page {
   overflow: auto;
-  height: 100vh;
+  height: 100dvh;
 }
 
 .comment-editor {
@@ -86,7 +86,7 @@
 
 @media (orientation: portrait) {
   .post-page {
-    height: calc(100vh - 50px);
+    height: calc(100dvh - 50px);
   }
 
   .comment-editor {
