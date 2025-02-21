@@ -1,11 +1,7 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react"
 import "./DefinitionTab.css"
-import Input from "../../Components/Input"
-import Button from "../../Components/Button"
-import { LoadingCircle } from "../../Components/Loading"
-import Error from "../../Components/Error"
-import Status from "../../Components/Status"
 import { getDefinition } from "../../Utils/Misc"
+import EditorFunction from "./EditorFunction"
 
 interface DefinitionTabProps {
   input: string
@@ -21,6 +17,9 @@ function DefinitionTab(props: DefinitionTabProps) {
   // const [test, setTest] = useState<
 
   const loadDefinitions = () => {
+    if (props.input === "")
+      return
+
     setStatus("Loading")
     getDefinition(props.type, props.input, defs => {
       setStatus("Success")
@@ -39,27 +38,16 @@ function DefinitionTab(props: DefinitionTabProps) {
   }, [])
 
   return (
-    <div className="editor-page-function">
-      <div className="editor-function-header">
-        <Input
-          inputProps={{
-            placeholder: "Cauta cuvant...",
-            onChange: e => props.setInput(e.target.value),
-            value: props.input
-          }} />
-        <Button onClick={loadDefinitions}>Cauta</Button>
-      </div>
-      <div className="editor-function-body">
-        <Status
-          status={status}
-          contentByStatus={{
-            "Success": definitions.map(def => <div key={def} dangerouslySetInnerHTML={{ __html: def }}></div>),
-            "Loading": <LoadingCircle />,
-            "Empty": <Error text="Nu exista definitii." />
-          }}
-        />
-      </div>
-    </div>
+    <EditorFunction
+      input={props.input}
+      setInput={props.setInput}
+      onSearch={loadDefinitions}
+      status={status}
+    >
+      {
+        definitions.map((def, index) => <div key={index} dangerouslySetInnerHTML={{ __html: def }}></div>)
+      }
+    </EditorFunction>
   )
 }
 

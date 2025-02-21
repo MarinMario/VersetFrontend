@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useLocation, useNavigate, useParams } from "react-router-dom"
-import { RequestGetDexDefinition, RequestGetSong, RequestUpdateSong } from "../../Utils/Requests"
+import { RequestGetSong, RequestUpdateSong } from "../../Utils/Requests"
 import useGoogleAuth from "../../Hooks/useGoogleAuth"
 import { DtoSong, DtoSongUpdate } from "../../Utils/Dtos"
 import Status from "../../Components/Status"
@@ -11,7 +11,7 @@ import Button from "../../Components/Button"
 import Select from "../../Components/Select"
 import EditorTextbox from "./EditorTextbox"
 import DefinitionTab from "./DefinitionTab"
-import Input from "../../Components/Input"
+import RhymesTab from "./RhymesTab"
 
 function EditorPage() {
 
@@ -24,8 +24,15 @@ function EditorPage() {
   const [status, setStatus] = useState<"loading" | "success" | "fail">("loading")
   const [saveStatus, setSaveStatus] = useState<"loading" | "success" | "fail">("success")
   const [content, setContent] = useState("")
-  const [option, setOption] = useState<"Definitie" | "Rime" | "Sinonime" | "Antonime">("Definitie")
+  const [option, setOption] = useState<"Editor" | "Definitie" | "Rime" | "Sinonime" | "Antonime">("Editor")
   const [functionInput, setFunctionInput] = useState("")
+  const [wordList, setWordList] = useState<string[]>([])
+
+  const loadWordList = () => {
+    fetch('/RomanianWordlist.txt')
+      .then(response => response.text())
+      .then(text => setWordList(text.split("\r\n")))
+  }
 
   const loadContent = () => {
     if (songId === undefined) {
@@ -91,7 +98,7 @@ function EditorPage() {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.ctrlKey && event.key === "s") {
-        event.preventDefault(); // Prevent the browser's save dialog
+        event.preventDefault()
         saveContent()
       }
     };
@@ -102,6 +109,9 @@ function EditorPage() {
     };
   }, [])
 
+  useEffect(() => {
+    loadWordList()
+  }, [])
 
   return (
     <div className="editor-page">
@@ -116,14 +126,14 @@ function EditorPage() {
             }
           </div>
         </Button>
-        <Button small variant="text">File</Button>
+        {/* <Button small variant="text">File</Button>
         <Button small variant="text">Sync with Docs</Button>
-        <Button small variant="text">Settings</Button>
+        <Button small variant="text">Settings</Button> */}
       </div>
       <div className="editor-page-content">
         <div className="editor-page-options">
           <Select vertical
-            options={["Definitie", "Rime", "Sinonime", "Antonime"]}
+            options={["Editor", "Definitie", "Rime", "Sinonime", "Antonime"]}
             selected={option}
             onOptionClick={option => {
               setOption(option)
@@ -133,8 +143,9 @@ function EditorPage() {
         <Status
           status={option}
           contentByStatus={{
+            "Editor": <></>,
             "Definitie": <DefinitionTab key="def" type="definitie" input={functionInput} setInput={setFunctionInput} />,
-            "Rime": <>Rime</>,
+            "Rime": <RhymesTab input={functionInput} setInput={setFunctionInput} wordList={wordList} />,
             "Sinonime": <DefinitionTab key="syn" type="definitie-sinonime" input={functionInput} setInput={setFunctionInput} />,
             "Antonime": <DefinitionTab key="ant" type="definitie-antonime" input={functionInput} setInput={setFunctionInput} />,
           }}
