@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useLocation, useNavigate, useParams } from "react-router-dom"
-import { RequestGetSong, RequestUpdateSong } from "../../Utils/Requests"
+import { RequestGetDexDefinition, RequestGetSong, RequestUpdateSong } from "../../Utils/Requests"
 import useGoogleAuth from "../../Hooks/useGoogleAuth"
 import { DtoSong, DtoSongUpdate } from "../../Utils/Dtos"
 import Status from "../../Components/Status"
@@ -10,6 +10,8 @@ import "./EditorPage.css"
 import Button from "../../Components/Button"
 import Select from "../../Components/Select"
 import EditorTextbox from "./EditorTextbox"
+import DefinitionTab from "./DefinitionTab"
+import Input from "../../Components/Input"
 
 function EditorPage() {
 
@@ -22,9 +24,11 @@ function EditorPage() {
   const [status, setStatus] = useState<"loading" | "success" | "fail">("loading")
   const [saveStatus, setSaveStatus] = useState<"loading" | "success" | "fail">("success")
   const [content, setContent] = useState("")
+  const [option, setOption] = useState<"Definitie" | "Rime" | "Sinonime" | "Antonime">("Definitie")
+  const [functionInput, setFunctionInput] = useState("")
 
   const loadContent = () => {
-    if(songId === undefined) {
+    if (songId === undefined) {
       console.log("Id parameter is not defined.")
       return
     }
@@ -84,6 +88,20 @@ function EditorPage() {
       setContent(dto.lyrics)
   }, [dto])
 
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.ctrlKey && event.key === "s") {
+        event.preventDefault(); // Prevent the browser's save dialog
+        saveContent()
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [])
+
 
   return (
     <div className="editor-page">
@@ -105,14 +123,22 @@ function EditorPage() {
       <div className="editor-page-content">
         <div className="editor-page-options">
           <Select vertical
-            options={["Nimic", "Definitie", "Rime", "Sinonime", "Antonime"]}
-            selected={"Nimic"}
-            onOptionClick={() => { }}
+            options={["Definitie", "Rime", "Sinonime", "Antonime"]}
+            selected={option}
+            onOptionClick={option => {
+              setOption(option)
+            }}
           />
         </div>
-        <div className="editor-page-function">
-
-        </div>
+        <Status
+          status={option}
+          contentByStatus={{
+            "Definitie": <DefinitionTab input={functionInput} setInput={setFunctionInput} />,
+            "Rime": <>Rime</>,
+            "Sinonime": <>Sinonime</>,
+            "Antonime": <>Antonime</>
+          }}
+        />
         <Status
           status={status}
           contentByStatus={{

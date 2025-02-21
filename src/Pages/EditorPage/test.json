@@ -1,0 +1,446 @@
+{
+  "type": "searchResults",
+  "word": "test",
+  "definitions": [
+    {
+      "type": "definition",
+      "id": "833037",
+      "internalRep": "@TEST^1,@ $teste,$ #s. n.# @1.@ (#Psih.#) Prob\u0103 prin care se examineaz\u0103 func\u021bii senzoriale-motorii sau mintale, nivelul dezvolt\u0103rii intelectuale, aptitudinile etc. @2.@ Prob\u0103 (scris\u0103 sau oral\u0103) de verificare a cuno\u0219tin\u021belor. * $Test-gril\u0103$ = prob\u0103 scris\u0103 sub form\u0103 de gril\u0103. - Din #fr.#, #engl.# @test.@",
+      "htmlRep": "<b>TEST<sup>1<\/sup>,<\/b> <i>teste,<\/i> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv neutru\">s. n.<\/abbr> <b>1.<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"psihologie\">Psih.<\/abbr>) Prob\u0103 prin care se examineaz\u0103 func\u021bii senzoriale-motorii sau mintale, nivelul dezvolt\u0103rii intelectuale, aptitudinile etc. <b>2.<\/b> Prob\u0103 (scris\u0103 sau oral\u0103) de verificare a cuno\u0219tin\u021belor. \u25ca <i>Test-gril\u0103<\/i> = prob\u0103 scris\u0103 sub form\u0103 de gril\u0103. \u2013 Din <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"limba francez\u0103\">fr.<\/abbr>, <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"limba englez\u0103\">engl.<\/abbr> <b>test.<\/b>",
+      "userNick": "blaurb.",
+      "sourceName": "DEX '09",
+      "createDate": "1385443313",
+      "modDate": "1610376588"
+    },
+    {
+      "type": "definition",
+      "id": "833038",
+      "internalRep": "@TEST^2,@ $teste,$ #s. n.# \u00cenveli\u0219 calcaros sau chitinos care protejeaz\u0103 corpul unor molu\u0219te, crustacee etc. - Din #fr.# @test.@",
+      "htmlRep": "<b>TEST<sup>2<\/sup>,<\/b> <i>teste,<\/i> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv neutru\">s. n.<\/abbr> \u00cenveli\u0219 calcaros sau chitinos care protejeaz\u0103 corpul unor molu\u0219te, crustacee etc. \u2013 Din <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"limba francez\u0103\">fr.<\/abbr> <b>test.<\/b>",
+      "userNick": "blaurb.",
+      "sourceName": "DEX '09",
+      "createDate": "1385443355",
+      "modDate": "1610363275"
+    },
+    {
+      "type": "definition",
+      "id": "1199071",
+      "internalRep": "@$test^{2}$@ $#s#$\n[#At:# DN^{2} \/ #Pl#: ? \/ #E:# #lat# @$testum,$@ #fr# @$test$@]\n(#Zlg#) \u00eenveli\u0219 calcaros sau chitinos care protejeaz\u0103 corpul unor molu\u0219te, crustacee #etc.# #Si:# $carapace, cochilie,$ (#pop#) $\u021best.$",
+      "htmlRep": "<b><i>test<sup>2<\/sup><\/i><\/b> <i><abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv\">s<\/abbr><\/i>\n[<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"atestare(a)\">At:<\/abbr> DN<sup>2<\/sup> \/ <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"plural\">Pl<\/abbr>: ? \/ <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"etimologie, etimologia\">E:<\/abbr> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"latin\u0103, latinesc(ul)\">lat<\/abbr> <b><i>testum,<\/i><\/b> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"francez\u0103, francez(ul)\">fr<\/abbr> <b><i>test<\/i><\/b>]\n(<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"zoologie\">Zlg<\/abbr>) \u00eenveli\u0219 calcaros sau chitinos care protejeaz\u0103 corpul unor molu\u0219te, crustacee <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"etcaetera\">etc.<\/abbr> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"sinonim\">Si:<\/abbr> <i>carapace, cochilie,<\/i> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"popular\">pop<\/abbr>) <i>\u021best.<\/i>",
+      "userNick": "blaurb.",
+      "sourceName": "MDA2",
+      "createDate": "1582969796",
+      "modDate": "1582970429"
+    },
+    {
+      "type": "definition",
+      "id": "1199070",
+      "internalRep": "@$test^{1}$@ $#sn#$\n[#At:# DER \/ #Pl#: $~e$ \/ #E:# #fr#, #eg# @$test$@]\n@1@ (#Psh#) Prob\u0103, const\u00e2nd din aceea\u0219i sarcin\u0103 pentru toate persoanele investigate, prin care se examineaz\u0103 func\u021biile senzoriale, motorii, nivelul dezvolt\u0103rii intelectuale, aptitudinile #etc.#\n@2@ (#Pex#) Materialul folosit pentru un test^{1} (@1@).\n@3@ (#Med#; #\u00ees#) ~ $cutanat$ Metod\u0103 prin care se cerceteaz\u0103 sensibilitatea pielii ##la## diferi\u021bi microbi sau produse chimice b\u0103nuite ##a## fi cauza \u00eemboln\u0103virii unei persoane.\n@4@ (#Pgn#) Experiment (@1@).\n@5@ (#Teh#) Determinare experimental\u0103 ##a## rezisten\u021bei \u0219i func\u021bion\u0103rii unei piese, unui aparat, unei instala\u021bii #etc.# #Si:# $\u00eencercare, prob\u0103$. @6@ Mijloc fizic sau chimic de recunoa\u0219tere \u0219i m\u0103surare ##a## unui fenomen, proces biologic #etc.#\n@7@ (#\u00cec#) @~-film@ Film folosit pentru verificarea \u0219i reglarea aparatului de proiec\u021bie.\n@8@ (#\u00cec#) @~-meci@ Meci interna\u021bional menit s\u0103 stabileasc\u0103 o ierarhie neoficial\u0103 \u00een rugby, crichet #etc.#\n@9@ (#Med#; #\u00ees#) ~ $de sarcin\u0103$ Metod\u0103 de investigare prin care se determin\u0103 existen\u021ba unei sarcini ##la## femei.",
+      "htmlRep": "<b><i>test<sup>1<\/sup><\/i><\/b> <i><abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv neutru\">sn<\/abbr><\/i>\n[<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"atestare(a)\">At:<\/abbr> DER \/ <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"plural\">Pl<\/abbr>: <i>~e<\/i> \/ <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"etimologie, etimologia\">E:<\/abbr> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"francez\u0103, francez(ul)\">fr<\/abbr>, <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"englez\u0103, englezesc(ul)\">eg<\/abbr> <b><i>test<\/i><\/b>]\n<b>1<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"psihologie\">Psh<\/abbr>) Prob\u0103, const\u00e2nd din aceea\u0219i sarcin\u0103 pentru toate persoanele investigate, prin care se examineaz\u0103 func\u021biile senzoriale, motorii, nivelul dezvolt\u0103rii intelectuale, aptitudinile <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"etcaetera\">etc.<\/abbr>\n<b>2<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"prin extensiune\">Pex<\/abbr>) Materialul folosit pentru un test<sup>1<\/sup> (<b>1<\/b>).\n<b>3<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"medicin\u0103\">Med<\/abbr>; <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00een sintagma \/ sintagmele\">\u00ees<\/abbr>) ~ <i>cutanat<\/i> Metod\u0103 prin care se cerceteaz\u0103 sensibilitatea pielii la diferi\u021bi microbi sau produse chimice b\u0103nuite a fi cauza \u00eemboln\u0103virii unei persoane.\n<b>4<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"prin generalizare\">Pgn<\/abbr>) Experiment (<b>1<\/b>).\n<b>5<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"tehnic\u0103\">Teh<\/abbr>) Determinare experimental\u0103 a rezisten\u021bei \u0219i func\u021bion\u0103rii unei piese, unui aparat, unei instala\u021bii <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"etcaetera\">etc.<\/abbr> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"sinonim\">Si:<\/abbr> <i>\u00eencercare, prob\u0103<\/i>. <b>6<\/b> Mijloc fizic sau chimic de recunoa\u0219tere \u0219i m\u0103surare a unui fenomen, proces biologic <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"etcaetera\">etc.<\/abbr>\n<b>7<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00een compusul\">\u00cec<\/abbr>) <b>~-film<\/b> Film folosit pentru verificarea \u0219i reglarea aparatului de proiec\u021bie.\n<b>8<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00een compusul\">\u00cec<\/abbr>) <b>~-meci<\/b> Meci interna\u021bional menit s\u0103 stabileasc\u0103 o ierarhie neoficial\u0103 \u00een rugby, crichet <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"etcaetera\">etc.<\/abbr>\n<b>9<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"medicin\u0103\">Med<\/abbr>; <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00een sintagma \/ sintagmele\">\u00ees<\/abbr>) ~ <i>de sarcin\u0103<\/i> Metod\u0103 de investigare prin care se determin\u0103 existen\u021ba unei sarcini la femei.",
+      "userNick": "blaurb.",
+      "sourceName": "MDA2",
+      "createDate": "1582959988",
+      "modDate": "1638207957"
+    },
+    {
+      "type": "definition",
+      "id": "19411",
+      "internalRep": "@TEST^1,@ $teste,$ #s. n.# Prob\u0103 prin care se examineaz\u0103, \u00een psihologia experimental\u0103, unele aptitudini psihice \u0219i fizice ale unei persoane; $#p. ext.#$ materialul (fi\u0219e, tablouri, scheme etc.) cu care se face aceast\u0103 prob\u0103. - Din #fr.#, #engl.# @test.@",
+      "htmlRep": "<b>TEST<sup>1<\/sup>,<\/b> <i>teste,<\/i> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv neutru\">s. n.<\/abbr> Prob\u0103 prin care se examineaz\u0103, \u00een psihologia experimental\u0103, unele aptitudini psihice \u0219i fizice ale unei persoane; <i><abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"prin extensiune\">p. ext.<\/abbr><\/i> materialul (fi\u0219e, tablouri, scheme etc.) cu care se face aceast\u0103 prob\u0103. \u2013 Din <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"limba francez\u0103\">fr.<\/abbr>, <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"limba englez\u0103\">engl.<\/abbr> <b>test.<\/b>",
+      "userNick": "cata",
+      "sourceName": "DEX '98",
+      "createDate": "1020150000",
+      "modDate": "1610363314"
+    },
+    {
+      "type": "definition",
+      "id": "933360",
+      "internalRep": "@TEST,@ $teste,$ #s. n.# Prob\u0103 prin care se examineaz\u0103 aptitudinile fizice \u0219i psihice ale unei persoane, %#p. ext.#% materialul (fi\u0219e, caiete, tablouri etc.) cu care se face aceast\u0103 prob\u0103.",
+      "htmlRep": "<b>TEST,<\/b> <i>teste,<\/i> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv neutru\">s. n.<\/abbr> Prob\u0103 prin care se examineaz\u0103 aptitudinile fizice \u0219i psihice ale unei persoane, <span class=\"spaced\"><abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"prin extensiune\">p. ext.<\/abbr><\/span> materialul (fi\u0219e, caiete, tablouri etc.) cu care se face aceast\u0103 prob\u0103.",
+      "userNick": "LauraGellner",
+      "sourceName": "DLRLC",
+      "createDate": "1438633537",
+      "modDate": "1610363337"
+    },
+    {
+      "type": "definition",
+      "id": "385047",
+      "internalRep": "@TEST^2@ $#s.n.#$ Carapace la foraminifere, radiolare, arici. ** Cochilia molu\u0219telor. [&lt; #fr.# $test,$ #cf.# #lat.# $testum$].",
+      "htmlRep": "<b>TEST<sup>2<\/sup><\/b> <i><abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv neutru\">s.n.<\/abbr><\/i> Carapace la foraminifere, radiolare, arici. \u2666 Cochilia molu\u0219telor. [&lt; <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"francez\u0103\">fr.<\/abbr> <i>test,<\/i> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"confer\">cf.<\/abbr> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"latin\u0103\">lat.<\/abbr> <i>testum<\/i>].",
+      "userNick": "LauraGellner",
+      "sourceName": "DN",
+      "createDate": "1128626646",
+      "modDate": "1610363535"
+    },
+    {
+      "type": "definition",
+      "id": "385046",
+      "internalRep": "@TEST^1@ $#s.n.#$ @1.@ \u00cencercare; experimentare, experiment. ** Prob\u0103 prin care, \u00een psihologia experimental\u0103, se pot examina unele aptitudini fizice \u0219i psihice ale unei persoane; ($#p. ext.#$) materialul folosit pentru aceast\u0103 prob\u0103. @2.@ Determinare experimental\u0103 a rezisten\u021bei \u0219i func\u021bion\u0103rii unei piese, unui aparat, unei instala\u021bii etc.; \u00eencercare, prob\u0103. ** Mijloc fizic sau chimic de recunoa\u0219tere \u0219i m\u0103surare a unui fenomen, proces biologic etc. ** $Test-film$ = film folosit pentru verificarea \u0219i reglarea aparatului de proiec\u021bie. * $Test-meci$ = meci interna\u021bional menit s\u0103 stabileasc\u0103 o ierarhie neoficial\u0103 \u00een rugbi, crichet etc. [&lt; #engl.#, #fr.# $test$].",
+      "htmlRep": "<b>TEST<sup>1<\/sup><\/b> <i><abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv neutru\">s.n.<\/abbr><\/i> <b>1.<\/b> \u00cencercare; experimentare, experiment. \u2666 Prob\u0103 prin care, \u00een psihologia experimental\u0103, se pot examina unele aptitudini fizice \u0219i psihice ale unei persoane; (<i><abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"prin extensiune\">p. ext.<\/abbr><\/i>) materialul folosit pentru aceast\u0103 prob\u0103. <b>2.<\/b> Determinare experimental\u0103 a rezisten\u021bei \u0219i func\u021bion\u0103rii unei piese, unui aparat, unei instala\u021bii etc.; \u00eencercare, prob\u0103. \u2666 Mijloc fizic sau chimic de recunoa\u0219tere \u0219i m\u0103surare a unui fenomen, proces biologic etc. \u2666 <i>Test-film<\/i> = film folosit pentru verificarea \u0219i reglarea aparatului de proiec\u021bie. \u25ca <i>Test-meci<\/i> = meci interna\u021bional menit s\u0103 stabileasc\u0103 o ierarhie neoficial\u0103 \u00een rugbi, crichet etc. [&lt; <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"englez\u0103\">engl.<\/abbr>, <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"francez\u0103\">fr.<\/abbr> <i>test<\/i>].",
+      "userNick": "LauraGellner",
+      "sourceName": "DN",
+      "createDate": "1128626517",
+      "modDate": "1610363521"
+    },
+    {
+      "type": "definition",
+      "id": "494134",
+      "internalRep": "@TEST^2@ $#s. n.#$ carapace la foraminifere, radiolari, arici. * cochilia molu\u0219telor. (&lt; #fr.# $test,$ #lat.# $testum$)",
+      "htmlRep": "<b>TEST<sup>2<\/sup><\/b> <i><abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv neutru\">s. n.<\/abbr><\/i> carapace la foraminifere, radiolari, arici. \u25ca cochilia molu\u0219telor. (&lt; <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"francez(\u0103)\">fr.<\/abbr> <i>test,<\/i> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"latin(\u0103)\">lat.<\/abbr> <i>testum<\/i>)",
+      "userNick": "raduborza",
+      "sourceName": "MDN '00",
+      "createDate": "1189834669",
+      "modDate": "1638205991"
+    },
+    {
+      "type": "definition",
+      "id": "494133",
+      "internalRep": "@TEST^1@ $#s. n.#$ 1. \u00eencercare; experimentare, experiment. * prob\u0103 \u00een psihologie, pedagogie etc. pentru a examina unele aptitudini fizice \u0219i psihice ale unei persoane. 2. mijloc fizic sau chimic de recunoa\u0219tere \u0219i m\u0103surare a unui fenomen, proces biologic etc. 3. determinare experimental\u0103 a rezisten\u021bei \u0219i a func\u021bion\u0103rii unei piese, unui aparat, unei instala\u021bii etc.; \u00eencercare, prob\u0103. (&lt; #fr.#, #engl.# $test$)",
+      "htmlRep": "<b>TEST<sup>1<\/sup><\/b> <i><abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv neutru\">s. n.<\/abbr><\/i> 1. \u00eencercare; experimentare, experiment. \u25ca prob\u0103 \u00een psihologie, pedagogie etc. pentru a examina unele aptitudini fizice \u0219i psihice ale unei persoane. 2. mijloc fizic sau chimic de recunoa\u0219tere \u0219i m\u0103surare a unui fenomen, proces biologic etc. 3. determinare experimental\u0103 a rezisten\u021bei \u0219i a func\u021bion\u0103rii unei piese, unui aparat, unei instala\u021bii etc.; \u00eencercare, prob\u0103. (&lt; <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"francez(\u0103)\">fr.<\/abbr>, <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"englez(\u0103)\">engl.<\/abbr> <i>test<\/i>)",
+      "userNick": "raduborza",
+      "sourceName": "MDN '00",
+      "createDate": "1189834669",
+      "modDate": "1702482093"
+    },
+    {
+      "type": "definition",
+      "id": "356759",
+      "internalRep": "@TEST^1 ~e@ $n.$ Prob\u0103-standard folosit\u0103 \u00een psihologia experimental\u0103 pentru examinarea aptitudinilor psihice \u0219i fizice ale unei persoane. \/&lt;fr., engl. $test$",
+      "htmlRep": "<b>TEST<sup>1<\/sup> ~e<\/b> <i>n.<\/i> Prob\u0103-standard folosit\u0103 \u00een psihologia experimental\u0103 pentru examinarea aptitudinilor psihice \u0219i fizice ale unei persoane. \/&lt;fr., engl. <i>test<\/i>",
+      "userNick": "siveco",
+      "sourceName": "NODEX",
+      "createDate": "1093071600",
+      "modDate": "1610363552"
+    },
+    {
+      "type": "definition",
+      "id": "356760",
+      "internalRep": "@TEST^2 ~e@ $n.$ Strat protector, calcaros sau chitinos, care acoper\u0103 corpul unor viet\u0103\u021bi (molu\u0219te, crustacee etc.). \/&lt;fr. $test$",
+      "htmlRep": "<b>TEST<sup>2<\/sup> ~e<\/b> <i>n.<\/i> Strat protector, calcaros sau chitinos, care acoper\u0103 corpul unor viet\u0103\u021bi (molu\u0219te, crustacee etc.). \/&lt;fr. <i>test<\/i>",
+      "userNick": "siveco",
+      "sourceName": "NODEX",
+      "createDate": "1093071600",
+      "modDate": "1610363553"
+    },
+    {
+      "type": "definition",
+      "id": "829725",
+      "internalRep": "@\u021aEST,@ $\u021besturi,$ #s. n.# @1.@ Obiect de lut ars sau de font\u0103 de forma unui clopot, cu care se acoper\u0103 p\u00e2inea, m\u0103laiul etc. puse la copt pe vatra \u00eencins\u0103. @2.@ (#Pop.#) Carapace de broasc\u0103 \u021bestoas\u0103. - #Lat.# @*testum.@",
+      "htmlRep": "<b>\u021aEST,<\/b> <i>\u021besturi,<\/i> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv neutru\">s. n.<\/abbr> <b>1.<\/b> Obiect de lut ars sau de font\u0103 de forma unui clopot, cu care se acoper\u0103 p\u00e2inea, m\u0103laiul etc. puse la copt pe vatra \u00eencins\u0103. <b>2.<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"popular\">Pop.<\/abbr>) Carapace de broasc\u0103 \u021bestoas\u0103. \u2013 <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"limba latin\u0103\">Lat.<\/abbr> <b>*testum.<\/b>",
+      "userNick": "blaurb.",
+      "sourceName": "DEX '09",
+      "createDate": "1384234188",
+      "modDate": "1525710305"
+    },
+    {
+      "type": "definition",
+      "id": "1214467",
+      "internalRep": "$@\u021best@ #sn#$\n[#At:# TETRAEV. (1574), 251 \/ #V:# (#\u00eerg#) @$\u021bist,$@ (#reg#) @$~ru$@{{Referin\u021ba \u00eencruci\u0219at\u0103 recomand\u0103 aceast\u0103 variant\u0103 \u00een forma: $@\u021b&#039;estre@$\/212}}, @$\u021be\u0219t$@ \/ #Pl#: $~uri, ~e$ \/ #E:# #ml# @$testum$@]\n@1@ Obiect de lut ars, de font\u0103 #etc.#, av\u00e2nd de obicei forma unui capac ad\u00e2ncit (prev\u0103zut cu o toart\u0103 sau cu un c\u00e2rlig), cu care, dup\u0103 ce este bine \u00eenc\u0103lzit, se acoper\u0103 aluatul de p\u00e2ine, m\u0103laiul #etc.# pentru ##a## se coace.\n@2@ (#\u00cee#) @\u00cei d\u0103 zestre dou\u0103 ~e@ Se zice despre o fat\u0103 l\u0103ud\u0103roas\u0103 care ##n##-##are## zestre.\n@3@ (#\u00cee#) @A fi ca ~ul@ A fi vrednic.\n@4@ (#\u00cee#) @A pune@ (cuiva) @~ul \u00een cap@ A prosti (pe cineva).\n@5@ (#\u00ceae#) A supune.\n@6@ (#\u00ceae#) A \u00eenc\u0103lca credin\u021ba conjugal\u0103 #Si:# $##a## \u00een\u0219ela.$ @7@ (#\u00cee#) @A fi cu ~ul \u00een cap@ A fi retras fa\u021b\u0103 de ceilal\u021bi oameni.\n@8@ (#\u00ceae#) A fi prost.\n@9@ (#\u00ceae#) A fi lene\u0219.\n@10@ (#\u00ceae#) A se l\u0103sa condus de femei.\n@11@ (#\u00cee#) @A fi cu ~ul \u00een spate@ A fi coco\u0219at.\n@12@ (#\u00cee#) @Umbl\u0103 tot cu ~ul aprins@ Se spune despre o femeie b\u00e2rfitoare \u0219i care p\u00e2n\u0103 ##la## urm\u0103 o p\u0103\u021be\u0219te.\n@13@ (#\u00cee#) @A umbla c\u00e2t \u021bine ~ul@ A umbla foarte mult.\n@14@ (#\u00cee#) @Ca ~ul, din vatr\u0103 \u00een vatr\u0103@ Se spune despre cineva care se mut\u0103 des.\n@15@ (#\u00cee#) @A face un ~@ (sau @##la## ~e@) A c\u0103dea \u00een fund.\n@16@ Con\u021binutul unui \u021best (@1@).\n@17@ (#Mun#; #Olt#; #fig#; #dep#) Epitet dat unui om prost \u0219i necizelat.\n@18@ (#Mun#; #Olt#; #fig#; #dep#) Epitet dat unui om lene\u0219.\n@19@ (#Mun#; #fig#; #dep#) Epitet dat unui om \u00eenc\u0103p\u0103\u021b\u00e2nat.\n@20@ (#Mun#; #fig#; #dep#) Epitet dat unui om care se \u00eenfurie u\u0219or.\n@21@ (#Reg#) Cuptor de p\u00e2ine f\u0103cut \u00een curte.\n@22@ (#Reg#) Un fel de cuptor de ciment care se folose\u0219te numai ##la## munte.\n@23@ (#Reg#) Vas de lemn \u00een care se pune aluatul ca s\u0103 dospeasc\u0103 atunci c\u00e2nd se face p\u00e2ine \u00een cas\u0103.\n@24@ (#\u00cerg#) Craniu (@1@).\n@25@ (#\u00cerg#; \u00een textele biserice\u0219ti) Traducerea numelui topic Golgota.\n@26@ (#\u00cevp#) Carapace.\n@27@ (#\u00cevp#) Cochilie (@1@).\n@28@ (#\u00cevp#) Scoic\u0103.\n@29@ (#\u00cevr#) Coaj\u0103 ##a## alunei.\n@30@ (#\u00cenv#) Partea superioar\u0103 ##a## unei coloane #Si:# $capitel.$ @31@ (#Reg#; #\u00ees#) $~ul trupului$ Partea de ##la## baza trunchiului^2.\n@32@ Scheletul de lemn al \u0219eii, peste care se \u00eentinde pielea.\n@33@ (#Nav#) Pies\u0103 de lemn care serve\u0219te ##la## \u00eentinderea subarbelor.\n@34@ (#Mol#; #\u00eef# $\u021bestru$) Capacul sicriului.\n@35@ (#Reg#; #\u00eef# $\u021be\u0219t$) Construc\u021bie de zid\u0103rie deasupra vetrei \u021b\u0103r\u0103ne\u0219ti pentru colectarea fumului.\n@36@ (#Trs#) Gaur\u0103 \u00een \u021b\u0103rmul r\u00e2ului unde se ascund pe\u0219tii \u0219i racii.",
+      "htmlRep": "<i><b>\u021best<\/b> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv neutru\">sn<\/abbr><\/i>\n[<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"atestare(a)\">At:<\/abbr> TETRAEV. (1574), 251 \/ <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"variant\u0103, variante(le)\">V:<\/abbr> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00eenvechit \u0219i regional\">\u00eerg<\/abbr>) <b><i>\u021bist,<\/i><\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"regional\">reg<\/abbr>) <b><i>~ru<\/i><\/b><sup class=\"footnote\">[1]<\/sup>, <b><i>\u021be\u0219t<\/i><\/b> \/ <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"plural\">Pl<\/abbr>: <i>~uri, ~e<\/i> \/ <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"etimologie, etimologia\">E:<\/abbr> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"mo\u0219tenit din latinescul\">ml<\/abbr> <b><i>testum<\/i><\/b>]\n<b>1<\/b> Obiect de lut ars, de font\u0103 <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"etcaetera\">etc.<\/abbr>, av\u00e2nd de obicei forma unui capac ad\u00e2ncit (prev\u0103zut cu o toart\u0103 sau cu un c\u00e2rlig), cu care, dup\u0103 ce este bine \u00eenc\u0103lzit, se acoper\u0103 aluatul de p\u00e2ine, m\u0103laiul <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"etcaetera\">etc.<\/abbr> pentru a se coace.\n<b>2<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00een expresia\">\u00cee<\/abbr>) <b>\u00cei d\u0103 zestre dou\u0103 ~e<\/b> Se zice despre o fat\u0103 l\u0103ud\u0103roas\u0103 care n-are zestre.\n<b>3<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00een expresia\">\u00cee<\/abbr>) <b>A fi ca ~ul<\/b> A fi vrednic.\n<b>4<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00een expresia\">\u00cee<\/abbr>) <b>A pune<\/b> (cuiva) <b>~ul \u00een cap<\/b> A prosti (pe cineva).\n<b>5<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00een aceea\u0219i expresie\">\u00ceae<\/abbr>) A supune.\n<b>6<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00een aceea\u0219i expresie\">\u00ceae<\/abbr>) A \u00eenc\u0103lca credin\u021ba conjugal\u0103 <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"sinonim\">Si:<\/abbr> <i>a \u00een\u0219ela.<\/i> <b>7<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00een expresia\">\u00cee<\/abbr>) <b>A fi cu ~ul \u00een cap<\/b> A fi retras fa\u021b\u0103 de ceilal\u021bi oameni.\n<b>8<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00een aceea\u0219i expresie\">\u00ceae<\/abbr>) A fi prost.\n<b>9<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00een aceea\u0219i expresie\">\u00ceae<\/abbr>) A fi lene\u0219.\n<b>10<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00een aceea\u0219i expresie\">\u00ceae<\/abbr>) A se l\u0103sa condus de femei.\n<b>11<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00een expresia\">\u00cee<\/abbr>) <b>A fi cu ~ul \u00een spate<\/b> A fi coco\u0219at.\n<b>12<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00een expresia\">\u00cee<\/abbr>) <b>Umbl\u0103 tot cu ~ul aprins<\/b> Se spune despre o femeie b\u00e2rfitoare \u0219i care p\u00e2n\u0103 la urm\u0103 o p\u0103\u021be\u0219te.\n<b>13<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00een expresia\">\u00cee<\/abbr>) <b>A umbla c\u00e2t \u021bine ~ul<\/b> A umbla foarte mult.\n<b>14<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00een expresia\">\u00cee<\/abbr>) <b>Ca ~ul, din vatr\u0103 \u00een vatr\u0103<\/b> Se spune despre cineva care se mut\u0103 des.\n<b>15<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00een expresia\">\u00cee<\/abbr>) <b>A face un ~<\/b> (sau <b>la ~e<\/b>) A c\u0103dea \u00een fund.\n<b>16<\/b> Con\u021binutul unui \u021best (<b>1<\/b>).\n<b>17<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"Muntenia\">Mun<\/abbr>; <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"Oltenia\">Olt<\/abbr>; <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"figurat(\u0103)\">fig<\/abbr>; <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"depreciativ\">dep<\/abbr>) Epitet dat unui om prost \u0219i necizelat.\n<b>18<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"Muntenia\">Mun<\/abbr>; <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"Oltenia\">Olt<\/abbr>; <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"figurat(\u0103)\">fig<\/abbr>; <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"depreciativ\">dep<\/abbr>) Epitet dat unui om lene\u0219.\n<b>19<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"Muntenia\">Mun<\/abbr>; <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"figurat(\u0103)\">fig<\/abbr>; <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"depreciativ\">dep<\/abbr>) Epitet dat unui om \u00eenc\u0103p\u0103\u021b\u00e2nat.\n<b>20<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"Muntenia\">Mun<\/abbr>; <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"figurat(\u0103)\">fig<\/abbr>; <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"depreciativ\">dep<\/abbr>) Epitet dat unui om care se \u00eenfurie u\u0219or.\n<b>21<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"regional\">Reg<\/abbr>) Cuptor de p\u00e2ine f\u0103cut \u00een curte.\n<b>22<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"regional\">Reg<\/abbr>) Un fel de cuptor de ciment care se folose\u0219te numai la munte.\n<b>23<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"regional\">Reg<\/abbr>) Vas de lemn \u00een care se pune aluatul ca s\u0103 dospeasc\u0103 atunci c\u00e2nd se face p\u00e2ine \u00een cas\u0103.\n<b>24<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00eenvechit \u0219i regional\">\u00cerg<\/abbr>) Craniu (<b>1<\/b>).\n<b>25<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00eenvechit \u0219i regional\">\u00cerg<\/abbr>; \u00een textele biserice\u0219ti) Traducerea numelui topic Golgota.\n<b>26<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00eenvechit \u0219i popular\">\u00cevp<\/abbr>) Carapace.\n<b>27<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00eenvechit \u0219i popular\">\u00cevp<\/abbr>) Cochilie (<b>1<\/b>).\n<b>28<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00eenvechit \u0219i popular\">\u00cevp<\/abbr>) Scoic\u0103.\n<b>29<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00eenvechit \u0219i rar\">\u00cevr<\/abbr>) Coaj\u0103 a alunei.\n<b>30<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00eenvechit\">\u00cenv<\/abbr>) Partea superioar\u0103 a unei coloane <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"sinonim\">Si:<\/abbr> <i>capitel.<\/i> <b>31<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"regional\">Reg<\/abbr>; <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00een sintagma \/ sintagmele\">\u00ees<\/abbr>) <i>~ul trupului<\/i> Partea de la baza trunchiului<sup>2<\/sup>.\n<b>32<\/b> Scheletul de lemn al \u0219eii, peste care se \u00eentinde pielea.\n<b>33<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"naviga\u021bie\">Nav<\/abbr>) Pies\u0103 de lemn care serve\u0219te la \u00eentinderea subarbelor.\n<b>34<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"Moldova\">Mol<\/abbr>; <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00een forma \u201e \u201d \/ formele \u201e \u201d, \u201e \u201d\">\u00eef<\/abbr> <i>\u021bestru<\/i>) Capacul sicriului.\n<b>35<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"regional\">Reg<\/abbr>; <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"\u00een forma \u201e \u201d \/ formele \u201e \u201d, \u201e \u201d\">\u00eef<\/abbr> <i>\u021be\u0219t<\/i>) Construc\u021bie de zid\u0103rie deasupra vetrei \u021b\u0103r\u0103ne\u0219ti pentru colectarea fumului.\n<b>36<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"Transilvania\">Trs<\/abbr>) Gaur\u0103 \u00een \u021b\u0103rmul r\u00e2ului unde se ascund pe\u0219tii \u0219i racii.",
+      "userNick": "LauraGellner",
+      "sourceName": "MDA2",
+      "createDate": "1593364004",
+      "modDate": "1638281899"
+    },
+    {
+      "type": "definition",
+      "id": "1214472",
+      "internalRep": "$@\u021b&#039;estre@${{\u00cen defini\u021bia principal\u0103, aceast\u0103 variant\u0103 este tip\u0103rit\u0103: $@\u021b&#039;estru@$\/212}} $#sn#$ #vz# $@\u021best@$",
+      "htmlRep": "<i><b>\u021b<span class=\"tonic-accent\">e<\/span>stre<\/b><\/i><sup class=\"footnote\">[1]<\/sup> <i><abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv neutru\">sn<\/abbr><\/i> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"vezi\">vz<\/abbr> <i><b>\u021best<\/b><\/i>",
+      "userNick": "LauraGellner",
+      "sourceName": "MDA2",
+      "createDate": "1593366194",
+      "modDate": "1593366566"
+    },
+    {
+      "type": "definition",
+      "id": "1214479",
+      "internalRep": "$@\u021be\u0219t@$ $#sn#$ #vz# @$\u021best$@",
+      "htmlRep": "<i><b>\u021be\u0219t<\/b><\/i> <i><abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv neutru\">sn<\/abbr><\/i> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"vezi\">vz<\/abbr> <b><i>\u021best<\/i><\/b>",
+      "userNick": "LauraGellner",
+      "sourceName": "MDA2",
+      "createDate": "1593371097",
+      "modDate": "1593371192"
+    },
+    {
+      "type": "definition",
+      "id": "1216021",
+      "internalRep": "$@\u021bist^{2}@ #sn#$ #vz# $@\u021best@$",
+      "htmlRep": "<i><b>\u021bist<sup>2<\/sup><\/b> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv neutru\">sn<\/abbr><\/i> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"vezi\">vz<\/abbr> <i><b>\u021best<\/b><\/i>",
+      "userNick": "LauraGellner",
+      "sourceName": "MDA2",
+      "createDate": "1594555637",
+      "modDate": "1594555637"
+    },
+    {
+      "type": "definition",
+      "id": "1344663",
+      "internalRep": "#\u274d#@\u021a\u0102ST@... #\ud83d\udc49# @\u021aEST@...",
+      "htmlRep": "<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"Provincialism\">\u274d<\/abbr><b>\u021a\u0102ST<\/b>... <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"Vezi\">\ud83d\udc49<\/abbr> <b>\u021aEST<\/b>...",
+      "userNick": "Andreea H-I",
+      "sourceName": "CADE",
+      "createDate": "1733824589",
+      "modDate": "1735231786"
+    },
+    {
+      "type": "definition",
+      "id": "1344989",
+      "internalRep": "@\u021aEST@, #\u274d#@\u021a\u0102ST@ ($#pl.#$ -$turi$, -$te$) $#sn.#$ 1 #\u2021# = @\u021aEAST\u0102@1: $ferec\u0103 Crum \u021bestul capului Iul Nichifor cu aur \u0219i dede tuturor de bea vin dintr\\&#039;\u00eensul$ {~#(mx.)#~} #\u00b6# 2 \u2020\u021aeast\u0103 de broasc\u0103 \u021bestoas\u0103, carapace: $\u00ee\u0219i fece fericitul trup ca \u021bestul broa\u0219tei de mu\u0219c\u0103turile \u021b\u00een\u021barilor ce era In p\u0103dure$ {~#(dos.)#~}; $ea se duse apoi, lu\u0103 un \u021best de broasc\u0103... \u0219i \u00eencepu s\u0103 adune \u00een el alifia$ {~#(slv.)#~} #\u00b6# 3 Un fel de cuptora\u0219, \u00een form\u0103 de strachin\u0103, de lut sau de tuciu, \u00een care se coace p\u00eeinea, azima, m\u0103laiul, etc.: se \u00eenfierb\u00eent\u0103 \u00eent\u00eeiu bine, se pune \u00een\u0103untru aluatul, se a\u0219az\u0103 pe vatr\u0103 \u0219i se acopere cu j\u0103ratec (#\ud83d\uddbc# 5126): $\u00eenc\u0103lzise \u021bestul \u0219i b\u0103gase o pl\u0103cint\u0103 s\u0103 se coac\u0103$ {~#(i#sp.#)#~}; $m\u00eeine diminea\u021b\u0103 s\u0103 arzi \u021bestul pentru azim\u0103$ {~#(dlvr.)#~}; $\u021b\u0103stul spart s\u0103 nu-l arunci \u00een drum sau \u00een gunoaie, c\u0103 faci buboaie$ {~#(gor.)#~}.",
+      "htmlRep": "<b>\u021aEST<\/b>, <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"Provincialism\">\u274d<\/abbr><b>\u021a\u0102ST<\/b> (<i><abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"plural\">pl.<\/abbr><\/i> -<i>turi<\/i>, -<i>te<\/i>) <i><abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv neutru\">sn.<\/abbr><\/i> 1 <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"Cuv\u00eent sau sens disp\u0103rut\">\u2021<\/abbr> = <b>\u021aEAST\u0102<\/b>1: <i>ferec\u0103 Crum \u021bestul capului Iul Nichifor cu aur \u0219i dede tuturor de bea vin dintr\u2019\u00eensul<\/i> <span class=\"small-caps\"><abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"Mihail MOXA, &lt;i&gt;Cronica&lt;\/i&gt; (tip. \u00een Hasdeu, &lt;i&gt;Cuvente den b\u0103tr\u00eeni&lt;\/i&gt;, vol. I).\">(mx.)<\/abbr><\/span> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"Separ\u0103 sensurile sau diversele categorii gramaticale ale aceluia\u0219i cuv\u00eent\">\u00b6<\/abbr> 2 \u2020\u021aeast\u0103 de broasc\u0103 \u021bestoas\u0103, carapace: <i>\u00ee\u0219i fece fericitul trup ca \u021bestul broa\u0219tei de mu\u0219c\u0103turile \u021b\u00een\u021barilor ce era In p\u0103dure<\/i> <span class=\"small-caps\"><abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"DOSOFTEI\">(dos.)<\/abbr><\/span>; <i>ea se duse apoi, lu\u0103 un \u021best de broasc\u0103... \u0219i \u00eencepu s\u0103 adune \u00een el alifia<\/i> <span class=\"small-caps\"><abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"I. SLAVICI\">(slv.)<\/abbr><\/span> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"Separ\u0103 sensurile sau diversele categorii gramaticale ale aceluia\u0219i cuv\u00eent\">\u00b6<\/abbr> 3 Un fel de cuptora\u0219, \u00een form\u0103 de strachin\u0103, de lut sau de tuciu, \u00een care se coace p\u00eeinea, azima, m\u0103laiul, etc.: se \u00eenfierb\u00eent\u0103 \u00eent\u00eeiu bine, se pune \u00een\u0103untru aluatul, se a\u0219az\u0103 pe vatr\u0103 \u0219i se acopere cu j\u0103ratec (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"Vezi figura\">\ud83d\uddbc<\/abbr> 5126): <i>\u00eenc\u0103lzise \u021bestul \u0219i b\u0103gase o pl\u0103cint\u0103 s\u0103 se coac\u0103<\/i> <span class=\"small-caps\"><abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"abreviere necunoscut\u0103\">(i<\/abbr>sp.<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"abreviere necunoscut\u0103\">)<\/abbr><\/span>; <i>m\u00eeine diminea\u021b\u0103 s\u0103 arzi \u021bestul pentru azim\u0103<\/i> <span class=\"small-caps\"><abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"B. DELAVRANCEA\">(dlvr.)<\/abbr><\/span>; <i>\u021b\u0103stul spart s\u0103 nu-l arunci \u00een drum sau \u00een gunoaie, c\u0103 faci buboaie<\/i> <span class=\"small-caps\"><abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"A. GOROVEI\">(gor.)<\/abbr><\/span>.",
+      "userNick": "Andreea H-I",
+      "sourceName": "CADE",
+      "createDate": "1734629763",
+      "modDate": "1739623666"
+    },
+    {
+      "type": "definition",
+      "id": "19611",
+      "internalRep": "@\u021aEST,@ $\u021besturi,$ #s. n.# @1.@ Obiect de p\u0103m\u00e2nt sau de font\u0103 de forma unui clopot, cu care se acoper\u0103 p\u00e2inea, m\u0103laiul etc. puse la copt pe vatra \u00eencins\u0103. @2.@ (#Pop.#) Carapace de broasc\u0103 \u021bestoas\u0103. - #Lat.# @*testum.@",
+      "htmlRep": "<b>\u021aEST,<\/b> <i>\u021besturi,<\/i> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv neutru\">s. n.<\/abbr> <b>1.<\/b> Obiect de p\u0103m\u00e2nt sau de font\u0103 de forma unui clopot, cu care se acoper\u0103 p\u00e2inea, m\u0103laiul etc. puse la copt pe vatra \u00eencins\u0103. <b>2.<\/b> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"popular\">Pop.<\/abbr>) Carapace de broasc\u0103 \u021bestoas\u0103. \u2013 <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"limba latin\u0103\">Lat.<\/abbr> <b>*testum.<\/b>",
+      "userNick": "valeriu",
+      "sourceName": "DEX '98",
+      "createDate": "1052290800",
+      "modDate": "1603718686"
+    },
+    {
+      "type": "definition",
+      "id": "937475",
+      "internalRep": "@\u021aEST,@ $\u021besturi,$ #s. n.# @1.@ Un fel de capac de p\u0103m\u00eent sau de tuci, cu care se acoper\u0103 pe vatra \u00eenfierb\u00eentat\u0103 p\u00eeinea, pl\u0103cinta etc. puse la copt. $\u00cenc\u0103lzise \u021bestul \u0219i b\u0103gase o pl\u0103cint\u0103 s\u0103 se coac\u0103.$ ISPIRESCU, la ~~#CADE#~~. @2.@ Carapace de broasc\u0103 \u021bestoas\u0103. $Ea se duse apoi, lu\u0103 un \u021best de broasc\u0103... \u0219i \u00eencepu s\u0103 adune \u00een el alifia.$ SLAVICI, la ~~#CADE#~~.",
+      "htmlRep": "<b>\u021aEST,<\/b> <i>\u021besturi,<\/i> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv neutru\">s. n.<\/abbr> <b>1.<\/b> Un fel de capac de p\u0103m\u00eent sau de tuci, cu care se acoper\u0103 pe vatra \u00eenfierb\u00eentat\u0103 p\u00eeinea, pl\u0103cinta etc. puse la copt. <i>\u00cenc\u0103lzise \u021bestul \u0219i b\u0103gase o pl\u0103cint\u0103 s\u0103 se coac\u0103.<\/i> ISPIRESCU, la <span class=\"small-caps-l\"><abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"<i>Dic\u021bionarul enciclopedic ilustrat \u00abCartea rom\u00eeneasc\u0103\u00bb<\/i>. Partea I: <i>Dic\u021bionarul limbii rom\u00eene din trecut \u0219i de ast\u0103zi<\/i> de I.-Aurel Candrea; partea II: <i>Dic\u021bionarul istoric \u0219i geografic universal<\/i> de Gh. Adamescu. Bucure\u0219ti, Editura \u00abCartea rom\u00eeneasc\u0103\u00bb, [1926-1931].\">CADE<\/abbr><\/span>. <b>2.<\/b> Carapace de broasc\u0103 \u021bestoas\u0103. <i>Ea se duse apoi, lu\u0103 un \u021best de broasc\u0103... \u0219i \u00eencepu s\u0103 adune \u00een el alifia.<\/i> SLAVICI, la <span class=\"small-caps-l\"><abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"<i>Dic\u021bionarul enciclopedic ilustrat \u00abCartea rom\u00eeneasc\u0103\u00bb<\/i>. Partea I: <i>Dic\u021bionarul limbii rom\u00eene din trecut \u0219i de ast\u0103zi<\/i> de I.-Aurel Candrea; partea II: <i>Dic\u021bionarul istoric \u0219i geografic universal<\/i> de Gh. Adamescu. Bucure\u0219ti, Editura \u00abCartea rom\u00eeneasc\u0103\u00bb, [1926-1931].\">CADE<\/abbr><\/span>.",
+      "userNick": "LauraGellner",
+      "sourceName": "DLRLC",
+      "createDate": "1441914572",
+      "modDate": "1739612134"
+    },
+    {
+      "type": "definition",
+      "id": "556747",
+      "internalRep": "@expoz&#039;i\u021bie-t&#039;est@ #s.# #f.# Expozi\u021bie \u00een care se prezint\u0103 mostre pentru testare * $&quot;Filiala din Cluj-Napoca a Asocia\u021biei Rom\u00e2ne de Marketing a organizat o @expozi\u021bie-test,@ \u00een cadrul c\u0103reia zeci de creatori din \u00eentreprinderile \u0219i institu\u021biile municipiului au prezentat mostre de obiecte de uz casnic, articole de \u00eembr\u0103c\u0103minte [...]&quot;$ #R.l.# 9 I 76 p. 2 * $&quot;R\u0103spuns la o @expozi\u021bie-test.@&quot;$ #Sc.# 28 II 76 p. 3. * $&quot;@Expozi\u021bie-test.@ La Galeria ARTIND a Centralei industriei \u0219i ceramicii fine din Ministerul Industriei U\u0219oare s-a deschis o expozi\u021bie cuprinz\u00e2nd lucr\u0103ri realizate \u00een cadrul programului de perfec\u021bionare organizat de Centrul de perfec\u021bionare a cadrelor [...]&quot;$ #Cont.# 13 VI 80 p. 11 (din $expozi\u021bie + test;$ C. Lupu \u00een #SCL# 6\/81 p. 504)",
+      "htmlRep": "<b>expoz<span class=\"tonic-accent\">i<\/span>\u021bie-t<span class=\"tonic-accent\">e<\/span>st<\/b> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv(al)\">s.<\/abbr> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"feminin\">f.<\/abbr> Expozi\u021bie \u00een care se prezint\u0103 mostre pentru testare \u25ca <i>\u201eFiliala din Cluj-Napoca a Asocia\u021biei Rom\u00e2ne de Marketing a organizat o <b>expozi\u021bie-test,<\/b> \u00een cadrul c\u0103reia zeci de creatori din \u00eentreprinderile \u0219i institu\u021biile municipiului au prezentat mostre de obiecte de uz casnic, articole de \u00eembr\u0103c\u0103minte [...]\u201d<\/i> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"&lt;i&gt;Rom\u00e2nia liber\u0103&lt;\/i&gt;, ziar, Bucure\u0219ti, \u00eenainte \u0219i dup\u0103 1989\">R.l.<\/abbr> 9 I 76 p. 2 \u25ca <i>\u201eR\u0103spuns la o <b>expozi\u021bie-test.<\/b>\u201d<\/i> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"&lt;i&gt;Sc\u00e2nteia&lt;\/i&gt;, ziar, Bucure\u0219ti, \u00eenainte de 1989\">Sc.<\/abbr> 28 II 76 p. 3. \u25ca <i>\u201e<b>Expozi\u021bie-test.<\/b> La Galeria ARTIND a Centralei industriei \u0219i ceramicii fine din Ministerul Industriei U\u0219oare s-a deschis o expozi\u021bie cuprinz\u00e2nd lucr\u0103ri realizate \u00een cadrul programului de perfec\u021bionare organizat de Centrul de perfec\u021bionare a cadrelor [...]\u201d<\/i> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"&lt;i&gt;Contemporanul&lt;\/i&gt;, revist\u0103, Bucure\u0219ti, \u00eenainte \u0219i dup\u0103 1989\">Cont.<\/abbr> 13 VI 80 p. 11 (din <i>expozi\u021bie + test;<\/i> C. Lupu \u00een <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"&lt;i&gt;Studii \u0219i cercet\u0103ri lingvistice&lt;\/i&gt;, Editura Academiei, din 1950.\">SCL<\/abbr> 6\/81 p. 504)",
+      "userNick": "raduborza",
+      "sourceName": "DCR2",
+      "createDate": "1313969041",
+      "modDate": "1699782337"
+    },
+    {
+      "type": "definition",
+      "id": "557885",
+      "internalRep": "@m&#039;eci-test@ #s.# #n.# (sport) Meci cu valoare de test * $&quot;[...] @meciul-test@ cu selec\u021bionata Angliei [...]&quot;$ #I.B.# 9 XI 84 p. 7. * $&quot;Ne a\u0219teapt\u0103 c\u00e2teva dificile examene interna\u021bionale: \u00een acest an @meciurile test@ cu Sco\u021bia [...] \u0219i cu Irlanda [...]&quot;$ #I.B.# 19 II 86 p. 3 (din $meci + test$)",
+      "htmlRep": "<b>m<span class=\"tonic-accent\">e<\/span>ci-test<\/b> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv(al)\">s.<\/abbr> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"neutru\">n.<\/abbr> (sport) Meci cu valoare de test \u25ca <i>\u201e[...] <b>meciul-test<\/b> cu selec\u021bionata Angliei [...]\u201d<\/i> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"&lt;i&gt;Informa\u021bia Bucure\u0219tiului&lt;\/i&gt;, ziar, Bucure\u0219ti, \u00eenainte de 1989\">I.B.<\/abbr> 9 XI 84 p. 7. \u25ca <i>\u201eNe a\u0219teapt\u0103 c\u00e2teva dificile examene interna\u021bionale: \u00een acest an <b>meciurile test<\/b> cu Sco\u021bia [...] \u0219i cu Irlanda [...]\u201d<\/i> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"&lt;i&gt;Informa\u021bia Bucure\u0219tiului&lt;\/i&gt;, ziar, Bucure\u0219ti, \u00eenainte de 1989\">I.B.<\/abbr> 19 II 86 p. 3 (din <i>meci + test<\/i>)",
+      "userNick": "raduborza",
+      "sourceName": "DCR2",
+      "createDate": "1313969055",
+      "modDate": "1699799523"
+    },
+    {
+      "type": "definition",
+      "id": "558552",
+      "internalRep": "@part&#039;id\u0103-t&#039;est@ #s.# #f.# (sport) Partid\u0103 cu rol de test * $&quot;Na\u021bionala de rugbi va sus\u021bine o @partid\u0103-test@ cu echipa Angliei.&quot;$ Emisiune Radio 3 XII 84; #v.# \u0219i #Sc.# 4 XII 84 p. 3 (din $partid\u0103 + test$)",
+      "htmlRep": "<b>part<span class=\"tonic-accent\">i<\/span>d\u0103-t<span class=\"tonic-accent\">e<\/span>st<\/b> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv(al)\">s.<\/abbr> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"feminin\">f.<\/abbr> (sport) Partid\u0103 cu rol de test \u25ca <i>\u201eNa\u021bionala de rugbi va sus\u021bine o <b>partid\u0103-test<\/b> cu echipa Angliei.\u201d<\/i> Emisiune Radio 3 XII 84; <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"vezi\">v.<\/abbr> \u0219i <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"&lt;i&gt;Sc\u00e2nteia&lt;\/i&gt;, ziar, Bucure\u0219ti, \u00eenainte de 1989\">Sc.<\/abbr> 4 XII 84 p. 3 (din <i>partid\u0103 + test<\/i>)",
+      "userNick": "raduborza",
+      "sourceName": "DCR2",
+      "createDate": "1313969062",
+      "modDate": "1699801080"
+    },
+    {
+      "type": "definition",
+      "id": "559549",
+      "internalRep": "@situ&#039;a\u021bie-t&#039;est@ #s.# #f.# 1972 Situa\u021bie care poate servi drept test #v.# $situa\u021bie-limit\u0103$ (din $situa\u021bie + test$)",
+      "htmlRep": "<b>situ<span class=\"tonic-accent\">a<\/span>\u021bie-t<span class=\"tonic-accent\">e<\/span>st<\/b> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv(al)\">s.<\/abbr> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"feminin\">f.<\/abbr> 1972 Situa\u021bie care poate servi drept test <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"vezi\">v.<\/abbr> <i>situa\u021bie-limit\u0103<\/i> (din <i>situa\u021bie + test<\/i>)",
+      "userNick": "raduborza",
+      "sourceName": "DCR2",
+      "createDate": "1313969077",
+      "modDate": "1699802215"
+    },
+    {
+      "type": "definition",
+      "id": "560270",
+      "internalRep": "@turn&#039;eu-t&#039;est@ #s.# #n.# Turneu artistic (sportiv) cu valoare de test * $&quot;C\u0103tre fiecare final de stagiune Teatrul \u00abGiule\u0219ti\u00bb \u00eentreprinde deplas\u0103ri \u00een mari centre ale \u021b\u0103rii cu cele mai reprezentative mont\u0103ri din repertoriul anului. De fapt, e vorba de @turnee-test,@ prilejuind o atent\u0103 sondare a opiniilor \u0219i preferin\u021belor publicului.&quot;$ #I.B.# 24 V 72 p. 2. * $&quot;@Turnee-test@ [...] \u00een rugbyul mondial.&quot;$ #Luc.# 4 XI 78 p. 7 \/\/din $turneu + test$\/\/",
+      "htmlRep": "<b>turn<span class=\"tonic-accent\">e<\/span>u-t<span class=\"tonic-accent\">e<\/span>st<\/b> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv(al)\">s.<\/abbr> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"neutru\">n.<\/abbr> Turneu artistic (sportiv) cu valoare de test \u25ca <i>\u201eC\u0103tre fiecare final de stagiune Teatrul \u00abGiule\u0219ti\u00bb \u00eentreprinde deplas\u0103ri \u00een mari centre ale \u021b\u0103rii cu cele mai reprezentative mont\u0103ri din repertoriul anului. De fapt, e vorba de <b>turnee-test,<\/b> prilejuind o atent\u0103 sondare a opiniilor \u0219i preferin\u021belor publicului.\u201d<\/i> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"&lt;i&gt;Informa\u021bia Bucure\u0219tiului&lt;\/i&gt;, ziar, Bucure\u0219ti, \u00eenainte de 1989\">I.B.<\/abbr> 24 V 72 p. 2. \u25ca <i>\u201e<b>Turnee-test<\/b> [...] \u00een rugbyul mondial.\u201d<\/i> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"&lt;i&gt;Luceaf\u0103rul&lt;\/i&gt;, revist\u0103, Bucure\u0219ti, \u00eenainte \u0219i dup\u0103 1989\">Luc.<\/abbr> 4 XI 78 p. 7 \/\/din <i>turneu + test<\/i>\/\/",
+      "userNick": "raduborza",
+      "sourceName": "DCR2",
+      "createDate": "1313969086",
+      "modDate": "1699802753"
+    },
+    {
+      "type": "definition",
+      "id": "358098",
+      "internalRep": "@\u021a&#039;EST ~uri@ $n.$ 1) Capac \u00een forma de clopot, cu care se acoper\u0103 p\u00e2inea pus\u0103 la copt pe vatra \u00eencins\u0103. 2) $pop. (la broa\u0219tele-\u021bestoase, raci etc.)$ \u00cenveli\u0219 dur, format din tegumente osoase care protejeaz\u0103 corpul; carapace; \u021beast\u0103. \/&lt;lat. $testum$",
+      "htmlRep": "<b>\u021a<span class=\"tonic-accent\">E<\/span>ST ~uri<\/b> <i>n.<\/i> 1) Capac \u00een forma de clopot, cu care se acoper\u0103 p\u00e2inea pus\u0103 la copt pe vatra \u00eencins\u0103. 2) <i>pop. (la broa\u0219tele-\u021bestoase, raci etc.)<\/i> \u00cenveli\u0219 dur, format din tegumente osoase care protejeaz\u0103 corpul; carapace; \u021beast\u0103. \/&lt;lat. <i>testum<\/i>",
+      "userNick": "siveco",
+      "sourceName": "NODEX",
+      "createDate": "1093071600",
+      "modDate": "1700757272"
+    },
+    {
+      "type": "definition",
+      "id": "808341",
+      "internalRep": "@\u021best@ n. @1.@ \u00eenveli\u0219 osos: $\u021besturi de broa\u0219te;$ @2.@ cuptora\u0219 de lut ars \u00een care \u021b\u0103ranca coace p\u00e2inea, azima \u0219i coca: $\u00eei puiu \u00een cap \u021bestul \u0219i rabd\u0103 \u00een t\u0103cere$ PANN. [Lat. TESTUM].",
+      "htmlRep": "<b>\u021best<\/b> n. <b>1.<\/b> \u00eenveli\u0219 osos: <i>\u021besturi de broa\u0219te;<\/i> <b>2.<\/b> cuptora\u0219 de lut ars \u00een care \u021b\u0103ranca coace p\u00e2inea, azima \u0219i coca: <i>\u00eei puiu \u00een cap \u021bestul \u0219i rabd\u0103 \u00een t\u0103cere<\/i> PANN. [Lat. TESTUM].",
+      "userNick": "blaurb.",
+      "sourceName": "\u0218\u0103ineanu, ed. VI",
+      "createDate": "1375852365",
+      "modDate": "1525709979"
+    },
+    {
+      "type": "definition",
+      "id": "734270",
+      "internalRep": "@\u021best@ n., pl. $ur\u012d$ (lat $*t\u0115stum,$ cl. $t\u00e9stum,$ capac de lut; it. pg. $testo,$ fr. $t\u00eat,$ sp. $tiesto.$ V. $\u021beast\u0103$). Carapace, troac\u0103 (la broasca \u021bestoas\u0103). Vas de lemn \u00een care se pune aluatu ca s\u0103 dospeasc\u0103 c\u00eend fac\u012d p\u00eene \u00een cas\u0103. Scheletu \u0219ele\u012d, peste care se\\&#039;ntinde pelea.",
+      "htmlRep": "<b>\u021best<\/b> n., pl. <i>ur\u012d<\/i> (lat <i>*t\u0115stum,<\/i> cl. <i>t\u00e9stum,<\/i> capac de lut; it. pg. <i>testo,<\/i> fr. <i>t\u00eat,<\/i> sp. <i>tiesto.<\/i> V. <i>\u021beast\u0103<\/i>). Carapace, troac\u0103 (la broasca \u021bestoas\u0103). Vas de lemn \u00een care se pune aluatu ca s\u0103 dospeasc\u0103 c\u00eend fac\u012d p\u00eene \u00een cas\u0103. Scheletu \u0219ele\u012d, peste care se\u2019ntinde pelea.",
+      "userNick": "LauraGellner",
+      "sourceName": "Scriban",
+      "createDate": "1360440131",
+      "modDate": "1525707019"
+    },
+    {
+      "type": "definition",
+      "id": "1268565",
+      "internalRep": "@test@ (prob\u0103, carapace) #s.# #n.#, #pl.# $t&#039;este$",
+      "htmlRep": "<b>test<\/b> (prob\u0103, carapace) <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv; substantival\">s.<\/abbr> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"neutru\">n.<\/abbr>, <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"plural\">pl.<\/abbr> <i>t<span class=\"tonic-accent\">e<\/span>ste<\/i>",
+      "userNick": "gall",
+      "sourceName": "DOOM 3",
+      "createDate": "1653152671",
+      "modDate": "1653152689"
+    },
+    {
+      "type": "definition",
+      "id": "722554",
+      "internalRep": "@test@ (prob\u0103, carapace) #s. n.#, #pl.# $t&#039;este$",
+      "htmlRep": "<b>test<\/b> (prob\u0103, carapace) <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv neutru\">s. n.<\/abbr>, <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"plural\">pl.<\/abbr> <i>t<span class=\"tonic-accent\">e<\/span>ste<\/i>",
+      "userNick": "raduborza",
+      "sourceName": "DOOM 2",
+      "createDate": "1359076439",
+      "modDate": "1651834996"
+    },
+    {
+      "type": "definition",
+      "id": "288415",
+      "internalRep": "@t&#039;est@ (prob\u0103, \u00eenveli\u0219) s. n., pl. $t&#039;este$",
+      "htmlRep": "<b>t<span class=\"tonic-accent\">e<\/span>st<\/b> (prob\u0103, \u00eenveli\u0219) s. n., pl. <i>t<span class=\"tonic-accent\">e<\/span>ste<\/i>",
+      "userNick": "siveco",
+      "sourceName": "Ortografic",
+      "createDate": "1092121200",
+      "modDate": "1688904535"
+    },
+    {
+      "type": "definition",
+      "id": "1268576",
+      "internalRep": "@test-gr&#039;il\u0103@ #s.# #n.#, #pl.# $teste-gr&#039;il\u0103$",
+      "htmlRep": "<b>test-gr<span class=\"tonic-accent\">i<\/span>l\u0103<\/b> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv; substantival\">s.<\/abbr> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"neutru\">n.<\/abbr>, <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"plural\">pl.<\/abbr> <i>teste-gr<span class=\"tonic-accent\">i<\/span>l\u0103<\/i>",
+      "userNick": "gall",
+      "sourceName": "DOOM 3",
+      "createDate": "1653152849",
+      "modDate": "1653152863"
+    },
+    {
+      "type": "definition",
+      "id": "1265294",
+      "internalRep": "@\u021best@ #s.# #n.#, #pl.# $\u021b&#039;esturi$",
+      "htmlRep": "<b>\u021best<\/b> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv; substantival\">s.<\/abbr> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"neutru\">n.<\/abbr>, <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"plural\">pl.<\/abbr> <i>\u021b<span class=\"tonic-accent\">e<\/span>sturi<\/i>",
+      "userNick": "gall",
+      "sourceName": "DOOM 3",
+      "createDate": "1652259502",
+      "modDate": "1652259510"
+    },
+    {
+      "type": "definition",
+      "id": "722565",
+      "internalRep": "@*test-gr&#039;il\u0103@ #s. n.#, #pl.# $t&#039;este-gr&#039;il\u0103$",
+      "htmlRep": "<b>*test-gr<span class=\"tonic-accent\">i<\/span>l\u0103<\/b> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv neutru\">s. n.<\/abbr>, <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"plural\">pl.<\/abbr> <i>t<span class=\"tonic-accent\">e<\/span>ste-gr<span class=\"tonic-accent\">i<\/span>l\u0103<\/i>",
+      "userNick": "raduborza",
+      "sourceName": "DOOM 2",
+      "createDate": "1359076439",
+      "modDate": "1651834996"
+    },
+    {
+      "type": "definition",
+      "id": "721088",
+      "internalRep": "@\u021best@ #s. n.#, #pl.# $\u021b&#039;esturi$",
+      "htmlRep": "<b>\u021best<\/b> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv neutru\">s. n.<\/abbr>, <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"plural\">pl.<\/abbr> <i>\u021b<span class=\"tonic-accent\">e<\/span>sturi<\/i>",
+      "userNick": "raduborza",
+      "sourceName": "DOOM 2",
+      "createDate": "1358993087",
+      "modDate": "1651835003"
+    },
+    {
+      "type": "definition",
+      "id": "290725",
+      "internalRep": "@\u021best@ s. n., pl. $\u021b&#039;esturi$",
+      "htmlRep": "<b>\u021best<\/b> s. n., pl. <i>\u021b<span class=\"tonic-accent\">e<\/span>sturi<\/i>",
+      "userNick": "siveco",
+      "sourceName": "Ortografic",
+      "createDate": "1092121200",
+      "modDate": "1688904538"
+    },
+    {
+      "type": "definition",
+      "id": "1138162",
+      "internalRep": "@\u021best@",
+      "htmlRep": "<b>\u021best<\/b>",
+      "userNick": "Ladislau Strifler",
+      "sourceName": "MDO",
+      "createDate": "1546085284",
+      "modDate": "1546085286"
+    },
+    {
+      "type": "definition",
+      "id": "1164811",
+      "internalRep": "@\u021best@, -turi.",
+      "htmlRep": "<b>\u021best<\/b>, -turi.",
+      "userNick": "Ladislau Strifler",
+      "sourceName": "IVO-III",
+      "createDate": "1560518109",
+      "modDate": "1560518111"
+    },
+    {
+      "type": "definition",
+      "id": "554497",
+      "internalRep": "@\u021best,@ $\u021besturi #s. n.#$ cap, \u021beast\u0103",
+      "htmlRep": "<b>\u021best,<\/b> <i>\u021besturi <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv neutru\">s. n.<\/abbr><\/i> cap, \u021beast\u0103",
+      "userNick": "LauraGellner",
+      "sourceName": "Argou",
+      "createDate": "1313699755",
+      "modDate": "1313699779"
+    },
+    {
+      "type": "definition",
+      "id": "216364",
+      "internalRep": "@\u021aEST@ s. @1.@ v. $carapace.$ @2.@ (Transilv. \u0219i Ban.) cerine. $(~ pentru copt p\u00e2inea.)$",
+      "htmlRep": "<b>\u021aEST<\/b> s. <b>1.<\/b> v. <i>carapace.<\/i> <b>2.<\/b> (Transilv. \u0219i Ban.) cerine. <i>(~ pentru copt p\u00e2inea.)<\/i>",
+      "userNick": "siveco",
+      "sourceName": "Sinonime",
+      "createDate": "1091602800",
+      "modDate": "1516892566"
+    },
+    {
+      "type": "definition",
+      "id": "1048241",
+      "internalRep": "@\u021aEST@ #s.# (#Transilv.# \u0219i #Ban.#) cer&#039;ine. $(~ pentru copt p\u00eeinea.)$",
+      "htmlRep": "<b>\u021aEST<\/b> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv\">s.<\/abbr> (<abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"Transilvania\">Transilv.<\/abbr> \u0219i <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"Banat\">Ban.<\/abbr>) cer<span class=\"tonic-accent\">i<\/span>ne. <i>(~ pentru copt p\u00eeinea.)<\/i>",
+      "userNick": "LauraGellner",
+      "sourceName": "Sinonime82",
+      "createDate": "1494792038",
+      "modDate": "1525778667"
+    },
+    {
+      "type": "definition",
+      "id": "1048242",
+      "internalRep": "@\u021best@ #s.# #v.# CARAPACE.",
+      "htmlRep": "<b>\u021best<\/b> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"substantiv\">s.<\/abbr> <abbr class=\"abbrev\" data-bs-toggle=\"popover\" data-bs-content=\"vezi (cuv\u00eentul, cuvintele)\">v.<\/abbr> CARAPACE.",
+      "userNick": "LauraGellner",
+      "sourceName": "Sinonime82",
+      "createDate": "1494792229",
+      "modDate": "1525778667"
+    },
+    {
+      "type": "definition",
+      "id": "437034",
+      "internalRep": "@\u021best,@ $\u021besturi,$ s.n. (reg.) @1.@ craniu, \u021beast\u0103. @2.@ carapace. @3.@ scheletul de lemn al \u0219eii. @4.@ gaur\u0103 \u00een \u021b\u0103rmul r\u00e2urilor unde se ascund pe\u0219tii.",
+      "htmlRep": "<b>\u021best,<\/b> <i>\u021besturi,<\/i> s.n. (reg.) <b>1.<\/b> craniu, \u021beast\u0103. <b>2.<\/b> carapace. <b>3.<\/b> scheletul de lemn al \u0219eii. <b>4.<\/b> gaur\u0103 \u00een \u021b\u0103rmul r\u00e2urilor unde se ascund pe\u0219tii.",
+      "userNick": "blaurb.",
+      "sourceName": "DAR",
+      "createDate": "1174540894",
+      "modDate": "1525704306"
+    }
+  ]
+}

@@ -17,8 +17,25 @@
 
 .editor-page-function {
   padding: 5px;
-  width: 200px;
+  width: 500px;
   background-color: var(--middleground-color);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.editor-function-body {
+  height: calc(100dvh - 95px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: auto;
+}
+
+.editor-function-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .editor-content-message {

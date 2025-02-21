@@ -105,3 +105,7 @@ export function RequestDeleteComment(runWithAuth: RunWithAuth, runWithResponse: 
   console.log(`Request: Comments/Delete/${commentId}`)
   runRequest(runWithAuth, runWithResponse, "DELETE", `Comments/Delete/${commentId}`)
 }
+
+export function RequestGetDexDefinition(word: string) {
+  return fetch(`https://dexonline.ro/definitie/${word}/json`)
+}
