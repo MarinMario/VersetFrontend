@@ -54,10 +54,3 @@
   justify-content: center;
   width: 30px;
 }
-
-.rhymes-content {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 5px; 
-  /* width: 300px; */
-}

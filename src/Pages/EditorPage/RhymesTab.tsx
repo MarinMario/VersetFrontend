@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react"
 import EditorFunction from "./EditorFunction"
-import { findRhymingWords } from "../../Utils/Misc"
+import { findRhymes } from "../../Utils/Misc"
+import "./RhymesTab.css"
 
 interface RhymesTabProps {
   input: string
@@ -12,15 +13,16 @@ function RhymesTab(props: RhymesTabProps) {
 
   // const rhymes = findRhymingWords()
   const wordList = props.wordList
-  const [rhymes, setRhymes] = useState<string[]>([])
+  const [rhymes, setRhymes] = useState<Record<number, string[]>>({})
 
   useEffect(() => {
     onSearch()
   }, [])
 
   const onSearch = () => {
-    setRhymes(findRhymingWords(wordList, props.input))
+    setRhymes(findRhymes(wordList, props.input))
   }
+
 
   return (
     <EditorFunction
@@ -31,10 +33,22 @@ function RhymesTab(props: RhymesTabProps) {
     >
       <div className="rhymes-content">
         {
-          rhymes
-            .sort((a, b) => a.length > b.length ? 1 : -1)
-            .filter(r => r.length >= 5)
-            .map((rhyme, index) => <span key={index}>{rhyme}</span>)
+          Object.keys(rhymes)
+            .filter(key => {
+              const intKey = parseInt(key)
+              return intKey > 1 && rhymes[intKey].length > 0
+            })
+            .reverse()
+            .map(key =>
+              <div key={key}>
+                <div className="rhymes-title">{key} litere finale identice</div>
+                <div className="rhymes-list">
+                  {
+                    rhymes[parseInt(key)].map((rhyme, index) => <div key={index}>{rhyme}</div>)
+                  }
+                </div>
+              </div>
+            )
         }
       </div>
     </EditorFunction>
