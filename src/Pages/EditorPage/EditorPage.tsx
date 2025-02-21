@@ -133,10 +133,10 @@ function EditorPage() {
         <Status
           status={option}
           contentByStatus={{
-            "Definitie": <DefinitionTab input={functionInput} setInput={setFunctionInput} />,
+            "Definitie": <DefinitionTab key="def" type="definitie" input={functionInput} setInput={setFunctionInput} />,
             "Rime": <>Rime</>,
-            "Sinonime": <>Sinonime</>,
-            "Antonime": <>Antonime</>
+            "Sinonime": <DefinitionTab key="syn" type="definitie-sinonime" input={functionInput} setInput={setFunctionInput} />,
+            "Antonime": <DefinitionTab key="ant" type="definitie-antonime" input={functionInput} setInput={setFunctionInput} />,
           }}
         />
         <Status

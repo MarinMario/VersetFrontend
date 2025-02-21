@@ -106,6 +106,7 @@ export function RequestDeleteComment(runWithAuth: RunWithAuth, runWithResponse: 
   runRequest(runWithAuth, runWithResponse, "DELETE", `Comments/Delete/${commentId}`)
 }
 
-export function RequestGetDexDefinition(word: string) {
-  return fetch(`https://dexonline.ro/definitie/${word}/json`)
+export function RequestGetDexDefinition(type: "definitie-sinonime" | "definitie-antonime" | "definitie", word: string) {
+  console.log(`Request: dexonline.ro/${type}/${word}/json`)
+  return fetch(`https://dexonline.ro/${type}/${word}/json`)
 }

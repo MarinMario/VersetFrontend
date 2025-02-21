@@ -1,36 +1,42 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react"
-import { RequestGetDexDefinition } from "../../Utils/Requests"
 import "./DefinitionTab.css"
 import Input from "../../Components/Input"
 import Button from "../../Components/Button"
-import he from "he"
+import { LoadingCircle } from "../../Components/Loading"
+import Error from "../../Components/Error"
+import Status from "../../Components/Status"
+import { getDefinition } from "../../Utils/Misc"
 
 interface DefinitionTabProps {
   input: string
   setInput: Dispatch<SetStateAction<string>>
+  type: "definitie-sinonime" | "definitie-antonime" | "definitie"
 }
 
 function DefinitionTab(props: DefinitionTabProps) {
 
 
-  const [status, setStatus] = useState<"Loading" | "Success" | "Fail">("Success")
+  const [status, setStatus] = useState<"Loading" | "Success" | "Empty">("Success")
   const [definitions, setDefinitions] = useState<string[]>([])
+  // const [test, setTest] = useState<
 
   const loadDefinitions = () => {
     setStatus("Loading")
-    RequestGetDexDefinition(props.input).then(response => {
-      if (response.ok) {
-        setStatus("Success")
-        response.json().then(data => {
-          const defs = data["definitions"] as Record<string, string>[]
-          const strDefs = defs.map(def => he.decode(def["internalRep"]))
-          setDefinitions(strDefs)
-        })
-      } else {
-        setStatus("Fail")
-      }
+    getDefinition(props.type, props.input, defs => {
+      setStatus("Success")
+      setDefinitions(defs)
     })
   }
+
+  useEffect(() => {
+    if (definitions.length === 0)
+      setStatus("Empty")
+  }, [definitions])
+
+
+  useEffect(() => {
+    loadDefinitions()
+  }, [])
 
   return (
     <div className="editor-page-function">
@@ -44,7 +50,14 @@ function DefinitionTab(props: DefinitionTabProps) {
         <Button onClick={loadDefinitions}>Cauta</Button>
       </div>
       <div className="editor-function-body">
-        {definitions.map(def => <div key={def}>{def}</div>)}
+        <Status
+          status={status}
+          contentByStatus={{
+            "Success": definitions.map(def => <div key={def} dangerouslySetInnerHTML={{ __html: def }}></div>),
+            "Loading": <LoadingCircle />,
+            "Empty": <Error text="Nu exista definitii." />
+          }}
+        />
       </div>
     </div>
   )
