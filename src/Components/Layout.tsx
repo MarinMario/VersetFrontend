@@ -41,11 +41,11 @@ function Layout(props: LayoutProps) {
         }
         <Select
           vertical={!verticalPage}
-          options={["/feed", "/projects", "/my-profile"]}
+          options={["/discover", "/projects", "/my-profile"]}
           selected={selected}
           onOptionClick={handleOnSelect}
           optionContent={{
-            "/feed": <IconSelectButtonContent icon={BiSolidNavigation} text={displayText("Discover")} iconClassName="icon" />,
+            "/discover": <IconSelectButtonContent icon={BiSolidNavigation} text={displayText("Discover")} iconClassName="icon" />,
             // "/following": <IconSelectButtonContent icon={FaUserFriends} text={displayText("Following")} iconClassName="icon" />,
             // "/notifications": <IconSelectButtonContent icon={MdNotifications} text={displayText("Notificari")} iconClassName="small-icon" />,
             "/projects": <IconSelectButtonContent icon={FaToolbox} text={displayText("Proiecte")} iconClassName="icon" />,
