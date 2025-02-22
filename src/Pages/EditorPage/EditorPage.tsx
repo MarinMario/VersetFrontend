@@ -60,6 +60,7 @@ function EditorPage() {
   const saveContent = () => {
     if (dto === null) {
       setSaveStatus("fail")
+      console.log("status failed")
       return
     }
 
@@ -107,7 +108,7 @@ function EditorPage() {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [])
+  }, [dto])
 
   useEffect(() => {
     loadWordList()

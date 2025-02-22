@@ -26,7 +26,7 @@ function SignInButton() {
             response.json().then(err => console.log(err))
           }
 
-          navigate("/feed")
+          navigate("/discover")
         })
       }
     },
