@@ -17,7 +17,9 @@ function EditorTextbox(props: EditorTextboxProps) {
       className="editor-textarea"
       placeholder="e 4 ziua, ma uit la ceas..."
       value={props.content}
-      onChange={e => props.setContent(e.target.value)}
+      onChange={e => {
+        props.setContent(e.target.value)
+      }}
     />
   )
 }

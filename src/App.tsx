@@ -23,7 +23,7 @@ function App() {
         <Route index element={<IndexPage />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path="login" element={<SignInPage />} />
-        <Route path="feed" element={<HomePage />} />
+        <Route path="discover" element={<HomePage />} />
         <Route path="notifications" element={<Layout>Notificari</Layout>} />
         <Route path="projects" element={<ProjectsPage />} />
         <Route path="my-profile" element={<ProfilePage />} />

@@ -17,8 +17,26 @@
 
 .editor-page-function {
   padding: 5px;
-  width: 200px;
+  width: 800px;
   background-color: var(--middleground-color);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.editor-function-body {
+  height: calc(100dvh - 95px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: auto;
+}
+
+.editor-function-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
 }
 
 .editor-content-message {
@@ -27,7 +45,7 @@
   align-items: center;
   width: 100%;
   justify-content: center;
-  background-color: var(--freground-color);
+  background-color: var(--foreground-color);
 }
 
 .editor-page-save-button-content {

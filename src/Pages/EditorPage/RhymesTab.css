@@ -1,0 +1,17 @@
+
+
+.rhymes-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+}
+
+.rhymes-title {
+  font-weight: bold;
+  color: var(--selected-color);
+}
+
+.rhymes-list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
