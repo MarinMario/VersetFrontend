@@ -29,13 +29,11 @@ function EditorPage() {
   const [wordList, setWordList] = useState<string[]>([])
 
   const loadWordList = () => {
-    console.log("Loading word list.")
     fetch('/RomanianWordlist.txt')
       .then(response => {
-        console.log("Loaded wordlist. ", response)
         return response.text()
       })
-      .then(text => setWordList(text.split("\r\n")))
+      .then(text => setWordList(text.split(",")))
   }
 
   const loadContent = () => {
