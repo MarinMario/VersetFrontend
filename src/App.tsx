@@ -12,10 +12,6 @@ import { PageNotFound } from "./Components/ErrorPage";
 
 function App() {
 
-  if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-  }
-
   return (
     <BrowserRouter>
       <RedirectToLogin />

@@ -11,7 +11,7 @@ function SignInPage() {
 
   useEffect(() => {
     if (localStorage.getItem(LocalStorageAuthKey) !== null) {
-      navigate("/feed")
+      navigate("/discover")
     }
   }, [])
 
