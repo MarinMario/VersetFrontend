@@ -7,7 +7,7 @@ function IndexPage() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    navigate(isLoggedIn() ? "/feed" : "/login")
+    navigate(isLoggedIn() ? "/discover" : "/login")
   }, [])
 
   return <></>
