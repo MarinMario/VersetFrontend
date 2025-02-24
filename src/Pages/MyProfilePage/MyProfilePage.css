@@ -1,0 +1,47 @@
+.my-profile-page {
+  overflow: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  height: calc(100dvh - 30px);
+}
+
+.my-profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.my-profile-details>div>input {
+  width: 187px;
+}
+
+.my-profile-details>div {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.my-profile-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.my-profile-buttons>button {
+  width: 150px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (orientation: portrait) {
+  .my-profile-page {
+    height: calc(100dvh - 60px);
+  }
+}
+

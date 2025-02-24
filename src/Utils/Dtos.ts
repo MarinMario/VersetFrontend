@@ -19,8 +19,6 @@ export interface DtoUserPublic {
 export interface DtoUserUpdate {
   name: string,
   public: boolean,
-  likedSongs: string[],
-  dislikedSongs: string[]
 }
 
 export interface DtoSong {
