@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Button from "../../Components/Button";
 import Layout from "../../Components/Layout"
-import useWindowSize from "../../Hooks/useWindowSize"
 import { logout } from "../../Utils/Authorization";
 import "./MyProfilePage.css"
 import { FaAt } from "react-icons/fa";
@@ -16,6 +15,8 @@ import { RequestGetUserData, RequestUpdateUser } from "../../Utils/Requests";
 import LoadingPage from "../../Components/LoadingPage";
 import ErrorPage from "../../Components/ErrorPage";
 import { LoadingCircle } from "../../Components/Loading";
+import { MdCalendarMonth } from "react-icons/md";
+import { formatIsoDate } from "../../Utils/DateTime";
 
 function MyProfilePage() {
 
@@ -86,11 +87,15 @@ function MyProfilePage() {
 
   return (
     <Layout>
-      <div className="page my-profile-page">
+      <div className="my-profile-page">
         <div className="my-profile-details">
           <div>
             <MdEmail className="icon" />
-            <p>{userData.email}</p>
+            <div>{userData.email}</div>
+          </div>
+          <div>
+            <MdCalendarMonth className="icon" />
+            <div>Creat pe {formatIsoDate(userData.creationDate + "Z")}</div>
           </div>
           <div>
             <FaAt className="icon" />

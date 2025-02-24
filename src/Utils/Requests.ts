@@ -110,3 +110,13 @@ export function RequestGetDexDefinition(type: "definitie-sinonime" | "definitie-
   console.log(`Request: dexonline.ro/${type}/${word}/json`)
   return fetch(`https://dexonline.ro/${type}/${word}/json`)
 }
+
+export function RequestGetUserPublic(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse, userId: string) {
+  console.log(`Request: Users/GetUserPublic/${userId}`)
+  runRequest(runWithAuth, runWithResponse, "GET", `Users/GetUserPublic/${userId}`)
+}
+
+export function RequestGetSongsByUserId(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse, userId: string) {
+  console.log(`Request: Songs/GetByUserId/${userId}`)
+  runRequest(runWithAuth, runWithResponse, "GET", `Songs/GetByUserId/${userId}`)
+}

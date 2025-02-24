@@ -9,6 +9,7 @@ import ProjectsPage from "./Pages/ProjectsPage/ProjectsPage";
 import EditorPage from "./Pages/EditorPage/EditorPage";
 import PostPage from "./Pages/PostPage/PostPage";
 import { PageNotFound } from "./Components/ErrorPage";
+import ProfilePage from "./Pages/ProfilePage/ProfilePage";
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="editor/:id" element={<EditorPage />} />
         <Route path="user/:id" element={<EditorPage />} />
         <Route path="post/:id" element={<PostPage />} />
+        <Route path="profile/:id" element={<ProfilePage />} />
       </Routes>
     </BrowserRouter>
   )

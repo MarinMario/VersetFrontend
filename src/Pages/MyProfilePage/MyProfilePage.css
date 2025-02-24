@@ -1,22 +1,31 @@
 .my-profile-page {
   overflow: auto;
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   justify-content: space-between;
-  height: calc(100dvh - 30px);
+  height: calc(100dvh - 40px);
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .my-profile-details {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  text-align: center;
+  gap: 20px;
 }
 
 .my-profile-details>div>input {
   width: 187px;
+}
+
+.my-profile-details>div>.icon {
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .my-profile-details>div {
@@ -41,7 +50,7 @@
 
 @media (orientation: portrait) {
   .my-profile-page {
-    height: calc(100dvh - 60px);
+    height: calc(100dvh - 120px);
   }
 }
 
