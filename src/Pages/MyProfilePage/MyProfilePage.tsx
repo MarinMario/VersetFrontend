@@ -68,8 +68,6 @@ function MyProfilePage() {
         response.json().then(data => setUserData(data))
       }
 
-      console.log(userUpdate)
-
       setSaving(false)
     }, userUpdate)
   }

@@ -1,0 +1,45 @@
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: calc(100dvh - 20px);
+  overflow: auto;
+}
+
+.profile-page-user-details {
+  padding: 10px;
+}
+
+.profile-page-buttons {
+  padding: 10px;
+}
+
+.profile-page-buttons>button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+}
+
+.profile-page-posts-title {
+  padding: 10px;
+}
+
+@media (orientation:portrait) {
+  .profile-page {
+    height: calc(100dvh - 70px);
+  }
+
+  .profile-page-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile-page-user-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}

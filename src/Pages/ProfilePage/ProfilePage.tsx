@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import ErrorPage, { PageNotFound } from "../../Components/ErrorPage"
 import Layout from "../../Components/Layout"
 import { useEffect, useState } from "react"
@@ -8,6 +8,8 @@ import { DtoSongPublic, DtoUser, DtoUserPublic } from "../../Utils/Dtos"
 import LoadingPage from "../../Components/LoadingPage"
 import { formatIsoDate } from "../../Utils/DateTime"
 import Post from "../../Components/Post"
+import "./ProfilePage.css"
+import Button from "../../Components/Button"
 
 function ProfilePage() {
 
@@ -20,6 +22,7 @@ function ProfilePage() {
   const [status, setStatus] = useState<"Loading" | "Success" | "Fail">("Loading")
 
   const { runWithAuth } = useGoogleAuth()
+  const navigate = useNavigate()
 
   if (userId === undefined)
     return <ErrorPage error="Pagina nu exista." />
@@ -55,6 +58,11 @@ function ProfilePage() {
     })
   }
 
+  const onRatingClick = () => {
+    loadUserPosts()
+    loadConnectedUserData()
+  }
+
   useEffect(() => {
     loadUserData()
     loadUserPosts()
@@ -69,15 +77,23 @@ function ProfilePage() {
 
   return (
     <Layout>
-      <div className="page">
-        <div>{userData.name}</div>
-        <div>Cont creat pe {formatIsoDate(userData.creationDate + "Z")}</div>
+      <div className="page profile-page">
+        <div className="profile-page-user-details">
+          <h3>{userData.name}</h3>
+          <div>Cont creat pe {formatIsoDate(userData.creationDate + "Z")}</div>
+        </div>
+        <div className="profile-page-buttons">
+          <Button>Follow</Button>
+        </div>
         <div>
-          <br />
-          <div>Postari</div>
-          <div>
+          <h3 className="profile-page-posts-title">Postari</h3>
+          <div className="profile-page-posts">
             {
-              userPosts.map(post => <Post song={post} userData={connectedUserData} />)
+              userPosts.map(post =>
+                <div key={post.id} className="feed-song" onClick={() => navigate(`/post/${post.id}`)}>
+                  <Post song={post} userData={connectedUserData} onRatingClick={onRatingClick} />
+                </div>
+              )
             }
           </div>
         </div>
