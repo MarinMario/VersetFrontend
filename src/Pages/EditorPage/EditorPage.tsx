@@ -59,19 +59,29 @@ function EditorPage() {
     }, songId)
   }
 
+  const dtoRef = useRef(dto)
+  const contentRef = useRef(content)
+  useEffect(() => {
+    contentRef.current = content
+  }, [content])
+  useEffect(() => {
+    dtoRef.current = dto
+  }, [dto])
+
   const saveContent = () => {
-    if (dto === null) {
+    const dtoCurrent = dtoRef.current
+    if (dtoCurrent === null) {
       setSaveStatus("fail")
       console.log("Failed to save project.")
       return
     }
 
     const song: DtoSongUpdate = {
-      id: dto.id,
-      name: dto.name,
-      lyrics: content,
-      description: dto.description,
-      accessFor: dto.accessFor,
+      id: dtoCurrent.id,
+      name: dtoCurrent.name,
+      lyrics: contentRef.current,
+      description: dtoCurrent.description,
+      accessFor: dtoCurrent.accessFor,
     }
 
     setSaveStatus("loading")
@@ -110,7 +120,7 @@ function EditorPage() {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [dto, content])
+  }, [])
 
   useEffect(() => {
     loadWordList()
