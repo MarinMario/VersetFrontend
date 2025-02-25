@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom"
 import Select, { IconSelectButtonContent } from "./Select"
 import { BiSolidNavigation } from "react-icons/bi";
-// import { MdNotifications } from "react-icons/md";
+import { MdNotifications } from "react-icons/md";
 import { FaToolbox } from "react-icons/fa6";
 import { FaAt } from "react-icons/fa";
 import { ReactNode } from "react";
@@ -41,13 +41,13 @@ function Layout(props: LayoutProps) {
         }
         <Select
           vertical={!verticalPage}
-          options={["/discover", "/projects", "/my-profile"]}
+          options={["/discover", "/notifications", "/projects", "/my-profile"]}
           selected={selected}
           onOptionClick={handleOnSelect}
           optionContent={{
             "/discover": <IconSelectButtonContent icon={BiSolidNavigation} text={displayText("Discover")} iconClassName="icon" />,
             // "/following": <IconSelectButtonContent icon={FaUserFriends} text={displayText("Following")} iconClassName="icon" />,
-            // "/notifications": <IconSelectButtonContent icon={MdNotifications} text={displayText("Notificari")} iconClassName="small-icon" />,
+            "/notifications": <IconSelectButtonContent icon={MdNotifications} text={displayText("Notificari")} iconClassName="small-icon" />,
             "/projects": <IconSelectButtonContent icon={FaToolbox} text={displayText("Proiecte")} iconClassName="icon" />,
             "/my-profile": <IconSelectButtonContent icon={FaAt} text={displayText("Profil")} iconClassName="icon" />
           }}
