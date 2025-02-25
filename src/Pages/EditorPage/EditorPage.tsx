@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useLocation, useNavigate, useParams } from "react-router-dom"
 import { RequestGetSong, RequestUpdateSong } from "../../Utils/Requests"
 import useGoogleAuth from "../../Hooks/useGoogleAuth"
@@ -62,7 +62,7 @@ function EditorPage() {
   const saveContent = () => {
     if (dto === null) {
       setSaveStatus("fail")
-      console.log("status failed")
+      console.log("Failed to save project.")
       return
     }
 
@@ -110,7 +110,7 @@ function EditorPage() {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [dto])
+  }, [dto, content])
 
   useEffect(() => {
     loadWordList()
@@ -158,6 +158,7 @@ function EditorPage() {
           contentByStatus={{
             "loading": <div className="editor-content-message"><Loading text="Loading project..." /></div>,
             "fail": <div className="editor-content-message"><Error text="Failed to load project." /></div>,
+
             "success": <EditorTextbox content={content} setContent={setContent} />
             // success: <div className="editor-content-message"><LoadingCircle /></div>
           }}
