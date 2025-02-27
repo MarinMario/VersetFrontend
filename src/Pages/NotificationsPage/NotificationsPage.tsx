@@ -4,13 +4,18 @@ import { RequestAcceptFollowRequest, RequestDeleteFollower, RequestGetFollowers 
 import useGoogleAuth from "../../Hooks/useGoogleAuth"
 import { DtoFollowPublic } from "../../Utils/Dtos"
 import Button from "../../Components/Button"
+import { compareIsoDates, formatIsoDate } from "../../Utils/DateTime"
+import "./NotificationsPage.css"
+import { useNavigate } from "react-router-dom"
 
 function NotificationsPage() {
 
   const { runWithAuth } = useGoogleAuth()
   const [follows, setFollows] = useState<DtoFollowPublic[]>([])
 
-  console.log(follows)
+  const navigate = useNavigate()
+
+  const sortedFollows = follows.sort((f1, f2) => -compareIsoDates(f1.date, f2.date))
 
   const loadFollowers = () => {
     RequestGetFollowers(runWithAuth, response => {
@@ -22,16 +27,20 @@ function NotificationsPage() {
 
   const acceptFollowRequest = (userId: string) => {
     RequestAcceptFollowRequest(runWithAuth, response => {
-      if(response.ok)
+      if (response.ok)
         loadFollowers()
     }, userId)
   }
 
   const deleteFollower = (userId: string) => {
     RequestDeleteFollower(runWithAuth, response => {
-      if(response.ok)
+      if (response.ok)
         loadFollowers()
     }, userId)
+  }
+
+  const onUsernameClick = (userId: string) => {
+    navigate(`/profile/${userId}`)
   }
 
   useEffect(() => {
@@ -41,23 +50,35 @@ function NotificationsPage() {
   return (
     <Layout>
       <div className="page">
-        {
-          follows.map(follow =>
-            follow.followStatus == 2
-              ? 
-              <div key={follow.id}>
-                <div>{follow.user.name} te urmareste.</div>
-              </div>
-              :
-              <div key={follow.id} style={{ display: "flex", gap: "5px", alignItems: "center" }}>
-                <div>{follow.user.name} vrea sa te urmareasca.</div>
-                <div style={{ display: "flex", gap: "5px" }}>
-                  <Button onClick={() => acceptFollowRequest(follow.user.id)}>Accepta</Button>
-                  <Button onClick={() => deleteFollower(follow.user.id)}>Respinge</Button>
+        <div className="notifications">
+          {
+            sortedFollows.map(follow =>
+              follow.followStatus == 2
+                ?
+                <div key={follow.id}>
+                  <div className="notification-date">{formatIsoDate(follow.date + "Z")}</div>
+                  <div className="notification-profile-button">
+                    <button onClick={() => onUsernameClick(follow.user.id)}>{follow.user.name}</button> te urmareste.
+                  </div>
                 </div>
-              </div>
-          )
-        }
+                :
+                <div key={follow.id}>
+                  <div>
+                    <div className="notification-date">{formatIsoDate(follow.date + "Z")}</div>
+                  </div>
+                  <div className="follow-request-notification-content">
+                    <div className="notification-profile-button">
+                      <button onClick={() => onUsernameClick(follow.user.id)}>{follow.user.name}</button> vrea sa te urmareasca.
+                    </div>
+                    <div className="follow-request-notification-buttons">
+                      <Button small onClick={() => acceptFollowRequest(follow.user.id)}>Accepta</Button>
+                      <Button small onClick={() => deleteFollower(follow.user.id)}>Respinge</Button>
+                    </div>
+                  </div>
+                </div>
+            )
+          }
+        </div>
       </div>
     </Layout>
   )

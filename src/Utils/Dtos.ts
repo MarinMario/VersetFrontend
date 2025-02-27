@@ -81,5 +81,6 @@ export interface DtoFollowPublic {
   followId: string
   id: string
   user: DtoUserPublic
+  date: string
 }
 
