@@ -52,6 +52,11 @@ function NotificationsPage() {
       <div className="page">
         <div className="notifications">
           {
+            sortedFollows.length === 0
+              ? "Nu ai notificari..."
+              : <></>
+          }
+          {
             sortedFollows.map(follow =>
               follow.followStatus == 2
                 ?
