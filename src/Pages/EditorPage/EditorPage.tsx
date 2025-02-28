@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useLocation, useNavigate, useParams } from "react-router-dom"
 import { RequestGetSong, RequestUpdateSong } from "../../Utils/Requests"
 import useGoogleAuth from "../../Hooks/useGoogleAuth"
@@ -59,19 +59,29 @@ function EditorPage() {
     }, songId)
   }
 
+  const dtoRef = useRef(dto)
+  const contentRef = useRef(content)
+  useEffect(() => {
+    contentRef.current = content
+  }, [content])
+  useEffect(() => {
+    dtoRef.current = dto
+  }, [dto])
+
   const saveContent = () => {
-    if (dto === null) {
+    const dtoCurrent = dtoRef.current
+    if (dtoCurrent === null) {
       setSaveStatus("fail")
-      console.log("status failed")
+      console.log("Failed to save project.")
       return
     }
 
     const song: DtoSongUpdate = {
-      id: dto.id,
-      name: dto.name,
-      lyrics: content,
-      description: dto.description,
-      accessFor: dto.accessFor,
+      id: dtoCurrent.id,
+      name: dtoCurrent.name,
+      lyrics: contentRef.current,
+      description: dtoCurrent.description,
+      accessFor: dtoCurrent.accessFor,
     }
 
     setSaveStatus("loading")
@@ -110,7 +120,7 @@ function EditorPage() {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [dto])
+  }, [])
 
   useEffect(() => {
     loadWordList()
@@ -158,6 +168,7 @@ function EditorPage() {
           contentByStatus={{
             "loading": <div className="editor-content-message"><Loading text="Loading project..." /></div>,
             "fail": <div className="editor-content-message"><Error text="Failed to load project." /></div>,
+
             "success": <EditorTextbox content={content} setContent={setContent} />
             // success: <div className="editor-content-message"><LoadingCircle /></div>
           }}

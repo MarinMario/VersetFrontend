@@ -120,3 +120,33 @@ export function RequestGetSongsByUserId(runWithAuth: RunWithAuth, runWithRespons
   console.log(`Request: Songs/GetByUserId/${userId}`)
   runRequest(runWithAuth, runWithResponse, "GET", `Songs/GetByUserId/${userId}`)
 }
+
+export function RequestGetFollowStatus(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse, userId: string) {
+  console.log(`Request: Follows/GetFollowStatus/${userId}`)
+  runRequest(runWithAuth, runWithResponse, "GET", `Follows/GetFollowStatus/${userId}`)
+}
+
+export function RequestGetFollowers(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse) {
+  console.log(`Request: Follows/GetFollowers`)
+  runRequest(runWithAuth, runWithResponse, "GET", `Follows/GetFollowers`)
+}
+
+export function RequestAddFollowRequest(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse, userId: string) {
+  console.log(`Request: Follows/AddFollowRequest/${userId}`)
+  runRequest(runWithAuth, runWithResponse, "POST", `Follows/AddFollowRequest/${userId}`)
+}
+
+export function RequestUnfollow(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse, userId: string) {
+  console.log(`Request: Follows/Unfollow/${userId}`)
+  runRequest(runWithAuth, runWithResponse, "DELETE", `Follows/Unfollow/${userId}`)
+}
+
+export function RequestAcceptFollowRequest(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse, userId: string) {
+  console.log(`Request: Follows/AcceptFollowRequest/${userId}`)
+  runRequest(runWithAuth, runWithResponse, "POST", `Follows/AcceptFollowRequest/${userId}`)
+}
+
+export function RequestDeleteFollower(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse, userId: string) {
+  console.log(`Request: Follows/DeleteFollower/${userId}`)
+  runRequest(runWithAuth, runWithResponse, "DELETE", `Follows/DeleteFollower/${userId}`)
+}

@@ -1,0 +1,42 @@
+
+.notifications {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notifications>div {
+  background-color: var(--foreground-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.notification-date {
+  font-size: 12px;
+}
+
+.follow-request-notification-content, .follow-request-notification-buttons {
+  /* style={{ display: "flex", gap: "5px", alignItems: "center" }} */
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.notification-profile-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.notification-profile-button>button {
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--selected-color);
+  border: 0px;
+}
+
+.notification-profile-button>button:hover {
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--text-color-secondary);
+}

@@ -2,9 +2,9 @@ import { useNavigate, useParams } from "react-router-dom"
 import ErrorPage, { PageNotFound } from "../../Components/ErrorPage"
 import Layout from "../../Components/Layout"
 import { useEffect, useState } from "react"
-import { RequestGetSongsByUserId, RequestGetUserData, RequestGetUserPublic } from "../../Utils/Requests"
+import { RequestAddFollowRequest, RequestGetFollowStatus, RequestGetSongsByUserId, RequestGetUserData, RequestGetUserPublic, RequestUnfollow } from "../../Utils/Requests"
 import useGoogleAuth from "../../Hooks/useGoogleAuth"
-import { DtoSongPublic, DtoUser, DtoUserPublic } from "../../Utils/Dtos"
+import { DtoFollowStatus, DtoSongPublic, DtoUser, DtoUserPublic } from "../../Utils/Dtos"
 import LoadingPage from "../../Components/LoadingPage"
 import { formatIsoDate } from "../../Utils/DateTime"
 import Post from "../../Components/Post"
@@ -18,6 +18,7 @@ function ProfilePage() {
 
   const [connectedUserData, setConnectedUserData] = useState<DtoUser | null>(null)
   const [userData, setUserData] = useState<DtoUserPublic | null>(null)
+  const [followStatus, setFollowStatus] = useState<0 | 1 | 2>(0)
   const [userPosts, setUserPosts] = useState<DtoSongPublic[]>([])
   const [status, setStatus] = useState<"Loading" | "Success" | "Fail">("Loading")
 
@@ -58,6 +59,38 @@ function ProfilePage() {
     })
   }
 
+  const loadFollowStatus = () => {
+    RequestGetFollowStatus(runWithAuth, response => {
+      if (response.ok)
+        response.json().then(data => {
+          const castedData = data as DtoFollowStatus
+          setFollowStatus(castedData.followStatus)
+        })
+    }, userId)
+  }
+
+  const addFollowRequest = () => {
+    RequestAddFollowRequest(runWithAuth, response => {
+      if (response.ok)
+        loadFollowStatus()
+    }, userId)
+  }
+
+  const unfollow = () => {
+    RequestUnfollow(runWithAuth, response => {
+      if (response.ok)
+        loadFollowStatus()
+    }, userId)
+  }
+
+  const onFollowClick = () => {
+    if (followStatus === 0) {
+      addFollowRequest()
+    } else {
+      unfollow()
+    }
+  }
+
   const onRatingClick = () => {
     loadUserPosts()
     loadConnectedUserData()
@@ -67,6 +100,7 @@ function ProfilePage() {
     loadUserData()
     loadUserPosts()
     loadConnectedUserData()
+    loadFollowStatus()
   }, [])
 
   if (status === "Loading")
@@ -83,7 +117,15 @@ function ProfilePage() {
           <div>Cont creat pe {formatIsoDate(userData.creationDate + "Z")}</div>
         </div>
         <div className="profile-page-buttons">
-          <Button>Follow</Button>
+          <Button onClick={onFollowClick}>
+            {
+              followStatus === 0
+                ? "Follow"
+                : followStatus === 1
+                  ? "Requested"
+                  : "Following"
+            }
+          </Button>
         </div>
         <div>
           <h3 className="profile-page-posts-title">Postari</h3>

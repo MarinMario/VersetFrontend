@@ -10,6 +10,12 @@
   padding: 10px;
 }
 
+.profile-page-posts {
+ display: flex;
+ flex-direction: column;
+ gap: 10px; 
+}
+
 .profile-page-buttons {
   padding: 10px;
 }

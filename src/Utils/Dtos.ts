@@ -72,3 +72,15 @@ export interface DtoCommentPublic {
   songId: string
 }
 
+export interface DtoFollowStatus {
+  followStatus: 0 | 1 | 2
+}
+
+export interface DtoFollowPublic {
+  followStatus: 0 | 1 | 2
+  followId: string
+  id: string
+  user: DtoUserPublic
+  date: string
+}
+
