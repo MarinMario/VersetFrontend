@@ -3,29 +3,26 @@ import Button from "../../Components/Button";
 import Layout from "../../Components/Layout"
 import { logout } from "../../Utils/Authorization";
 import "./MyProfilePage.css"
-import { FaAt } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import { MdPublic } from "react-icons/md";
+import { MdCalendarMonth, MdEmail } from "react-icons/md";
 import { useEffect, useState } from "react";
 import useGoogleAuth from "../../Hooks/useGoogleAuth";
-import Input from "../../Components/Input";
-import Select from "../../Components/Select";
-import { DtoUser, DtoUserUpdate } from "../../Utils/Dtos";
-import { RequestGetUserData, RequestUpdateUser } from "../../Utils/Requests";
+import { DtoUser } from "../../Utils/Dtos";
+import { RequestGetUserData } from "../../Utils/Requests";
 import LoadingPage from "../../Components/LoadingPage";
 import ErrorPage from "../../Components/ErrorPage";
-import { LoadingCircle } from "../../Components/Loading";
-import { MdCalendarMonth } from "react-icons/md";
+import MyProfileSettingsModal from "./MyProfileSettingsModal";
 import { formatIsoDate } from "../../Utils/DateTime";
+import IconButton from "../../Components/IconButton";
+import { MdSettings } from "react-icons/md";
+import { FaShare } from "react-icons/fa";
+import FollowModal from "./FollowModal";
 
 function MyProfilePage() {
 
   const [userData, setUserData] = useState<DtoUser | null>(null)
   const [status, setStatus] = useState<"Loading" | "Success" | "Fail">("Loading")
-  const [saving, setSaving] = useState(false)
-
-  const [name, setName] = useState("")
-  const [publicAccess, setPublicAccess] = useState<boolean>(false)
+  const [settingsModalOpen, setSettingsModalOpen] = useState(false)
+  const [followModalOpen, setFollowModalOpen] = useState(false)
 
   const navigate = useNavigate()
 
@@ -45,9 +42,6 @@ function MyProfilePage() {
             setStatus("Success")
             return data
           })
-          setName(data.name)
-          setPublicAccess(data.public)
-
         })
       } else {
         setStatus("Fail")
@@ -55,25 +49,14 @@ function MyProfilePage() {
     })
   }
 
-  const saveUserData = () => {
-    setSaving(true)
+  const onShare = () => {
+    if (userData == null)
+      return
 
-    const userUpdate: DtoUserUpdate = {
-      name: name,
-      public: publicAccess
-    }
-
-    RequestUpdateUser(runWithAuth, response => {
-      if (response.ok) {
-        response.json().then(data => setUserData(data))
-      }
-
-      setSaving(false)
-    }, userUpdate)
+    navigator.clipboard.writeText(`${location.origin}/profile/${userData.id}`)
   }
 
   useEffect(() => {
-    // runWithAuth(auth => setTokenData(getIdTokenData(auth)))
     loadUserData()
   }, [])
 
@@ -85,36 +68,35 @@ function MyProfilePage() {
 
   return (
     <Layout>
+      <MyProfileSettingsModal open={settingsModalOpen} setOpen={setSettingsModalOpen} userData={userData} setUserData={setUserData} />
+      <FollowModal open={followModalOpen} setOpen={setFollowModalOpen} userData={userData} />
       <div className="my-profile-page">
         <div className="my-profile-details">
-          <div>
+          <div className="username-buttons">
+            <h3>{userData.name}</h3>
+            <div className="share-settings-buttons">
+              <div>
+                <IconButton onClick={onShare} icon={FaShare} iconClassName="icon" />
+              </div>
+              <div>
+                <IconButton onClick={() => setSettingsModalOpen(true)} icon={MdSettings} iconClassName="small-icon" />
+              </div>
+            </div>
+          </div>
+          <div className="icon-content">
             <MdEmail className="icon" />
             <div>{userData.email}</div>
           </div>
-          <div>
+          <div className="icon-content">
             <MdCalendarMonth className="icon" />
             <div>Creat pe {formatIsoDate(userData.creationDate + "Z")}</div>
           </div>
-          <div>
-            <FaAt className="icon" />
-            <Input inputProps={{ value: name, onChange: e => setName(e.target.value), placeholder: "nume..." }} />
-          </div>
-          <div>
-            <MdPublic className="icon" />
-            <Select
-              small
-              options={["true", "false"]}
-              selected={publicAccess ? "true" : "false"}
-              onOptionClick={option => setPublicAccess(option === "true")}
-              optionContent={{
-                "true": <>Acces Public</>,
-                "false": <>Acces Privat</>,
-              }}
-            />
+          <div className="following-followers-buttons">
+            <Button>Follwing</Button>
+            <Button onClick={() => setFollowModalOpen(true)}>Followers</Button>
           </div>
         </div>
         <div className="my-profile-buttons">
-          <Button onClick={saveUserData}>{saving ? <LoadingCircle small /> : "Salveaza"}</Button>
           <Button onClick={onLogOut}>Deconecteaza-te</Button>
         </div>
       </div>
