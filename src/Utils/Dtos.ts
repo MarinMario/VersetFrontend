@@ -78,9 +78,9 @@ export interface DtoFollowStatus {
 
 export interface DtoFollowPublic {
   followStatus: 0 | 1 | 2
-  followId: string
   id: string
   user: DtoUserPublic
+  follows: DtoUserPublic
   date: string
 }
 

@@ -16,6 +16,7 @@ import IconButton from "../../Components/IconButton";
 import { MdSettings } from "react-icons/md";
 import { FaShare } from "react-icons/fa";
 import FollowModal from "./FollowModal";
+import FollowingModal from "./FollowingModal";
 
 function MyProfilePage() {
 
@@ -23,6 +24,7 @@ function MyProfilePage() {
   const [status, setStatus] = useState<"Loading" | "Success" | "Fail">("Loading")
   const [settingsModalOpen, setSettingsModalOpen] = useState(false)
   const [followModalOpen, setFollowModalOpen] = useState(false)
+  const [followingModalOpen, setFollowingModalOpen] = useState(false)
 
   const navigate = useNavigate()
 
@@ -70,6 +72,7 @@ function MyProfilePage() {
     <Layout>
       <MyProfileSettingsModal open={settingsModalOpen} setOpen={setSettingsModalOpen} userData={userData} setUserData={setUserData} />
       <FollowModal open={followModalOpen} setOpen={setFollowModalOpen} userData={userData} />
+      <FollowingModal open={followingModalOpen} setOpen={setFollowingModalOpen} />
       <div className="my-profile-page">
         <div className="my-profile-details">
           <div className="username-buttons">
@@ -92,7 +95,7 @@ function MyProfilePage() {
             <div>Creat pe {formatIsoDate(userData.creationDate + "Z")}</div>
           </div>
           <div className="following-followers-buttons">
-            <Button>Follwing</Button>
+            <Button onClick={() => setFollowingModalOpen(true)}>Follwing</Button>
             <Button onClick={() => setFollowModalOpen(true)}>Followers</Button>
           </div>
         </div>

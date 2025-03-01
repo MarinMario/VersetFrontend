@@ -97,3 +97,11 @@
   display: flex;
   gap: 5px;
 }
+
+.my-profile-page-following-button>button {
+  width: 160px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+

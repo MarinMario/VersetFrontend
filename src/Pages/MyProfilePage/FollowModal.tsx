@@ -12,7 +12,7 @@ interface FollowModalProps {
 }
 
 
-function FollowModal(propos: FollowModalProps) {
+function FollowModal(props: FollowModalProps) {
 
   const [followers, setFollowers] = useState<DtoFollowPublic[]>([])
 
@@ -43,16 +43,16 @@ function FollowModal(propos: FollowModalProps) {
   }
 
   const onClose = () => {
-    propos.setOpen(false)
+    props.setOpen(false)
   }
 
   useEffect(() => {
-    if (propos.open)
+    if (props.open)
       loadFollowers()
-  }, [propos.open])
+  }, [props.open])
 
   return (
-    <Modal open={propos.open} onClose={onClose}>
+    <Modal open={props.open} onClose={onClose}>
       <div>
         {
           followers.length === 0
