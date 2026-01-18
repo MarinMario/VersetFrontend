@@ -150,3 +150,8 @@ export function RequestDeleteFollower(runWithAuth: RunWithAuth, runWithResponse:
   console.log(`Request: Follows/DeleteFollower/${userId}`)
   runRequest(runWithAuth, runWithResponse, "DELETE", `Follows/DeleteFollower/${userId}`)
 }
+
+export function RequestGetFollowing(runWithAuth: RunWithAuth, runWithResponse: RunWithResponse) {
+  console.log(`Request: Follows/GetFollowing`)
+  runRequest(runWithAuth, runWithResponse, "GET", `Follows/GetFollowing`)
+}

@@ -3,6 +3,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google'
 import App from './App.tsx'
 import "./index.css"
 
+
 const CLIENT_ID = import.meta.env.VITE_CLIENT_ID
 
 createRoot(document.getElementById('root')!).render(
