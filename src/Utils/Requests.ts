@@ -12,7 +12,7 @@ export function runRequest2(auth: Authorization, runWithResponse: RunWithRespons
     method: method,
     headers: {
       "Content-Type": "application/json",
-      "idToken": auth.id_token,
+      "Authorization": "Bearer " + auth.id_token,
     },
     body: body === undefined ? undefined : JSON.stringify(body)
   }).then(response => {
