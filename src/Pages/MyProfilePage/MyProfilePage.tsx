@@ -92,7 +92,7 @@ function MyProfilePage() {
           </div>
           <div className="icon-content">
             <MdCalendarMonth className="icon" />
-            <div>Creat pe {formatIsoDate(userData.creationDate + "Z")}</div>
+            <div>Creat pe {formatIsoDate(userData.creationDate)}</div>
           </div>
           <div className="following-followers-buttons">
             <Button onClick={() => setFollowingModalOpen(true)}>Follwing</Button>

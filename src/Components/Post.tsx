@@ -78,7 +78,7 @@ function Post(props: PostProps) {
         <div className="post-username-and-date">
           <button onClick={onUserNameClick}>{song.user.name}</button>
           <div>⦁</div>
-          <div>{isoToText(song.lastUpdateDate + "Z")}</div>
+          <div>{isoToText(song.lastUpdateDate)}</div>
         </div>
         <h3 className="post-name">{song.name}</h3>
       </div>

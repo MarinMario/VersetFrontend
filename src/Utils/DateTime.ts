@@ -20,8 +20,8 @@ export function getMonthRomanian(date: Date) {
 }
 
 export function compareIsoDates(date1: string, date2: string) {
-  const d1 = new Date(date1 + "Z").getTime()
-  const d2 = new Date(date2 + "Z").getTime()
+  const d1 = new Date(date1).getTime()
+  const d2 = new Date(date2).getTime()
 
   if (d1 === d2)
     return 0

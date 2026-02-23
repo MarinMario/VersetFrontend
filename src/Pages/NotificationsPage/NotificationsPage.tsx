@@ -61,7 +61,7 @@ function NotificationsPage() {
               follow.followStatus == 2
                 ?
                 <div key={follow.id}>
-                  <div className="notification-date">{formatIsoDate(follow.date + "Z")}</div>
+                  <div className="notification-date">{formatIsoDate(follow.date)}</div>
                   <div className="notification-profile-button">
                     <button onClick={() => onUsernameClick(follow.user.id)}>{follow.user.name}</button> te urmareste.
                   </div>
@@ -69,7 +69,7 @@ function NotificationsPage() {
                 :
                 <div key={follow.id}>
                   <div>
-                    <div className="notification-date">{formatIsoDate(follow.date + "Z")}</div>
+                    <div className="notification-date">{formatIsoDate(follow.date)}</div>
                   </div>
                   <div className="follow-request-notification-content">
                     <div className="notification-profile-button">

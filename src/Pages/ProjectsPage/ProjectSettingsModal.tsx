@@ -23,8 +23,8 @@ function ProjectSettingsModal(props: ProjectSettingsModalProps) {
 
   const { runWithAuth } = useGoogleAuth()
 
-  const createdAtText = formatIsoDate(props.dto.creationDate + "Z")
-  const lastUpdateText = formatIsoDate(props.dto.lastUpdateDate + "Z")
+  const createdAtText = formatIsoDate(props.dto.creationDate)
+  const lastUpdateText = formatIsoDate(props.dto.lastUpdateDate)
 
   const onClose = () => {
     props.setOpen(false)

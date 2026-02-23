@@ -139,7 +139,7 @@ function PostPage() {
                   <div className="comment-username-and-date">
                     <div className="comment-username">{c.user.name}</div>
                     <div>⦁</div>
-                    <div>{isoToText(c.creationDate + "Z")}</div>
+                    <div>{isoToText(c.creationDate)}</div>
                   </div>
                   <div className="comment-content-container">
                     <div className="comment-content">{c.content}</div>

@@ -27,7 +27,7 @@ function ProjectCard(props: ProjectCardProps) {
   const name = props.dto.name
   const visibleName = name.length <= 30 ? name : name.slice(0, 28) + "..."
 
-  const lastUpdateText = isoToText(props.dto.lastUpdateDate + "Z")
+  const lastUpdateText = isoToText(props.dto.lastUpdateDate)
 
   const { runWithAuth } = useGoogleAuth()
 

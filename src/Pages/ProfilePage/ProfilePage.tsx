@@ -114,7 +114,7 @@ function ProfilePage() {
       <div className="page profile-page">
         <div className="profile-page-user-details">
           <h3>{userData.name}</h3>
-          <div>Cont creat pe {formatIsoDate(userData.creationDate + "Z")}</div>
+          <div>Cont creat pe {formatIsoDate(userData.creationDate)}</div>
         </div>
         <div className="profile-page-buttons">
           <Button onClick={onFollowClick}>
